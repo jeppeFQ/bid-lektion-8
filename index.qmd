@@ -110,6 +110,98 @@ Gennem en proces kaldet optimering justerer modellen gradvist sine interne vægt
 INDSÆT TIMER MED SPG. 
 ----->
 
+
+## Natural Language Processing (NLP)
+
+*Computervidenskabelig disciplin, der beskæftiger sig med, hvordan en computer kan forstå og producere menneskeligt sprog.*
+
+::: {style="font-size: 0.8em;"}
+* Behandling og bearbejdning af **“naturligt sprog”** ved hjælp af computerteknologi
+* Teknikker der involverer statistiske metoder til at forstå tekst; *med eller uden lingvistiske indsigter*
+* Krydsfelt mellem **datalogi og lingvistik**
+* Involverer i stigende grad brug af **maskinlæringsteknologi**
+    * Eksempler fra hverdagen: *ChatGPT, Tale-til-tekst applikationer, tekstforslag i beskeder, autokorrektur, oversættelsestjenester (Google Translate)*
+:::
+
+## Analyseformål 
+
+* **Skabe overblik** (fx nøgleordsanalyse)
+* Identificér og måle **prædefinerede koncepter** (hate-speech, politisk ideologi, diskurs)
+* Udforske og forstå **komplekse meningssammenhænge** (hvordan temaer opstår og udvikler sig, hvordan befolkningsgrupper, institutioner eller andet italesættes, koblinger mellem temaer, holdning og mening)
+* Identificér **sociale aktører** og deres (formodede) **handlinger** (hvem gjorde hvad til hvem?)
+* Computationel analyse af **sætningskonstruktion**
+
+
+
+
+## Naive Bayes klassifikation: *læring gennem sandsynlighedsteori*
+
+> Forestil jer, at du står med en filmanmeldelse og vil afgøre, om den er positiv eller negativ. Naive Bayes spørger: "Givet de ord, jeg ser i denne anmeldelse, hvad er sandsynligheden for, at den tilhører hver kategori?"
+
+Dette tager afsæt i **Bayes' Theorem**/-sætning:
+
+$$
+P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
+$$
+
+Sætningen fortæller os, hvordan vi kan vende en betinget sandsynlighed om. Hvis vi kalder vores kategorier for $C$ ("positiv" eller "negativ") og vores dokument for $D$ (repræsenteret ved de ord, det indeholder), så siger Bayes' sætning:
+
+::: {style="font-size: 0.8em;"}
+1. $P(C \mid D)$ er den **posterior sandsynlighed**: sandsynligheden for, at dokumentet tilhører kategori C, givet at vi har observeret ordene i D.Det er altså hvad vi vil finde ud af. 
+2. $P(D \mid C)$ er vores **likelihood**: sandsynligheden for at se netop denne kombination af ord, hvis vi ved, at dokumentet tilhører kategori $C$. 
+3. $P(C)$ er **prior sandsynligheden**: vores forhåndsforventning om, hvor sandsynlig kategorien er, før vi har set dokumentet. $P(D)$ er en normaliseringskonstant, der sikrer, at sandsynlighederne summerer til én.
+:::
+
+---
+
+$$
+P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
+$$
+
+Den naive antagelse er at vi går ud fra uafhængighed mellem ord. I virkeligheden er ord i en tekst åbenlyst ikke uafhængige af hinanden.
+
+Naive Bayes **antager**, at alle ord er betingelsesvist uafhængige givet kategorien, udtrykt som:
+
+$$
+P(D \mid C) = P(w_1, w_2, \ldots, w_n \mid C) = P(w_1 \mid C) \times P(w_2 \mid C) \times \cdots \times P(w_n \mid C)
+$$
+
+
+hvor $w_1, w_2, \ldots, w_n$ er de individuelle ord i dokumentet. **Denne antagelse er objektivt forkert, men den fungerer stadig i praksis, fordi den gør beregningerne håndterbare.**
+
+
+## Naive Bayes som *Sentimentanalyse*
+
+Forstil jer at vi har trænet en model på tusindvis af filmanmeldelser, og vi ser denne korte anmeldelse: `"Fantastisk film. Elsker!"`.
+
+::: {style="font-size: 0.8em;"}
+::: {.incremental}
+1. Vi har to kategorier: `positiv` ($P$) og `negativ` ($N$).
+2. Fra vores træningsdata har vi lært følgende sandsynligheder. 
+    * Prior sandsynlighederne er $P(P) = 0.6$ og $P(N) = 0.4$: fordi $60$ procent af vores træningsanmeldelser var positive. 
+    * Hvor ofte hvert ord optræder i hver kategori: 
+      * $P(\text{fantastisk}|P) = 0.08$ (optrådte i 8 procent af positive anmeldelser) og $P(\text{fantastisk}|N) = 0.01$ (kun 1 procent negative anmeldelser). 
+      * $P(\text{film}|P) = 0.15$ og $P(\text{film}|N) = 0.12$
+      * $P(\text{elsker}|P) = 0.09$ og $P(\text{elsker}|N) = 0.02$
+:::
+:::
+
+---
+
+::: {style="font-size: 0.8em;"}
+::: {.incremental}
+3. Nu kan vi beregne den unormaliserede posterior sandsynlighed for positiv kategori:
+    * $P(P \mid D) \propto P(P) \times P(\text{fantastisk} \mid P) \times P(\text{film} \mid P) \times P(\text{elsker} \mid P)$
+    * $P(P \mid D) \propto 0.6 \times 0.08 \times 0.15 \times 0.09 = 0.0006480$
+4. Tilsvarende for negativ kategori:
+    * $P(N \mid D) \propto P(N) \times P(\text{fantastisk} \mid N) \times P(\text{film} \mid N) \times P(\text{elsker} \mid N)$
+    * $P(N \mid D) \propto 0.4 \times 0.01 \times 0.12 \times 0.02 = 0.0000096$
+5. Selv uden at normalisere kan vi se, at den positive sandsynlighed er omkring $67$ gange højere end den negative. Efter **normalisering** ville $P(P|D)$ være cirka $0.985$, så modellen er meget sikker på, at dette er en positiv anmeldelse.
+:::
+:::
+
+# Øvelse
+
 ## Hvilken problemer opstår i læring? 
 
 <!------
@@ -1271,6 +1363,101 @@ Du er arkitekten der designer bygningen (netværket).
 Gradient descent er byggearbejderne der udfylder detaljerne (vægtene).
 Men du bestemmer grundstrukturen!
 
+```{python}
+import tensorflow as tf
+from tensorflow import keras
+
+# Build model
+model = keras.Sequential([
+    keras.layers.Conv2D(32, 3, activation='relu', 
+                       input_shape=(224, 224, 3)),
+    keras.layers.MaxPooling2D(2),
+    keras.layers.Conv2D(64, 3, activation='relu'),
+    keras.layers.MaxPooling2D(2),
+    keras.layers.Conv2D(128, 3, activation='relu'),
+    keras.layers.Flatten(),
+    keras.layers.Dense(256, activation='relu'),
+    keras.layers.Dense(2, activation='softmax')
+])
+
+# Load image
+image = load_cat_image()  # Shape: (224, 224, 3)
+image_batch = np.expand_dims(image, axis=0)  # Shape: (1, 224, 224, 3)
+
+# Create model that outputs intermediate layers
+layer_outputs = [layer.output for layer in model.layers[:6]]
+activation_model = keras.Model(inputs=model.input, 
+                               outputs=layer_outputs)
+
+# Get feature maps
+activations = activation_model.predict(image_batch)
+
+# Inspect
+print("Layer 1 (Conv2D) output shape:", activations[0].shape)
+# (1, 222, 222, 32) ← batch_size, height, width, channels
+
+print("Layer 2 (MaxPool) output shape:", activations[1].shape)
+# (1, 111, 111, 32)
+
+print("Layer 3 (Conv2D) output shape:", activations[2].shape)
+# (1, 109, 109, 64)
+
+# Access specific neuron
+neuron_value = activations[0][0, 50, 75, 15]
+print(f"Neuron at position (50,75) in feature map 15: {neuron_value}")
+# 145.73
+
+# Visualize feature map
+import matplotlib.pyplot as plt
+
+# Feature map 15 fra layer 1
+feature_map_15 = activations[0][0, :, :, 15]
+plt.imshow(feature_map_15, cmap='viridis')
+plt.title('Feature Map 15 from Layer 1')
+plt.colorbar()
+plt.show()
+```
+
+
+DENSE LAYER:
+100 neuroner
+100 inputs per neuron
+= 100 × 100 = 10,000 vægte ✗ Mange!
+
+CONV LAYER:
+32 filtre
+3×3×1 per filter
+= 32 × 9 = 288 vægte ✓ Få!
+
+Men producerer 26×26×32 = 21,632 output værdier!
+
+Dette er EFFEKTIVITETEN i CNN:
+Få vægte, meget output, deling på tværs af positioner
+
+
+ET CONVOLUTIONAL LAYER har:
+═══════════════════════════
+
+FILTRE (også kaldet kernels):
+- Antal: Du vælger (f.eks. 32, 64, 128)
+- Hver filter = ét sæt vægte
+- Hver filter scanner hele input
+- Hver filter producerer ÉN feature map
+
+NEURONER (output positioner):
+- Antal: Beregnes automatisk
+- = (output_height × output_width × antal_filtre)
+- Hver position i hver feature map = én "neuron"
+
+EKSEMPEL:
+Conv2D(filters=32, kernel_size=3)
+på 28×28 input
+
+→ 32 filtre
+→ Output: 26×26×32
+→ 26 × 26 × 32 = 21,632 "neuroner"
+→ Men kun 32 × 9 = 288 vægte!
+  (vægtene deles på tværs af positioner)
 
 Hvis du brugte Dense layer direkte på billede:
 # 8×8 pixels billede = 64 pixels
@@ -1543,10 +1730,212 @@ FILTER (3×3):
 └─────────┘
 
 
+Position 1: Top-Venstre (0,0)
+STEP 1: Placer filter over top-venstre hjørne
+════════════════════════════════════════════
+
+┌────────────────────────────────┐
+│[10  20  30] 40  50  60  70  80│  ← Filter dækker disse 9 pixels
+│[15  25  35] 45  55  65  75  85│
+│[20  30  40] 50  60  70  80  90│
+│ 25  35  45  55  65  75  85  95│
+...
+
+FILTER:              INPUT PATCH:
+┌─────────┐         ┌─────────┐
+│ 1  0 -1 │    ×    │10 20 30│
+│ 1  0 -1 │         │15 25 35│
+│ 1  0 -1 │         │20 30 40│
+└─────────┘         └─────────┘
+
+BEREGNING (element-wise multiply og sum):
+output[0,0] = (10×1) + (20×0) + (30×-1) +
+              (15×1) + (25×0) + (35×-1) +
+              (20×1) + (30×0) + (40×-1)
+            
+            = 10 + 0 - 30 +
+              15 + 0 - 35 +
+              20 + 0 - 40
+            
+            = -60
+
+OUTPUT FEATURE MAP:
+┌─────────────┐
+│ -60  ?  ? ..│
+│  ?   ?  ? ..│
+│  ?   ?  ? ..│
+└─────────────┘
+
+
+Position 2: Skift Én Pixel Til Højre (0,1)
+
+STEP 2: "Glid" filteret én pixel til højre
+═══════════════════════════════════════════
+
+┌────────────────────────────────┐
+│ 10 [20  30  40] 50  60  70  80│  ← Nu dækker vi disse 9 pixels
+│ 15 [25  35  45] 55  65  75  85│
+│ 20 [30  40  50] 60  70  80  90│
+│ 25  35  45  55  65  75  85  95│
+...
+
+FILTER:              INPUT PATCH:
+┌─────────┐         ┌─────────┐
+│ 1  0 -1 │    ×    │20 30 40│
+│ 1  0 -1 │         │25 35 45│
+│ 1  0 -1 │         │30 40 50│
+└─────────┘         └─────────┘
+
+BEREGNING:
+output[0,1] = (20×1) + (30×0) + (40×-1) +
+              (25×1) + (35×0) + (45×-1) +
+              (30×1) + (40×0) + (50×-1)
+            
+            = 20 + 0 - 40 +
+              25 + 0 - 45 +
+              30 + 0 - 50
+            
+            = -60
+
+OUTPUT FEATURE MAP:
+┌─────────────┐
+│-60 -60  ? ..│
+│ ?   ?   ? ..│
+│ ?   ?   ? ..│
+└─────────────┘
+
+Position 3: Næste Position (0,2)
+STEP 3: Fortsæt til højre
+═════════════════════════
+
+┌────────────────────────────────┐
+│ 10  20 [30  40  50] 60  70  80│
+│ 15  25 [35  45  55] 65  75  85│
+│ 20  30 [40  50  60] 70  80  90│
+...
+
+output[0,2] = beregn på samme måde...
+            = -60
 
 
 
+INPUT: 224×224×3 RGB billede
+    ↓
 
+LAYER 1: Conv2D(32 filters, 3×3)
+════════════════════════════════
+- 32 different 3×3×3 filters
+- Each scans entire image
+- Output: 222×222×32
+  (32 feature maps, each 222×222)
+
+    ↓
+
+LAYER 2: MaxPooling(2×2)
+════════════════════════
+- No filters/weights
+- Just takes max of 2×2 regions
+- Output: 111×111×32
+  (reduced size, same depth)
+
+    ↓
+
+LAYER 3: Conv2D(64 filters, 3×3)
+════════════════════════════════
+- 64 different 3×3×32 filters
+  (must be 32 deep to match input!)
+- Each filter: 3×3×32 = 288 weights
+- Output: 109×109×64
+
+    ↓
+
+LAYER 4: MaxPooling(2×2)
+════════════════════════
+- Output: 54×54×64
+
+    ↓
+
+LAYER 5: Conv2D(128 filters, 3×3)
+═════════════════════════════════
+- 128 different 3×3×64 filters
+- Each filter: 3×3×64 = 576 weights
+- Output: 52×52×128
+
+    ↓
+
+Continue...
+
+
+
+START → FILTER SCANNING → OUTPUT
+
+Frame 1:
+INPUT (8×8)        FILTER (3×3)      OUTPUT (6×6)
+┌────────┐         ┌───┐             ┌────────┐
+│[▓▓▓]   │    ×    │w w│    →        │[✓]     │
+│[▓▓▓]   │         │w w│             │        │
+│[▓▓▓]   │         └───┘             │        │
+│        │                           │        │
+└────────┘                           └────────┘
+
+Frame 2:
+┌────────┐                           ┌────────┐
+│ [▓▓▓]  │    ×    [Same filter] →  │ ✓[✓]   │
+│ [▓▓▓]  │                           │        │
+│ [▓▓▓]  │                           │        │
+│        │                           │        │
+└────────┘                           └────────┘
+
+Frame 3:
+┌────────┐                           ┌────────┐
+│  [▓▓▓] │    ×    [Same filter] →  │ ✓ ✓[✓] │
+│  [▓▓▓] │                           │        │
+│  [▓▓▓] │                           │        │
+│        │                           │        │
+└────────┘                           └────────┘
+
+...continue til hele billedet er scannet...
+
+Final:
+┌────────┐                           ┌────────┐
+│        │                           │✓✓✓✓✓✓  │
+│        │    Alle positioner →     │✓✓✓✓✓✓  │
+│        │    beregnet              │✓✓✓✓✓✓  │
+│        │                           │✓✓✓✓✓✓  │
+└────────┘                           └────────┘
+                                     Feature Map!
+
+
+
+Tænk på det som: ****************************************************
+Ét filter = Én type detektor (f.eks. "lodret kant-finder")
+Scanning = Lede efter dette mønster OVERALT i billedet
+Feature map = Kort over "hvor fandt jeg dette mønster"
+Mange filtre = Lede efter mange forskellige mønstre samtidigt!
+
+
+✓ Et LAYER har mange FILTRE (f.eks. 32)
+✓ Hvert FILTER producerer én FEATURE MAP
+✓ Hver FEATURE MAP indeholder mange "neuroner" (output positioner)
+✓ Eksempel: 32 filtre → 32 feature maps × 26×26 = 21,632 "neuroner"
+
+✓ Output = 3D tensor (højde × bredde × dybde)
+✓ Dybde = antal filtre
+✓ Hver "slice" i dybden = én feature map
+✓ Hver værdi = hvor stærkt filteret responderede der
+✓ Høj værdi = stærk match til filterets mønster
+
+Feature maps eksisterer MELLEM lag
+De er outputtet fra ét lag
+Og inputtet til næste lag
+
+┌────────┐  Feature    ┌────────┐  Feature    ┌────────┐
+│ Layer  │   Maps      │ Layer  │   Maps      │ Layer  │
+│   1    │─────────→   │   2    │─────────→   │   3    │
+│ (Conv) │  32×222×222 │ (Pool) │  32×111×111 │ (Conv) │
+└────────┘             └────────┘             └────────┘
+
+Feature maps er "aktivationer" - output fra lag
 
 
 
@@ -2313,96 +2702,6 @@ Det er den smukke bro mellem rå data og abstrakt forståelse!
 
 ------->
 
-
-
-## Natural Language Processing (NLP)
-
-*Computervidenskabelig disciplin, der beskæftiger sig med, hvordan en computer kan forstå og producere menneskeligt sprog.*
-
-::: {style="font-size: 0.8em;"}
-* Behandling og bearbejdning af **“naturligt sprog”** ved hjælp af computerteknologi
-* Teknikker der involverer statistiske metoder til at forstå tekst; *med eller uden lingvistiske indsigter*
-* Krydsfelt mellem **datalogi og lingvistik**
-* Involverer i stigende grad brug af **maskinlæringsteknologi**
-    * Eksempler fra hverdagen: *ChatGPT, Tale-til-tekst applikationer, tekstforslag i beskeder, autokorrektur, oversættelsestjenester (Google Translate)*
-:::
-
-## Analyseformål 
-
-* **Skabe overblik** (fx nøgleordsanalyse)
-* Identificér og måle **prædefinerede koncepter** (hate-speech, politisk ideologi, diskurs)
-* Udforske og forstå **komplekse meningssammenhænge** (hvordan temaer opstår og udvikler sig, hvordan befolkningsgrupper, institutioner eller andet italesættes, koblinger mellem temaer, holdning og mening)
-* Identificér **sociale aktører** og deres (formodede) **handlinger** (hvem gjorde hvad til hvem?)
-* Computationel analyse af **sætningskonstruktion**
-
-
-
-
-## Naive Bayes klassifikation: *læring gennem sandsynlighedsteori*
-
-> Forestil jer, at du står med en filmanmeldelse og vil afgøre, om den er positiv eller negativ. Naive Bayes spørger: "Givet de ord, jeg ser i denne anmeldelse, hvad er sandsynligheden for, at den tilhører hver kategori?"
-
-Dette tager afsæt i **Bayes' Theorem**/-sætning:
-
-$$
-P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
-$$
-
-Sætningen fortæller os, hvordan vi kan vende en betinget sandsynlighed om. Hvis vi kalder vores kategorier for $C$ ("positiv" eller "negativ") og vores dokument for $D$ (repræsenteret ved de ord, det indeholder), så siger Bayes' sætning:
-
-::: {style="font-size: 0.8em;"}
-1. $P(C \mid D)$ er den **posterior sandsynlighed**: sandsynligheden for, at dokumentet tilhører kategori C, givet at vi har observeret ordene i D.Det er altså hvad vi vil finde ud af. 
-2. $P(D \mid C)$ er vores **likelihood**: sandsynligheden for at se netop denne kombination af ord, hvis vi ved, at dokumentet tilhører kategori $C$. 
-3. $P(C)$ er **prior sandsynligheden**: vores forhåndsforventning om, hvor sandsynlig kategorien er, før vi har set dokumentet. $P(D)$ er en normaliseringskonstant, der sikrer, at sandsynlighederne summerer til én.
-:::
-
----
-
-$$
-P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
-$$
-
-Den naive antagelse er at vi går ud fra uafhængighed mellem ord. I virkeligheden er ord i en tekst åbenlyst ikke uafhængige af hinanden.
-
-Naive Bayes **antager**, at alle ord er betingelsesvist uafhængige givet kategorien, udtrykt som:
-
-$$
-P(D \mid C) = P(w_1, w_2, \ldots, w_n \mid C) = P(w_1 \mid C) \times P(w_2 \mid C) \times \cdots \times P(w_n \mid C)
-$$
-
-
-hvor $w_1, w_2, \ldots, w_n$ er de individuelle ord i dokumentet. **Denne antagelse er objektivt forkert, men den fungerer stadig i praksis, fordi den gør beregningerne håndterbare.**
-
-
-## Naive Bayes som *Sentimentanalyse*
-
-Forstil jer at vi har trænet en model på tusindvis af filmanmeldelser, og vi ser denne korte anmeldelse: `"Fantastisk film. Elsker!"`.
-
-::: {style="font-size: 0.8em;"}
-::: {.incremental}
-1. Vi har to kategorier: `positiv` ($P$) og `negativ` ($N$).
-2. Fra vores træningsdata har vi lært følgende sandsynligheder. 
-    * Prior sandsynlighederne er $P(P) = 0.6$ og $P(N) = 0.4$: fordi $60$ procent af vores træningsanmeldelser var positive. 
-    * Hvor ofte hvert ord optræder i hver kategori: 
-      * $P(\text{fantastisk}|P) = 0.08$ (optrådte i 8 procent af positive anmeldelser) og $P(\text{fantastisk}|N) = 0.01$ (kun 1 procent negative anmeldelser). 
-      * $P(\text{film}|P) = 0.15$ og $P(\text{film}|N) = 0.12$
-      * $P(\text{elsker}|P) = 0.09$ og $P(\text{elsker}|N) = 0.02$
-:::
-:::
-
----
-
-::: {style="font-size: 0.8em;"}
-::: {.incremental}
-3. Nu kan vi beregne den unormaliserede posterior sandsynlighed for positiv kategori:
-    * $P(P \mid D) \propto P(P) \times P(\text{fantastisk} \mid P) \times P(\text{film} \mid P) \times P(\text{elsker} \mid P)$
-    * $P(P \mid D) \propto 0.6 \times 0.08 \times 0.15 \times 0.09 = 0.0006480$
-4. Tilsvarende for negativ kategori:
-    * $P(N \mid D) \propto P(N) \times P(\text{fantastisk} \mid N) \times P(\text{film} \mid N) \times P(\text{elsker} \mid N)$
-    * $P(N \mid D) \propto 0.4 \times 0.01 \times 0.12 \times 0.02 = 0.0000096$
-5. Selv uden at normalisere kan vi se, at den positive sandsynlighed er omkring $67$ gange højere end den negative. Efter **normalisering** ville $P(P|D)$ være cirka $0.985$, så modellen er meget sikker på, at dette er en positiv anmeldelse.
-:::
-:::
 
 
 
