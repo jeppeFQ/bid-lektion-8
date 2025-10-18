@@ -1451,7 +1451,7 @@ P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
 <h2>Billedegenkendelse: <em>hvorfor er det så svært?</em></h2>
 <p>Forestil jer at skulle programmere en computer til at genkende billeder af katte.</p>
 <p>Med traditionel programmering ville vi forsøge at skrive regler:</p>
-<div id="3573ac21" class="cell" data-execution_count="1">
+<div id="a838385a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a><span class="kw">def</span> er_det_en_kat(image):</span>
 <span id="cb1-2"><a href></a>    <span class="cf">if</span> har_spidse_orer(image) <span class="kw">and</span> har_knurhår(image) <span class="kw">and</span> har_pels(image):</span>
 <span id="cb1-3"><a href></a>        <span class="cf">return</span> <span class="va">True</span></span>
@@ -1626,16 +1626,28 @@ Billede af en hund (samme størrelse):
 <h2>Broen mellem rå data og abstrakt forståelse</h2>
 <p>Netværket lærer <em>selv</em> at beregne disse features.</p>
 <ul>
-<li>Neural network starter med pixels og lærer filtre:</li>
+<li>Neural network <strong>starter med pixels</strong> og <strong>lærer filtre</strong>:</li>
 <li>Neural network’et beregner:
 <ul>
 <li>Tusindvis af mellemliggende features</li>
 <li>Hvoraf nogle kan fortolkes som “rundhed”, “pels”, etc.</li>
-<li>Men netværket har aldrig fået at vide hvad disse er.</li>
-<li>Det opdagede selv at disse features er nyttige for at løse opgaven.</li>
-<li>Det er derfor det hedder “feature learning” i stedet for “feature engineering”</li>
+<li>Men <strong>netværket har aldrig fået at vide hvad disse er.</strong></li>
+<li>Det <strong>opdagede selv at disse features er nyttige for at løse opgaven.</strong></li>
+<li>Det er derfor det hedder “feature <em>learning</em>” i stedet for “feature <em>engineering</em>”</li>
 </ul></li>
 </ul>
+</section>
+<section id="øvelse" class="slide level2 scrollable">
+<h2>Øvelse</h2>
+<p><strong><em>Lav et pitch til en AI-løsning, der er relevant for jeres system.</em></strong></p>
+<ol type="1">
+<li>Løsningen skal skal være “realistisk”.</li>
+<li>Den skal løse én opgave i jeres system; ikke erstattet det.</li>
+<li>Præsenter jeres pitch som om I ville sælge løsningen til mig som jeres leder eller kunde.
+<ul>
+<li>5 min. per gruppe.</li>
+</ul></li>
+</ol>
 
 </section></section>
     </div>

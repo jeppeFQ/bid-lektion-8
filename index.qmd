@@ -575,7 +575,7 @@ Netværket lærer *selv* at beregne disse features.
 
 ## Øvelse
 
-Lav et pitch til en AI-løsning, der er relevant for jeres system. 
+***Lav et pitch til en AI-løsning, der er relevant for jeres system.***
 
 1. Løsningen skal skal være "realistisk". 
 2. Den skal løse én opgave i jeres system; ikke erstattet det. 
