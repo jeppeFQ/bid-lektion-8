@@ -39,9 +39,6 @@ format:
           </style>
 ---
 
-## Dagens program 
-
-
 ## Maskinlæring (ML)
 
 Et ord vi ikke kan komme udenom i dag ... men hvad dækker det egentlig over? 
@@ -56,7 +53,7 @@ Et ord vi ikke kan komme udenom i dag ... men hvad dækker det egentlig over?
 
 * I stedet for at følge faste, hårdkodede regler, lærer systemet mønstre og sammenhænge fra eksempler.
 * Den fundamentale idé bag machine learning er at skabe algoritmer der kan forbedre sig selv gennem erfaring.
-* Forestil dig forskellen mellem at lære et barn at genkende en kat ved at give det en liste af specifikke regler (har fire ben, spidse ører, pels osv.) versus at vise barnet hundredvis af billeder af katte. Machine learning fungerer ud fra en mere realistisk tilgang om hvordan mennesker lærer: systemet lærer ved at blive eksponeret for mange eksempler.
+* Forestil dig forskellen mellem at lære et barn at genkende en kat ved at give det en liste af specifikke regler (har fire ben, spidse ører, pels osv.) versus at vise barnet hundredvis af billeder af katte. Machine learning fungerer ud fra en mere realistisk tilgang om hvordan mennesker lærer: **systemet lærer ved at blive eksponeret for mange eksempler.**
 
 :::
 
@@ -89,9 +86,9 @@ Machine learning er (blevet) allestedsnærværende i moderne teknologi.
 
 ---
 
-> Hvordan har I brug (generativ) AI på dette kurset og studiet indtil nu? Hvilke erfaringer har I gjort jer? 
+> Hvordan har I anvendt (generativ) AI på dette kurset og studiet indtil nu? Hvilke erfaringer har I gjort jer; er der noget I vil gøre mere/mindre? 
 
-<span class="timer" data-time="180"></span>
+<span class="timer" data-time="300"></span>
 
 ---
 
@@ -104,35 +101,44 @@ Machine learning er (blevet) allestedsnærværende i moderne teknologi.
 
 1. De første computere fra 1945 gjorde teoretisk AI praktisk muligt, selvom computerne var primitive efter moderne standarder.
 2. Den optimistiske periode i 50'erne og 60'erne: 
-    * Artificial Intelligence som felt "fødes" ved Dartmouth Konferencen i 1956; ambitionen var at skabe tænkende maskiner. 
-    *  Begrebet Machine Learning introduceres af A. Samuel i 1959 ved introduktionen af sit checkers-program [dam-spil]. 
-    * I 1958 præsenteres Perceptronen, der er det første neurale netværk, der kunne klassificere simple mønstre. 
-    * Den første chat-bot, ELIZA introduceres i 1966.
-3. Den første "AI-vinter" 70'erne og 80'erne:
+    * **Artificial Intelligence** som felt "fødes" ved Dartmouth Konferencen i 1956; ambitionen var at skabe tænkende maskiner. 
+    *  Begrebet **Machine Learning** introduceres i 1959 ved introduktionen af et checkers-program [dam-spil]. 
+    * I 1958 præsenteres Perceptronen, der er det første **neurale netværk**, der kunne klassificere simple mønstre. 
+    * Den første chat-bot, **ELIZA** introduceres i 1966.
+3. Den første **AI-vinter** 70'erne og 80'erne:
     * Artiklen "Perceptrons" fra 1969 udfordrer meget af grundlaget for deep learning. 
-    * PROLOG programmeringssproget bliver introduceret.
-    * Selvom ekspertsystemer bliver udviklet er de dyre og ikke fleksible.  
+    * PROLOG **programmeringssproget** bliver introduceret.
+    * Selvom **ekspertsystemer** bliver udviklet er de dyre og ikke fleksible.  
 4. Maskinlærings gennembrudende i 90'erne:
-    * Nye matematiske/statistiske gennembrud; Support Vector Machines (klassifikation), Convolutional Neural Networks (Håndskriftgenkendelse). 
-    * **IBM's Deep Blue besejrede verdensmesteren Garry Kasparov i skak i 1997.** 
+    * Nye **matematiske/statistiske gennembrud**; Support Vector Machines (klassifikation), Convolutional Neural Networks (Håndskriftgenkendelse). 
+    * ***IBM's Deep Blue besejrede verdensmesteren Garry Kasparov i skak i 1997.***
+
+:::
+:::
+
+---
+ 
+::: {style="font-size: 0.6em;"}
+::: {.incremental}
+
 5. Big Data og moderne maskinlæring i 00'erne. 
     * Random Forests og XGBoost. 
-    * Deep Learning og neurale netværk får en renæssance. 
-    * ImageNet datasættet (2009) med millioner af mærkede billeder blev katalysator for computer vision fremskridt.
-    * AlexNet fra 2012 står som et centralt gennembrud i billedgenkendelse.
+    * **Deep Learning** og **neurale netværk** får en renæssance. 
+    * ImageNet **data**sættet (2009) med millioner af mærkede billeder blev katalysator for computer vision fremskridt.
+    * **AlexNet** fra 2012 står som et centralt gennembrud i billedgenkendelse.
     * IBM's Watson vinder Jeopardy og Siri kommer på markedet i 2011 
 6. Deep Learning's dominerer feltet i 10'erne:
-    * Word embeddings bliver praktisk implementeret. 
-    * Transformers og Attention-mekanismen muliggør chat-bots som vi kender dem i dag. 
-    * AlphaGo besejrede i 2016 Go-verdensmesteren Lee Sedol gennem kombination af deep learning, Monte Carlo tree search og reinforcement learning. Go var indtil da betragtet som umuligt for maskiner.
-    * AlphaZero fra 2017 lærte skak, shogi og Go fra scratch gennem self-play, uden menneskelig viden.
+    * **Word embeddings** bliver praktisk implementeret. 
+    * Transformers og Attention-mekanismen muliggør **chat-bots** som vi kender dem i dag. 
+    * AlphaGo besejrede i 2016 Go-verdensmesteren Lee Sedol gennem **kombination** af deep learning, Monte Carlo tree search og reinforcement learning. Go var indtil da betragtet som umuligt for maskiner.
+    * AlphaZero fra 2017 lærte skak, shogi og Go fra scratch gennem self-play, **uden menneskelig viden** om disse spil.
 7. Large Language Models har domineret 20'erne 
-    * Transfer learning kan implementeres i praksis (Pre-træn på massive datasæt, finjuster til specifikke opgaver.)
-    * GPT (2018), GPT-2 (2019) og GPT-3 (2020) fra OpenAI demonstrerede skalerings-love: større modeller på mere data gav kvalitativt bedre evner.
-    * GPT-3 med 175 milliarder parametre illustrerede "few-shot learning", der er evnen til at udføre opgaver fra få eksempler uden specifik træning.
-    * ChatGPT nåede i 2022 100 millioner brugere hurtigere end nogen anden teknologi.
-    * Diffusion models som DALL-E, Midjourney og Stable Diffusion revolutionerede billedgenerering.
-    * GitHub Copilot fra 2021 og efterfølgende systemer som GPT-4 transformerede programmering ved at generere funktionel kode fra naturlig sprogbeskrivelser.
+    * **Transfer learning** kan implementeres i praksis (Pre-træn på massive datasæt, finjuster til specifikke opgaver.)
+    * GPT (2018), GPT-2 (2019) og GPT-3 (2020) fra OpenAI demonstrerede **skalerings-love**: større modeller på mere data gav kvalitativt bedre evner.
+    * **GPT-3** med 175 milliarder parametre illustrerede "few-shot learning", der er evnen til at udføre opgaver fra få eksempler uden specifik træning.
+    * **ChatGPT** nåede i 2022 100 millioner brugere hurtigere end nogen anden teknologi.
+    * Diffusion-models som DALL-E, Midjourney og Stable Diffusion revolutionerede **billedgenerering**.
+    * GitHub Copilot fra 2021 og efterfølgende systemer som GPT-4 transformerede programmering ved at **generere funktionel kode fra naturlig sprogbeskrivelser**.
 
 :::
 :::
@@ -160,37 +166,15 @@ Machine learning er (blevet) allestedsnærværende i moderne teknologi.
 
 ---
 
-::: {style="font-size: 0.8em;"}
-:::{.incremental}
-* I superviseret læring giver vi computeren et træningsdatasæt, hvor hver tekst allerede er blevet mærket eller kategoriseret af mennesker.
-* Hvis vi for eksempel vil bygge et system til at klassificere filmanmeldelser som positive eller negative, starter vi med at give computeren tusindvis af anmeldelser, hvor vi på forhånd har markeret hver enkelt som enten positiv eller negativ. **Computeren lærer så at finde de sproglige mønstre, der karakteriserer hver kategori.**
-* De mest almindelige superviserede metoder til tekstanalyse omfatter klassifikationsalgoritmer som **Naive Bayes**, Support Vector Machines og neurale netværk. 
-* En vigtig pointe er, at kvaliteten af den superviserede model er dybt afhængig af kvaliteten og omfanget af de "labeled" data, vi træner den med.
-:::
-:::
+**Unsupervised learning** handler om at finde skjulte strukturer i data *uden* forudgavede svar. 
+
+Algoritmen opdager selv mønstre, grupperinger eller sammenhænge. Dette bruges blandt andet til at segmentere kunder i forskellige grupper baseret på deres adfærd, eller til at reducere kompleksiteten i datasæt med mange dimensioner.
 
 ---
 
-**Unsupervised learning** handler om at finde skjulte strukturer i data *uden* forudgavede svar. Algoritmen opdager selv mønstre, grupperinger eller sammenhænge. Dette bruges blandt andet til at segmentere kunder i forskellige grupper baseret på deres adfærd, eller til at reducere kompleksiteten i datasæt med mange dimensioner.
+**Reinforcement learning** er inspireret af hvordan dyr og mennesker lærer gennem belønning og straf. En agent (det lærende system) interagerer med et miljø og modtager feedback i form af belønninger for gode handlinger og straffe for dårlige. 
 
----
-
-**Reinforcement learning** er inspireret af hvordan dyr og mennesker lærer gennem belønning og straf. En agent (det lærende system) interagerer med et miljø og modtager feedback i form af belønninger for gode handlinger og straffe for dårlige. Over tid lærer agenten hvilke strategier der maksimerer den samlede belønning. Denne tilgang har haft stor succes inden for spil, robotstyring og autonome systemer.
-
-## Hvordan "lærer" man noget? 
-
-<!-----
-
-Lad os tage et konkret eksempel: forestil dig at du vil lære en model at forudsige boligpriser baseret på kvadratmeter, antal værelser og beliggenhed.
-
-Modellen starter med tilfældige gætteværdier for hvor meget hver faktor betyder. Den laver derefter forudsigelser for alle boliger i træningsdataene og sammenligner sine gæt med de faktiske priser. Forskellen mellem gæt og virkelighed kaldes "fejlen" eller "tabet".
-
-Gennem en proces kaldet optimering justerer modellen gradvist sine interne vægte for at minimere denne fejl. Dette sker typisk gennem en metode kaldet gradient descent, hvor modellen beregner hvordan små ændringer i vægtene påvirker fejlen, og derefter bevæger sig i retning af mindre fejl. Denne proces gentages mange gange gennem træningsdataene, indtil modellen konvergerer mod en løsning der giver gode forudsigelser.
-
-
-INDSÆT TIMER MED SPG. 
------>
-
+Over tid lærer agenten hvilke strategier der maksimerer den samlede belønning. Denne tilgang har haft stor succes inden for spil, robotstyring og autonome systemer.
 
 ## Natural Language Processing (NLP)
 
@@ -204,20 +188,11 @@ INDSÆT TIMER MED SPG.
     * Eksempler fra hverdagen: *ChatGPT, Tale-til-tekst applikationer, tekstforslag i beskeder, autokorrektur, oversættelsestjenester (Google Translate)*
 :::
 
-## Analyseformål 
-
-* **Skabe overblik** (fx nøgleordsanalyse)
-* Identificér og måle **prædefinerede koncepter** (hate-speech, politisk ideologi, diskurs)
-* Udforske og forstå **komplekse meningssammenhænge** (hvordan temaer opstår og udvikler sig, hvordan befolkningsgrupper, institutioner eller andet italesættes, koblinger mellem temaer, holdning og mening)
-* Identificér **sociale aktører** og deres (formodede) **handlinger** (hvem gjorde hvad til hvem?)
-* Computationel analyse af **sætningskonstruktion**
-
-
-
+<span class="timer" data-time="180"></span>
 
 ## Naive Bayes klassifikation: *læring gennem sandsynlighedsteori*
 
-> Forestil jer, at du står med en filmanmeldelse og vil afgøre, om den er positiv eller negativ. Naive Bayes spørger: "Givet de ord, jeg ser i denne anmeldelse, hvad er sandsynligheden for, at den tilhører hver kategori?"
+> Forestil jer, at I står med en filmanmeldelse og vil afgøre, om den er positiv eller negativ. Naive Bayes spørger: "Givet de ord, jeg ser i denne anmeldelse, hvad er sandsynligheden for, at den tilhører hver kategori?"
 
 Dette tager afsæt i **Bayes' Theorem**/-sætning:
 
@@ -227,8 +202,14 @@ $$
 
 Sætningen fortæller os, hvordan vi kan vende en betinget sandsynlighed om. Hvis vi kalder vores kategorier for $C$ ("positiv" eller "negativ") og vores dokument for $D$ (repræsenteret ved de ord, det indeholder), så siger Bayes' sætning:
 
+---
+
+$$
+P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
+$$
+
 ::: {style="font-size: 0.8em;"}
-1. $P(C \mid D)$ er den **posterior sandsynlighed**: sandsynligheden for, at dokumentet tilhører kategori C, givet at vi har observeret ordene i D.Det er altså hvad vi vil finde ud af. 
+1. $P(C \mid D)$ er den **posterior sandsynlighed**: sandsynligheden for, at dokumentet tilhører kategori $C$, givet at vi har observeret ordene i $D$. Det er altså hvad vi vil finde ud af. 
 2. $P(D \mid C)$ er vores **likelihood**: sandsynligheden for at se netop denne kombination af ord, hvis vi ved, at dokumentet tilhører kategori $C$. 
 3. $P(C)$ er **prior sandsynligheden**: vores forhåndsforventning om, hvor sandsynlig kategorien er, før vi har set dokumentet. $P(D)$ er en normaliseringskonstant, der sikrer, at sandsynlighederne summerer til én.
 :::
@@ -241,17 +222,7 @@ $$
 
 Den naive antagelse er at vi går ud fra uafhængighed mellem ord. I virkeligheden er ord i en tekst åbenlyst ikke uafhængige af hinanden.
 
-Naive Bayes **antager**, at alle ord er betingelsesvist uafhængige givet kategorien, udtrykt som:
-
-$$
-P(D \mid C) = P(w_1, w_2, \ldots, w_n \mid C) = P(w_1 \mid C) \times P(w_2 \mid C) \times \cdots \times P(w_n \mid C)
-$$
-
-
-hvor $w_1, w_2, \ldots, w_n$ er de individuelle ord i dokumentet. **Denne antagelse er objektivt forkert, men den fungerer stadig i praksis, fordi den gør beregningerne håndterbare.**
-
-
-## Naive Bayes som *Sentimentanalyse*
+## Naive Bayes i praksis
 
 Forstil jer at vi har trænet en model på tusindvis af filmanmeldelser, og vi ser denne korte anmeldelse: `"Fantastisk film. Elsker!"`.
 
@@ -281,786 +252,148 @@ Forstil jer at vi har trænet en model på tusindvis af filmanmeldelser, og vi s
 :::
 :::
 
-# Øvelse
+# Live eksempel
 
 ## Hvilken problemer opstår i læring? 
 
-<!------
+Machine learning er ikke en universalløsning.
 
-Machine learning er ikke en universalløsning. Systemerne er kun så gode som den data de trænes på. Hvis træningsdataene er biased eller ufuldstændige, vil modellen lære og reproducere disse fejl. En ansigtsgenkendelses-algoritme trænet primært på billeder af en bestemt demografi kan fejle når den møder andre ansigtstyper.
+::: {style="font-size: 0.8em;"}
 
-Mange machine learning modeller, især deep learning netværk, fungerer som "black boxes" - det kan være svært at forstå præcist hvorfor de træffer en bestemt beslutning. Dette skaber udfordringer inden for områder hvor transparens og forklarlighed er kritiske, såsom medicinske diagnoser eller juridiske afgørelser.
+* Systemerne er **kun så gode som den data de trænes på**. Hvis træningsdataene er biased eller ufuldstændige, vil modellen lære og reproducere disse fejl.
+    * En ansigtsgenkendelses-algoritme trænet primært på billeder af en bestemt demografi kan fejle når den møder andre ansigtstyper.
+* Mange machine learning modeller, især deep learning netværk, fungerer som **"black boxes"**. 
+    * Det kan være svært, hvis ikke umuligt, at forstå præcist hvorfor de træffer en bestemt beslutning. Dette giver nogle fundamentale udfordringer inden for områder hvor transparens og forklarlighed er kritiske, såsom medicinske diagnoser eller juridiske afgørelser.
+* Desuden kræver mange moderne machine learning systemer **enorme mængder data og beregningskraft for at træne**, hvilket kan være dyrt og miljømæssigt belastende. 
 
-Desuden kræver mange moderne machine learning systemer enorme mængder data og beregningskraft for at træne, hvilket kan være dyrt og miljømæssigt belastende. Og selvom modeller kan være utroligt dygtige til specifikke opgaver, mangler de den generelle intelligens og robusthed som mennesker besidder.
-
-Machine learning repræsenterer en fundamental forskydning i hvordan vi bygger intelligente systemer - fra håndskrevne regler til datadrevet læring. Det er et felt i rivende udvikling der fortsætter med at transformere industrier og åbne nye muligheder, samtidig med at det rejser vigtige spørgsmål om etik, bias og ansvar i AI-systemer.
-
------>
+:::
 
 ## ML algoritmer 
 
-<!----
+#### Superviseret ML: 
 
-LAV LISTE
-Disse algoritmer repræsenterer fundamentet i machine learning. I praksis kombineres de ofte, ensembles bygges, og hyperparametre tunes omhyggeligt. Valget af algoritme afhænger af dit problem, datamængde, krav til fortolkelighed, og computational resourcer. Der er ingen "bedste" algoritme - det handler om at forstå styrker og svagheder og vælge det rigtige værktøj til jobbet.RetryJ
+::: {style="font-size: 0.4em;"}
 
+* **Lineær Regression**: Lineær regression bruges til at forudsige numeriske værdier som huspriser, temperaturer eller salgstal. Algoritmen finder den bedste rette linje gennem datapunkterne, hvilket gør den hurtig, simpel at fortolke og nem at implementere. Den fungerer godt når sammenhængen mellem input og output kan tegnes som en ret linje. Ulempen er at den kun kan modellere lineære forhold, og den er følsom over for outliers - det vil sige ekstreme værdier der ligger langt fra resten af dataene. Et eksempel er at forudsige huspris baseret på størrelse, hvor sammenhængen er: jo større hus, jo højere pris, hvilket danner en ret linje.
 
+* **Logistisk Regression**: Logistisk regression bruges til klassifikation, altså at placere ting i kategorier som spam/ikke-spam, syg/rask eller godkendt/afvist. Algoritmen beregner sandsynligheden for at noget tilhører en bestemt kategori. Fordelen er at den er hurtig, giver sandsynligheder i stedet for bare ja/nej, og er let at fortolke. Den kan dog have udfordringer ved klassifikation af flere kategorier samtidig. Et eksempel: hvis du spørger om en email er spam, kan algoritmen svare "85% sandsynlighed for spam".
 
+* **Decision Trees**: Decision trees bruges til både klassifikation og regression. Algoritmen træffer beslutninger gennem en serie af ja/nej-spørgsmål organiseret i en træstruktur. De er intuitive og lette at visualisere, og de håndterer både numeriske tal og kategoriske data som tekst med minimal forberedelse. Ulemperne er tendens til overfitting, hvor modellen lærer træningsdata for godt og klarer sig dårligt på nye data. De er også ustabile, så små ændringer i data kan give meget forskellige træer, og de er dårlige til at gætte værdier uden for træningsdataens område. Et eksempel på en beslutningstræ-proces: "Er det solrigt? Ja → Er det over 20°? Ja → Er det weekend? Ja → Tag til stranden".
 
-GØR FØLGENDE "VALGFRI" LÆSNING VED AT TRYKKE NED
+* **Random forests**: Random forests bruges til samme opgaver som decision trees, men er mere pålidelige. De anvender ensemble learning, hvor mange træer kombineres for at få et bedre samlet resultat - ligesom at spørge flere eksperter i stedet for kun én. Dette gør dem robuste over for overfitting, og de håndterer manglende data godt samt kan vise hvilke features (egenskaber) der er vigtigst. Ulemperne er at de er mindre tolkbare end enkelte træer fordi det er svært at se præcis hvorfor de traf en beslutning, og de giver langsommere forudsigelser og kræver mere hukommelse. Man kan tænke på det som at spørge 100 eksperter og tage gennemsnittet af deres svar i stedet for at stole på én enkelt ekspert.
 
-Lineær Regression
-Lineær regression er en af de enkleste og mest fundamentale algoritmer. Den søger at finde en ret linje (eller et hyperplan i flere dimensioner) der bedst beskriver forholdet mellem input-features og output.
-Matematisk udtrykkes dette som: y = w₁x₁ + w₂x₂ + ... + wₙxₙ + b
-Her er x'erne dine input-features (f.eks. kvadratmeter, antal værelser), w'erne er vægte der fortæller hvor meget hver feature betyder, og b er en bias-term (skæringspunktet med y-aksen).
-Læringen foregår ved at justere vægtene så den samlede fejl minimeres. Fejlen måles typisk med Mean Squared Error (MSE), der beregner gennemsnittet af de kvadrerede forskelle mellem forudsigelser og faktiske værdier. Kvadreringen sikrer at både positive og negative fejl tæller, og større fejl straffes hårdere.
-Algoritmen bruger gradient descent: den beregner hvordan små ændringer i hver vægt påvirker fejlen (gradienten), og flytter vægtene i modsat retning af gradienten. Dette gentages iterativt indtil modellen konvergerer. Forestil dig at du er på et bjerg i tåge og vil ned i dalen - du føler hældningen omkring dig og tager små skridt i den retning der går mest nedad.
-Fordele: Hurtig, simpel at implementere og fortolke, fungerer godt når sammenhænge er lineære.
-Ulemper: Kan kun modellere lineære forhold, følsom over for outliers.
+* **Gradient boosting**: Gradient boosting bruges til samme opgaver som random forests, ofte med endnu bedre præcision. I modsætning til random forests, der bygger alle træer uafhængigt, bygger gradient boosting træer sekventielt - et ad gangen - hvor hvert nyt træ fokuserer på at rette op på de fejl de tidligere træer lavede. Dette gør den ofte til den mest præcise algoritme i praksis, og den er fleksibel og håndterer komplekse forhold. Ulemperne er at den er mere tilbøjelig til overfitting end random forests, kræver omhyggelig tuning af hyperparametre (indstillinger der styrer hvordan algoritmen lærer), og har langsommere træning.
 
+* **Support Vector Machines**: Support Vector Machines bruges til klassifikation. Forestil dig en linje der adskiller to grupper som æbler og pærer - SVM finder den bedste linje med mest mulig afstand til begge grupper. Algoritmen er effektiv selv når der er mange features, hukommelseseffektiv, og kraftfuld med den rigtige kernel, som er et matematisk trick der hjælper med at adskille komplekse mønstre. Den er dog langsom på store datasæt, følsom over for feature scaling (hvilket betyder at alle features skal være på samme skala), og svær at fortolke. Et eksempel er at adskille sunde og syge patienter baseret på blodprøver ved at finde den klareste grænse mellem grupperne.
 
+* **K-Nearest Neighbors** (KNN): K-Nearest Neighbors bruges til klassifikation og regression. Algoritmen fungerer efter princippet "stem med dine naboer" - den ser på de K nærmeste datapunkter og lader dem stemme om kategorien. Den har ingen træningsfase og lærer derfor ikke på forhånd, den er simpel at forstå, og den fungerer godt med uregelmæssige beslutningsgrænser. Ulemperne er at den er langsom ved forudsigelse på store datasæt fordi den skal sammenligne med alle datapunkter, den er følsom over for irrelevante features og feature scaling, og den kræver meget hukommelse. Et eksempel: hvis dine 5 nærmeste naboer er 4 katte og 1 hund, klassificeres du som kat fordi flertallet vinder.
 
+* **Naive Bayes**: Naive Bayes bruges til klassifikation, især tekstklassifikation og spam-filtrering. Algoritmen bruger sandsynlighedsregning gennem Bayes' sætning til at gætte kategorier. Den er ekstremt hurtig, effektiv selv med lidt data, og fungerer godt med højdimensionelle data der har mange features. Navnet "naive" kommer af at den antager at alle features er uafhængige af hinanden, hvilket sjældent er sandt i virkeligheden. Den kan også være dårlig til at estimere sandsynligheder hvis træningsdata er utilstrækkelig. Et eksempel er en spam-filter der ser på ord i en email og beregner: "90% af emails med ordene 'gratis', 'vind' og 'klik her' er spam".
 
-Logistisk Regression
-Trods navnet bruges logistisk regression til klassifikation, ikke regression. Den forudsiger sandsynligheden for at noget tilhører en bestemt kategori.
-Algoritmen tager den lineære kombination af features (som i lineær regression), men sender resultatet gennem en sigmoid-funktion der presser output til et interval mellem 0 og 1. Sigmoid-funktionen ser ud som et S og er defineret som: σ(z) = 1 / (1 + e⁻ᶻ)
-Hvis vi skal klassificere emails som spam eller ikke-spam, vil modellen beregne en score og konvertere den til en sandsynlighed. En sandsynlighed over 0.5 klassificeres typisk som "spam", under 0.5 som "ikke spam".
-Træningen bruger en tabsfunktion kaldet cross-entropy loss, der straffes særligt hårdt når modellen er meget sikker, men tager fejl. Optimering sker igen gennem gradient descent.
-For problemer med flere kategorier (multi-class classification) bruges softmax regression, der generaliserer logistisk regression til at håndtere mere end to klasser.
+:::
 
+---
 
 
+#### Usuperviseret ML: 
 
+::: {style="font-size: 0.5em;"}
 
-Decision Trees (Beslutningstræer)
-Decision trees træffer beslutninger gennem en serie af ja/nej spørgsmål, organiseret i en træstruktur. Hver intern node repræsenterer et spørgsmål om en feature, hver gren repræsenterer et svar, og hvert blad repræsenterer en klassifikation eller forudsigelse.
-Sådan bygges træet:
-Algoritmen starter med hele datasættet ved roden og stiller spørgsmålet: "Hvilket split giver mig den reneste opdeling?" Den evaluerer alle mulige måder at dele dataene på og vælger den der maksimerer "information gain" eller minimerer "Gini impurity".
-Gini impurity måler hvor "blandede" klasserne er i en node. En ren node (kun én klasse) har Gini = 0, mens en perfekt blandet node har højere Gini. Formlen er: Gini = 1 - Σ(pᵢ²) hvor pᵢ er sandsynligheden for klasse i.
-Information gain måler reduktionen i entropi (uorden) efter et split. Algoritmen vælger altid det split der giver højest information gain.
-Denne proces gentages rekursivt for hver undergruppe, indtil et stopkriterium er nået (f.eks. maksimal dybde, minimum antal eksempler per blad, eller ingen yderligere forbedring).
-Fordele: Intuitive, let at visualisere, håndterer både numeriske og kategoriske data, kræver minimal data preprocessing.
-Ulemper: Tendens til overfitting, ustabile (små ændringer i data kan give meget forskellige træer), dårlige til at ekstrapolere.
+* **K-means**: K-means bruges til at gruppere data i kategorier når vi ikke ved kategorierne på forhånd. Algoritmen finder K centre-punkter og placerer hvert datapunkt ved det nærmeste center, hvilket danner klynger. Den er simpel, hurtig og skalerer godt til store datasæt. Ulemperne er at man skal vælge antallet af klynger (K) på forhånd, den er følsom over for hvor man starter (initialisering), den antager at klynger er runde med lignende størrelse, og den er følsom over for outliers. Et eksempel er at gruppere kunder i segmenter baseret på købeadfærd uden at vide kategorierne på forhånd - algoritmen kan finde fx "budget-shoppere", "luksus-kunder" og "impuls-købere".
 
+* **Principal Component Analysis** (PCA): PCA bruges ikke til forudsigelser, men til at simplificere komplicerede data. Algoritmen transformerer data så de vigtigste mønstre, kaldet principal components, fanger mest variation i dataene. Den reducerer støj, gør andre algoritmer hurtigere, og muliggør visualisering af komplekse data. Ulemperne er at principal components er svære at fortolke (hvad betyder "komponent 1" egentlig?), den er kun en lineær metode og finder derfor kun lineære sammenhænge, og den er følsom over for feature scaling. Et eksempel er at reducere 100 målinger om en person som højde, vægt, alder og indkomst til 3 hovedkomponenter der fanger det vigtigste, hvilket gør det lettere at visualisere og arbejde med dataene.
 
+* **Neurale Netværk**: Neurale netværk bruges til komplekse opgaver som billedgenkendelse, sprogforståelse og tale-genkendelse. De er inspireret af hvordan hjernen virker og består af lag af neuroner, som er simple beregningsenheder. Hver neuron modtager input, anvender vægte der repræsenterer styrken af forbindelser, summerer dem, tilføjer bias og sender resultatet gennem en aktiveringsfunktion. Netværket lærer ved at bruge backpropagation, hvor det arbejder baglæns fra fejl og justerer vægte så det forbedres over tid. De kan lære ekstremt komplekse mønstre og giver state-of-the-art resultater på mange opgaver. Ulemperne er at de kræver meget data og computerkapacitet, de er svære at fortolke og fungerer som en "black box", og de har lang træningstid. Et eksempel er at genkende ansigter på billeder ved at lære mønstre fra millioner af eksempler.
 
+:::
 
+---
 
-Random Forests
-Random forests adresserer mange af decision trees' svagheder ved at bruge ensemble learning - at kombinere mange modeller til én stærkere model.
-Algoritmen bygger hundredvis eller tusinder af decision trees, men introducerer to vigtige elementer af tilfældighed:
-Bootstrap Aggregating (Bagging): Hvert træ trænes på et tilfældigt udvalg af træningsdata, hvor eksempler kan vælges flere gange (sampling with replacement). Dette skaber variation mellem træerne.
-Feature Randomness: Ved hvert split i hvert træ overvejes kun et tilfældigt subset af features i stedet for alle features. Dette forhindrer at dominerende features overtager alle træer.
-Når modellen skal lave en forudsigelse, "stemmer" alle træerne. For klassifikation bruges majority vote, for regression bruges gennemsnit.
-Denne diversitet blandt træerne gør modellen robust: selv hvis enkelte træer laver fejl eller overfitter, vil flertallet af træer typisk træffe bedre beslutninger. Det er princippet om "wisdom of crowds".
-Fordele: Højt præcis, robust over for overfitting, håndterer manglende data godt, kan estimere feature importance.
-Ulemper: Mindre tolkbar end enkelte træer, langsommere til forudsigelse, kræver mere hukommelse.
-
-
-
-
-
-
-Gradient Boosting
-Gradient boosting er en anden ensemble-metode, men med en fundamental anderledes strategi end random forests. I stedet for at bygge træer uafhængigt, bygges de sekventielt hvor hvert nyt træ forsøger at korrigere fejlene fra de foregående træer.
-Processen:
-
-Start med en simpel forudsigelse (ofte bare gennemsnittet)
-Beregn residualerne (forskellen mellem forudsigelse og faktiske værdier)
-Træn et nyt træ til at forudsige disse residualer
-Tilføj dette træ til modellen med en lav vægt (learning rate)
-Gentag 2-4 hundredvis af gange
-
-Hver iteration fokuserer på de eksempler hvor modellen stadig performer dårligt. Det er som at have en studiegruppe hvor hver person fokuserer på at løse de problemer de andre har haft svært ved.
-Den endelige forudsigelse er summen af alle træernes bidrag: F(x) = f₀(x) + α·f₁(x) + α·f₂(x) + ... + α·fₙ(x), hvor α er learning rate.
-Moderne implementationer som XGBoost, LightGBM og CatBoost har tilføjet sofistikerede optimeringer der gør gradient boosting ekstremt kraftfuld og effektiv.
-Fordele: Ofte den mest præcise algoritme i praksis, fleksibel, håndterer komplekse forhold.
-Ulemper: Mere tilbøjelig til overfitting end random forests, kræver omhyggelig hyperparameter tuning, langsommere træning.
-
-
-
-
-
-Support Vector Machines (SVM)
-SVM er en elegant algoritme til klassifikation der søger at finde den optimale beslutningsgrænse mellem klasser. Idéen er at finde hyperplanet (i 2D en linje, i 3D et plan, osv.) der maksimerer marginen mellem de to nærmeste punkter fra hver klasse.
-Kerneidéen:
-Forestil dig to grupper af punkter på et papir. Der er mange linjer du kunne tegne for at adskille dem, men SVM vælger den linje der har størst mulig afstand til de nærmeste punkter fra begge sider. Disse nærmeste punkter kaldes "support vectors" - de er de eneste punkter der faktisk påvirker placeringen af beslutningsgrænsen.
-Matematisk optimeres dette ved at maksimere: 2/||w||, subject til at alle punkter er korrekt klassificeret med en margin. Her er w vægt-vektoren der definerer hyperplanet.
-Kernel-tricket:
-SVMs sande styrke kommer fra kernel-tricket. Ofte er data ikke lineært separerbart i det originale feature-space. Kernel-tricket transformerer implicit dataene til et højere-dimensionelt rum hvor lineær separation bliver mulig.
-Tænk på cirkler og kryds blandet sammen på en linje. Du kan ikke tegne en ret linje for at adskille dem. Men hvis du tilføjer en dimension (højde) og løfter alle cirkler op, kan du nu skære dem ad med et plan. Kernel-funktioner gør dette matematisk elegant uden faktisk at beregne de høj-dimensionelle koordinater.
-Populære kernels inkluderer:
-
-Lineær: K(x,y) = x·y
-Polynomial: K(x,y) = (x·y + c)^d
-RBF (Radial Basis Function): K(x,y) = exp(-γ||x-y||²)
-
-Fordele: Effektiv i højdimensionelle rum, hukommelseseffektiv, kraftfuld med rigtig kernel.
-Ulemper: Langsom på store datasæt, følsom over for feature scaling, svær at fortolke.
-
-
-
-
-
-
-
-K-Nearest Neighbors (KNN)
-KNN er måske den mest intuitive machine learning algoritme - den klassificerer baseret på hvad de nærmeste naboer stemmer.
-Sådan virker det:
-Når du skal klassificere et nyt punkt, finder algoritmen de K nærmeste træningspunkter (typisk målt med euklidisk afstand) og lader dem "stemme". For klassifikation vinder den klasse der er mest repræsenteret blandt naboerne. For regression bruges gennemsnittet af naboernes værdier.
-Valget af K er kritisk:
-
-Lille K (f.eks. 1-3): Følsomt over for støj, komplekse beslutningsgrænser, risiko for overfitting
-Stor K: Mere robust, glattere grænser, men kan udviske lokale mønstre
-
-Afstandsmåling er også vigtig. Euklidisk afstand d = √Σ(xᵢ-yᵢ)² er standard, men Manhattan distance (sum af absolutte forskelle) eller Minkowski distance kan være bedre for visse problemer.
-Fordele: Ingen træningsfase, simpel at forstå, fungerer godt med uregelmæssige beslutningsgrænser.
-Ulemper: Langsom ved forudsigelse på store datasæt, følsom over for irrelevante features og feature scaling, memory-intensive.
-
-
-
-
-
-
-Naive Bayes
-Naive Bayes bygger på Bayes' sætning fra sandsynlighedsteori. Navnet "naive" kommer fra antagelsen om at alle features er uafhængige givet klassen - en antagelse der sjældent holder i virkeligheden, men algoritmen virker ofte alligevel overraskende godt.
-Bayes' sætning:
-P(Class|Features) = P(Features|Class) · P(Class) / P(Features)
-Dette læses som: Sandsynligheden for en klasse givet features er lig med sandsynligheden for at se disse features i den klasse, gange den generelle sandsynlighed for klassen, divideret med den generelle sandsynlighed for disse features.
-I praksis:
-For at klassificere et dokument som spam eller ikke-spam beregner algoritmen:
-
-P(spam|ord₁, ord₂, ..., ordₙ)
-P(ikke-spam|ord₁, ord₂, ..., ordₙ)
-
-Med naive-antagelsen bliver dette: P(spam) · P(ord₁|spam) · P(ord₂|spam) · ... · P(ordₙ|spam)
-Disse sandsynligheder estimeres simpelt fra træningsdata ved at tælle frekvenser.
-Varianter:
-
-Gaussian Naive Bayes: For kontinuerlige features, antager normal-fordeling
-Multinomial Naive Bayes: For optællingsdata, god til tekstklassifikation
-Bernoulli Naive Bayes: For binære features
-
-Fordele: Ekstremt hurtig, effektiv med lidt data, fungerer godt med højdimensionelle data, god til tekstklassifikation.
-Ulemper: Naive uafhængighedsantagelse holder sjældent, kan være dårlig til at estimere sandsynligheder hvis træningsdata er utilstrækkelig.
-
-
-
-
-
-
-
-K-Means Clustering
-K-means er den mest populære unsupervised learning algoritme til clustering. Den grupperer data i K klynger baseret på lighed.
-Algoritmen:
-
-Initialisering: Vælg K tilfældige punkter som initiale cluster centers (centroids)
-Assignment: Tildel hvert datapunkt til den nærmeste centroid
-Update: Beregn nye centroids som midtpunktet af alle punkter i hver cluster
-Gentag: Iterér skridt 2-3 indtil centroids ikke længere flytter sig (konvergens)
-
-Algoritmen minimerer "within-cluster sum of squares" (WCSS): summen af kvadrerede afstande fra hvert punkt til dets cluster center.
-Valg af K:
-Elbow-metoden ploter WCSS mod antal clusters. Når kurven begynder at flade ud ("albuen"), er det ofte et godt valg af K. Silhouette-score er en anden metrik der måler hvor godt clusteret data er.
-Fordele: Simpel, hurtig, skalerer godt til store datasæt.
-Ulemper: Skal vælge K på forhånd, følsom over for initialisering, antager sfæriske clusters med lignende størrelse, følsom over for outliers.
-
-
-
-
-
-
-
-
-Principal Component Analysis (PCA)
-PCA er en dimensionalitetsreduktions-teknik der transformerer data til et nyt koordinatsystem hvor de første dimensioner (principal components) fanger mest varians i dataene.
-Hvorfor reducere dimensioner?
-Højdimensionelle data er svære at visualisere, træge at processere, og lider af "the curse of dimensionality". PCA hjælper ved at finde de retninger i data hvor der er mest variation og projicere data ned på disse retninger.
-Matematisk:
-PCA finder egenvektorer og egenværdier af kovariansmatricen. Egenværdierne fortæller hvor meget varians hver principal component forklarer. De første få components fanger typisk størstedelen af variansen.
-Hvis dine data har 100 features men de 10 første principal components fanger 95% af variansen, kan du reducere fra 100 til 10 dimensioner med minimal informationstab.
-Fordele: Reducerer støj, accelererer andre algoritmer, gør visualisering mulig.
-Ulemper: Principal components er svære at fortolke, lineær metode (finder kun lineære sammenhænge), følsom over for feature scaling.
-
-
-
-
-
-
-
-
-Neurale Netværk - Dybere Forklaring
-Et neuralt netværk består af lag af neuroner. Hver neuron modtager input, anvender en vægt til hvert input, summerer dem, tilføjer en bias, og sender resultatet gennem en aktiveringsfunktion.
-Matematisk for én neuron:
-output = activation(Σ(wᵢ · xᵢ) + b)
-Aktiveringsfunktioner:
-Disse ikke-lineære funktioner giver netværket evnen til at lære komplekse mønstre:
-
-ReLU (Rectified Linear Unit): f(x) = max(0, x) - Enkel, hurtig, mest populær
-Sigmoid: f(x) = 1/(1+e⁻ˣ) - Output mellem 0 og 1, god til output layer i binær klassifikation
-Tanh: f(x) = (eˣ-e⁻ˣ)/(eˣ+e⁻ˣ) - Output mellem -1 og 1, centreret omkring 0
-Softmax: Brugt i output layer for multi-class, giver sandsynlighedsfordeling
-
-Backpropagation:
-Dette er den centrale læringsalgoritme i neurale netværk. Den beregner hvordan fejlen ved output skal fordeles tilbage gennem netværket for at justere hver vægt:
-
-Forward pass: Data sendes gennem netværket, lag for lag
-Beregn fejl: Sammenlign output med faktisk værdi
-Backward pass: Brug kædereglen fra calculus til at beregne gradienten for hver vægt relativt til fejlen
-Opdater vægte: Juster vægte i retning der reducerer fejlen
-
-Dette gentages over mange epochs (gennemløb af træningsdata) med små learning rates for gradvist at forbedre netværket.
-Regularisering:
-For at forhindre overfitting bruges teknikker som:
-
-Dropout: Slukker tilfældigt for nogle neuroner under træning
-L1/L2 regularization: Tilføjer straf for store vægte til tabsfunktionen
-Batch normalization: Normaliserer aktivationer mellem lag
-Early stopping: Stop træning når validation loss stopper med at falde
-
-
------>
+I praksis kombineres algoritmerne ofte i **ensembles** med omhyggelig **hyperparameter-tuning**. Valget afhænger af problem, datamængde, krav til fortolkelighed og computational ressourcer. Der er ingen "bedste" algoritme. Det vil altid handle om at vælge det rigtige "værktøj" til jobbet.
 
 ## Algorimer? 
 
-<!-----
+::: {style="font-size: 0.8em;"}
 
-INDSÆT TIMER 
+Den **klassiske algoritme-definition**: En præcis, endelig sekvens af veldefinerede instruktioner der:
 
-Den Klassiske Algoritme-Definition
-I traditionel computervidenskab defineres en algoritme som:
-En præcis, endelig sekvens af veldefinerede instruktioner der:
+1. Tager et input
+2. Udfører en beregning gennem diskrete skridt
+3. Producerer et output
+4. Terminerer (stopper) efter et endeligt antal skridt
+5. Er reproducerbar - samme input giver samme output
 
-Tager et input
-Udfører en beregning gennem diskrete skridt
-Producerer et output
-Terminerer (stopper) efter et endeligt antal skridt
-Er reproducerbar - samme input giver samme output
+Det der gør **machine learning modeller** til *algoritmer* er at de fundamentalt er specificerede, reproducerbare, mekaniske procedurer for at **transformere input til output gennem en sekvens af veldefinerede operationer**.
 
-Eksempel: En sorteringsalgoritme tager en usorteret liste, følger specifikke regler for at sammenligne og bytte elementer, og returnerer en sorteret liste. Processen er fuldstændig deterministisk og specificeret på forhånd.
+På et meta-niveau forbliver alt algoritmisk: **sekvenser af præcise instruktioner, eksekverbare af en maskine, analysable matematisk, reproducerbare i praksis.** 
 
+Machine learning er ikke "magi". Det er ekstremt sofistikeret anvendelse af algoritmisk tænkning til at automatisere opdagelsen af mønstre i data.
 
-Det der gør machine learning modeller til "algoritmer" er at de fundamentalt er specificerede, reproducerbare, mekaniske procedurer for at transformere input til output gennem en sekvens af veldefinerede operationer.
-Både læreprocessen og inferensprocessen er fuldt algoritmiske. Det unikke ved ML sammenlignet med traditionelle algoritmer er at lærealgoritmen automatisk syntetiserer inferensalgoritmen baseret på data, i stedet for at have inferenslogikken håndkodet.
-Men på et meta-niveau forbliver alt algoritmisk: sekvenser af præcise instruktioner, eksekverbare af en maskine, analysable matematisk, reproducerbare i praksis. Machine learning er ikke magi - det er ekstremt sofistikeret anvendelse af algoritmisk tænkning til at automatisere opdagelsen af mønstre i data.
-Den dybeste indsigt: ML-algoritmer er algoritmer der skriver algoritmer, men hele kæden - fra læring til inferens - er algoritmisk hele vejen ned.
+:::
 
+---
 
+### To Algoritmer i Én
 
-ML's Dobbelte Natur: To Algoritmer i Én
-Her bliver det interessant. Når vi taler om en "machine learning algoritme", refererer vi faktisk til to forskellige algoritmiske processer:
-1. Lærealgoritmen (Training Algorithm)
-Dette er den proces der justerer modellens parametre baseret på data. DET er kernen i hvad vi mener med "algoritmen". For eksempel:
+::: {style="font-size: 0.8em;"}
 
-I gradient descent er algoritmen: beregn gradienten af tabsfunktionen, tag et skridt i modsat retning, gentag indtil konvergens
-I decision trees er algoritmen: find det bedste split, opdel data rekursivt, stop ved kriterium
-I k-means er algoritmen: tildel punkter til nærmeste centroid, genberegn centroids, gentag indtil stabilitet
+Når vi taler om en "machine learning algoritme", refererer vi faktisk til **to forskellige algoritmiske processer**, der består af at **transformere den matematiske idealspecifikation** til en mekanisk, step-by-step **procedure der kan eksekveres af en computer**:
 
-Disse er fuldt specificerede, mekaniske processer - præcis hvad en klassisk algoritme er.
-2. Inferens-algoritmen (Prediction Algorithm)
-Den trænede model selv udfører også en algoritmisk proces når den laver forudsigelser:
+1. ***Lærealgoritmen*** (training algorithm): den proces der justerer modellens parametre baseret på data. Det er denne, der er kernen i hvad vi mener med "algoritmen". For eksempel:
 
-Lineær regression: multiplicér inputs med vægte og addér - deterministisk aritmetik
-Neural netværk: feed-forward propagation gennem lag - specificerede matrix-operationer
-K-NN: find K nærmeste naboer, stem - veldefineret søge- og sammenligningsproces
+    * I **gradient descent** er algoritmen: beregn gradienten af tabsfunktionen, tag et skridt i modsat retning, gentag indtil konvergens
+    * I **decision trees** er algoritmen: find det bedste split, opdel data rekursivt, stop ved givet kriterium
+    * I **k-means** er algoritmen: tildel punkter til nærmeste centroid, genberegn centroids, gentag indtil stabilitet
 
+2. ***Inferens-algoritmen*** (prediction algorithm): den trænede model, der udfører også en algoritmisk proces når den laver forudsigelser:
 
+    * **Lineær regression**: multiplicer inputs med vægte og læg sammen
+    * **Neural netværk**: feed-forward propagation gennem lag
+    * **K-NN**: find K nærmeste naboer og udfør sammenligningsproces
 
+:::
 
-Fra Matematisk Model til Algoritmisk Implementering
-Dette er et centralt punkt: Der er en fundamental forskel mellem den matematiske specifikation og den algoritmiske implementering.
-Matematisk niveau:
-Lineær regression er defineret som at finde vægte w der minimerer: min Σ(yᵢ - wᵀxᵢ)²
-Dette er en matematisk optimeringsopgave - en specifikation af hvad vi ønsker at opnå, ikke hvordan vi gør det.
-Algoritmisk niveau:
-Gradient descent giver os en konkret fremgangsmåde:
-1. Initialiser vægte tilfældigt
-2. FOR hver iteration:
-   a. Beregn forudsigelser for alle datapunkter
-   b. Beregn gradient: ∂L/∂w
-   c. Opdater vægte: w := w - α·∇L
-   d. HVIS konvergens: STOP
-3. RETURNER vægte
-Det algoritmiske består i at transformere den matematiske idealspecifikation til en mekanisk, step-by-step procedure der kan eksekveres af en computer.
-Andre metoder som Normal Equation giver en anden algoritmisk løsning på samme matematiske problem: w = (XᵀX)⁻¹Xᵀy - her er algoritmen matrix-inversion og multiplikation.
+--- 
+### Det epistemologisk interessante ved ML algoritmer 
 
+Traditionelle algoritmer implementerer løsninger vi allerede kender. De løser et problem vi kan specificere fuldstændigt. ML-algoritmer **finder løsninger til problemer vi ikke kan specificere eksplicit**. 
 
+> Vi kan ikke skrive ned præcise regler for at genkende en kat, men vi kan skrive en algoritme der lærer disse regler fra data.
 
+* Algoritmen er altså en metode til automatisk at *generere en anden algoritme* (**modellen**).
+* Dette er *meta-algoritmisk*: en algoritme der producerer algoritmer. **Læreprocessen er algoritmisk specificeret, men den resulterende model er ikke forhåndsspecificeret af programmøren**.
 
+## Hvad ML *ikke* er
 
+* Tilfældig trial-and-error uden struktur
+* Mystisk *"emergent intelligence"* uden mekanisk basis
+* Uforklarlige "black boxes" på algoritmisk niveau (selvom beslutningslogikken kan være uklar)
+* Menneskelig-lignende forståelse eller intuition
 
-Hvad Gør Processen "Algoritmisk"?
-Lad mig identificere de kerneegenskaber der gør ML-procedurer til ægte algoritmer:
-1. Mekanisk Eksekverbarhed
-Hvert trin i processen er præcist defineret ned til matematiske operationer der kan udføres mekanisk. Der er ingen "brug din intuition" eller "gør det der føles rigtigt" - ****alt er reduceret til beregninger****.
-Når gradient descent siger "beregn gradienten", mener den: tag den partielle afledte af tabsfunktionen med hensyn til hver parameter ved hjælp af calculus regler. Det er fuldstændig specificeret.
-2. Reproducerbarhed
-Givet samme starttilstand, data, og hyperparametre, vil algoritmen producere identiske resultater (eller i tilfælde med stochastiske elementer: samme statistiske fordeling af resultater med samme random seed).
-Dette adskiller ML-algoritmer fra menneskelig læring. Hvis to mennesker lærer fra samme data, vil deres indre repræsentationer være forskellige. To identiske neurale netværk med samme initialisering og data vil lære præcis det samme.
-3. Endelige Operationer
-Selvom nogle algoritmer teoretisk kunne køre i evighed, har de praktiske stopbetingelser:
+## Billedegenkendelse: *hvorfor er det så svært?* 
 
-Maksimalt antal iterationer
-Konvergens-threshold (når forbedring < ε)
-Validation performance stabiliserer sig
-Timeout
+Forestil jer at skulle programmere en computer til at genkende billeder af katte. 
 
-Decision tree algoritmen stopper når den når max_depth eller min_samples_split. Dette sikrer terminering.
-4. Decomponerbarhed
-Algoritmen kan brydes ned i atomiske operationer: addition, multiplikation, sammenligning, datastruktur-manipulation. Ingen "magiske" skridt.
-Backpropagation virker mystisk, men er bare gentagen anvendelse af kædereglen - en mekanisk calculus-operation.
-5. Implementeringsuafhængighed
-En algoritme er abstrakt - uafhængig af dens konkrete implementering. Gradient descent kan implementeres i Python, C++, eller JavaScript, men algoritmen forbliver den samme. Selve proceduren - sekvensen af logiske skridt - er det algoritmiske indhold.
-
-
------->
-
-## Det epistemologisk interessante ved ML algoritmer 
-
-<!-----
-
-Her bliver det filosofisk interessant. Traditionelle algoritmer implementerer løsninger vi allerede kender. Sortering løser et problem vi kan specificere fuldstændigt.
-ML-algoritmer finder løsninger til problemer vi ikke kan specificere eksplicit. Vi kan ikke skrive ned præcise regler for at genkende en kat, men vi kan skrive en algoritme der lærer disse regler fra data.
-
-Algoritmen er altså en metode til at automatisk generere en anden algoritme (modellen).
-Dette er meta-algoritmisk: en algoritme der producerer algoritmer. Læreprocessen er algoritmisk specificeret, men den resulterende model - selvom den også er algoritmisk - er ikke forhåndsspecificeret af programmøren.
-
-
-Optimering som Algoritmisk Fundament
-På det dybeste niveau kan næsten alle ML-algoritmer ses som optimeringsalgoritmer - algoritmer der søger efter minimum eller maksimum af en funktion.
-Optimeringsteori giver os den algoritmiske infrastruktur:
-Generel ML-algoritme struktur:
-
-Definer en tabsfunktion L(θ) der måler hvor dårlig modellen er
-Vælg en optimeringsalgoritme (gradient descent, Newton's method, etc.)
-Iterativt juster parametre θ for at minimere L(θ)
-Stop ved konvergens eller anden betingelse
-
-Dette framework gælder for lineær regression, neurale netværk, SVM, logistisk regression - de deler alle denne algoritmiske kerne. Forskellen ligger i:
-
-Formen af tabsfunktionen
-Strukturen af parameterspace
-Valget af optimizer
-Regulariseringstermer
-
-Men den underliggende algoritmiske proces - iterativ forbedring gennem gradientfølgning eller anden search-strategi - er fælles.
-
-
-Hvad Machine Learning IKKE Er
-For at forstå det algoritmiske i ML, kan det hjælpe at se hvad det ikke er:
-
-ML er ikke:
-Tilfældig trial-and-error uden struktur
-Mystisk "emergent intelligence" uden mekanisk basis
-Uforklarlige "black boxes" på algoritmisk niveau (selvom beslutningslogikken kan være uklar)
-Menneskelig-lignende forståelse eller intuition
-
-ML er:
-Systematisk søgning i parameterspace
-Mekanisk pattern-matching gennem matematiske transformationer
-Optimering af veldefinerede objektive funktioner
-Deterministisk manipulation af numeriske repræsentationer
-
-Den komplette algoritmiske proces for lineær regression er:
-
-Data Loading → Parse CSV/database til arrays
-Preprocessing → Feature scaling, handling missing values
-Split Data → Training/validation/test sets
-Initialize → Set parametre til startværdier
-Training Loop:
-
-Forward pass (matrix multiplikation)
-Loss computation (squared errors)
-Backward pass (gradient beregning)
-Parameter update (vægt opdatering)
-Convergence check
-
-
-Validation → Tjek performance på usete data
-Hyperparameter Tuning → Juster learning rate, regularization
-Final Evaluation → Test på holdout set
-Deployment → Save vægte, load til produktion
-
-Hver eneste operation - fra at læse bytes fra disk til at opdatere en vægt - er en præcis, mekanisk, reproducerbar proces. Der er ingen magi, kun algoritmer hele vejen ned.
----->
-
-
-
-## Et eksempel på algoritmisk implementering af OLS 
-
-<!-----
-
-"FRIVILLIG VED AT TRYKKE NED"
-
-Algoritmisk Implementering
-Lad mig tage dig gennem hver detalje af hvordan lineær regression faktisk implementeres, fra den første linje kode til den endelige model. Jeg vil bruge et konkret, simpelt eksempel hele vejen igennem.
-Problemformulering
-Vi har data hvor vi kender både input (features) og output (target), og vil finde en lineær funktion der bedst beskriver forholdet:
-y = w₁x₁ + w₂x₂ + ... + wₙxₙ + b
-eller i matrix-form: y = Xw + b
-Vores mål er at finde vægtene w og bias b der minimerer fejlen mellem forudsigelser og faktiske værdier.
-Konkret Eksempel: Boligpriser
-Lad os sige vi vil forudsige huspriser baseret på størrelse (m²) og antal værelser.
-Vores træningsdata:
-Størrelse (m²) | Værelser | Pris (mio. kr)
-    50         |    1     |    2.0
-    80         |    2     |    3.2
-   120         |    3     |    4.5
-   150         |    4     |    5.8
-   200         |    5     |    7.5
-Datarepræsentation i Hukommelsen
-Sådan ser dataene faktisk ud når de er loadet i en computer:
-Feature matrix X:
-[[  50,  1]
- [  80,  2]
- [ 120,  3]
- [ 150,  4]
- [ 200,  5]]
-Target vector y:
-[2.0, 3.2, 4.5, 5.8, 7.5]
-I computerens hukommelse er dette blot arrays af floating-point tal, typisk gemt i sammenhængende memory blocks. Hver række i X er én observation, hver kolonne er én feature.
-Pre-processing: Feature Scaling
-Før vi træner, skal vi typisk standardisere features så de er på samme skala. Dette hjælper algoritmerne med at konvergere hurtigere.
-Z-score normalisering:
-For hver feature: x_scaled = (x - mean(x)) / std(x)
-Beregning for størrelse:
-mean = (50 + 80 + 120 + 150 + 200) / 5 = 120
-std = √[(70² + 40² + 0² + 30² + 80²) / 5] = √(11400/5) = 47.75
-
-Skaleret størrelse:
-50  → (50-120)/47.75  = -1.466
-80  → (80-120)/47.75  = -0.838
-120 → (120-120)/47.75 =  0.000
-150 → (150-120)/47.75 =  0.628
-200 → (200-120)/47.75 =  1.676
-Beregning for værelser:
-mean = 3, std = 1.414
-
-1 → (1-3)/1.414 = -1.414
-2 → (2-3)/1.414 = -0.707
-3 → (3-3)/1.414 =  0.000
-4 → (4-3)/1.414 =  0.707
-5 → (5-3)/1.414 =  1.414
-Nu er vores X_scaled klar til træning.
-
-
-
-
-Gradient Descent (Iterativ Tilgang)
-Nu den iterative metode der er mere skalerbar og bruges mest i praksis.
-Konceptet
-I stedet for at beregne den optimale løsning direkte, starter vi med tilfældige vægte og forbedrer dem gradvist.
-Tabsfunktion (Mean Squared Error):
-L(w) = (1/n) × Σᵢ(yᵢ - ŷᵢ)²
-hvor ŷᵢ = w₁x₁ᵢ + w₂x₂ᵢ + b
-Gradienten fortæller os hvordan L ændrer sig når vi ændrer hver vægt.
-Matematisk Afledning af Gradient
-For at finde gradienten tager vi den partielle afledte af L med hensyn til hver parameter.
-For bias b:
-∂L/∂b = ∂/∂b[(1/n) × Σ(yᵢ - (w₁x₁ᵢ + w₂x₂ᵢ + b))²]
-Ved kædereglen:
-= (1/n) × Σ[2(yᵢ - (w₁x₁ᵢ + w₂x₂ᵢ + b)) × (-1)]
-= (-2/n) × Σ(yᵢ - ŷᵢ)
-For vægt w₁:
-∂L/∂w₁ = (1/n) × Σ[2(yᵢ - ŷᵢ) × (-x₁ᵢ)]
-= (-2/n) × Σ(yᵢ - ŷᵢ) × x₁ᵢ
-For vægt w₂:
-∂L/∂w₂ = (-2/n) × Σ(yᵢ - ŷᵢ) × x₂ᵢ
-
-
-Den Algoritmiske Implementering
+Med traditionel programmering ville vi forsøge at skrive regler:
 
 ```{python}
-# PSEUDOKODE FOR GRADIENT DESCENT
-
-# 1. INITIALISERING
-w1 = random_small_value()      # f.eks. 0.01
-w2 = random_small_value()      # f.eks. -0.01
-b = 0.0
-learning_rate = 0.01
-max_iterations = 1000
-tolerance = 1e-6
-
-# 2. ITERATIV OPTIMERING
-for iteration in range(max_iterations):
-    
-    # 2a. FORWARD PASS - beregn forudsigelser
-    predictions = []
-    for i in range(n_samples):
-        y_pred = w1 * X[i][0] + w2 * X[i][1] + b
-        predictions.append(y_pred)
-    
-    # 2b. BEREGN FEJL
-    errors = []
-    for i in range(n_samples):
-        error = y[i] - predictions[i]
-        errors.append(error)
-    
-    # 2c. BEREGN GRADIENTER
-    gradient_w1 = 0
-    gradient_w2 = 0
-    gradient_b = 0
-    
-    for i in range(n_samples):
-        gradient_w1 += errors[i] * X[i][0]
-        gradient_w2 += errors[i] * X[i][1]
-        gradient_b += errors[i]
-    
-    gradient_w1 = (-2.0 / n_samples) * gradient_w1
-    gradient_w2 = (-2.0 / n_samples) * gradient_w2
-    gradient_b = (-2.0 / n_samples) * gradient_b
-    
-    # 2d. OPDATER VÆGTE
-    w1 = w1 - learning_rate * gradient_w1
-    w2 = w2 - learning_rate * gradient_w2
-    b = b - learning_rate * gradient_b
-    
-    # 2e. TJEK KONVERGENS
-    gradient_magnitude = sqrt(gradient_w1² + gradient_w2² + gradient_b²)
-    if gradient_magnitude < tolerance:
-        print(f"Konvergeret efter {iteration} iterationer")
-        break
-    
-    # 2f. (OPTIONAL) LOG PROGRESS
-    if iteration % 100 == 0:
-        loss = mean(errors²)
-        print(f"Iteration {iteration}: Loss = {loss}")
-
-# 3. RETURNER TRÆNEDE VÆGTE
-return w1, w2, b
-```
-
-formål
-
-Koden implementerer gradient descent for en simpel lineær regressionsmodel med to input-funktioner (features) 𝑥1 og 𝑥2. Modellen er: y^​=w1​x1​+w2​x2​+b
-
-Formålet er at finde parametrene w1​,w2​,b som minimerer middelkvadreret fejl (MSE) mellem sande mål y og forudsigelser 𝑦^, ved iterativt at opdatere parametrene imod den negative gradient af tabet.
-
-1. Initialisering
-```{python}
-w1 = random_small_value()      # f.eks. 0.01
-w2 = random_small_value()      # f.eks. -0.01
-b = 0.0
-learning_rate = 0.01
-max_iterations = 1000
-tolerance = 1e-6
-```
-
-w1, w2, b: startværdier for parametrene. Små tilfældige startværdier hjælper med at bryde symmetri.
-
-learning_rate (α): hvor store skridt vi tager i parameter-rummet hver opdatering.
-
-max_iterations: øvre grænse for antal opdateringer (sikrer termination).
-
-tolerance: stop-kriterium — hvis gradientens størrelse bliver mindre end dette, antages konvergens.
-
-2. Iterativ optimering (hovedløkken)
-
-```{python}
-for iteration in range(max_iterations):
-
-```
-
-Kører opdateringscyklusser op til max_iterations. Hver iteration estimerer gradienten og opdaterer parametrene.
-
-2a. Forward pass — beregn forudsigelser
-
-```{python}
-predictions = []
-for i in range(n_samples):
-    y_pred = w1 * X[i][0] + w2 * X[i][1] + b
-    predictions.append(y_pred)
-
-```
-
-For hver datapunkt 𝑖 beregnes y^_i​=w1​x_i1​+w2​x_i2​+b
-
-Dette er fuld-batch fremadprop — alle samples bruges til at beregne fejl og gradient i hver iteration.
-
-2b. Beregn fejl
-
-```{python}
-errors = []
-for i in range(n_samples):
-    error = y[i] - predictions[i]
-    errors.append(error)
-
-```
-
-errors[i] = y_i - \hat{y}_i. Bemærk: koden definerer fejl som (sandt - forudsagt). Dette påvirker fortegnet i gradienten senere.
-
-2c. Beregn gradienter
-
-```{python}
-gradient_w1 = 0
-gradient_w2 = 0
-gradient_b = 0
-
-for i in range(n_samples):
-    gradient_w1 += errors[i] * X[i][0]
-    gradient_w2 += errors[i] * X[i][1]
-    gradient_b += errors[i]
-
-gradient_w1 = (-2.0 / n_samples) * gradient_w1
-gradient_w2 = (-2.0 / n_samples) * gradient_w2
-gradient_b = (-2.0 / n_samples) * gradient_b
-
-```
-
-Først summeres errors[i] * x_{ij} over alle samples. Matematiske mellemskridt:
-
-- For tabet L=1/n ∑i (yi −y^ i )2
-
-- ∂L/∂w1 = −2/n ∑i (yi −y^ i )xi1 (Deraf multiplicatoren -2/n.)
-
-Koden følger denne formel; bemærk at tegn og faktor (-2/n) matches error = y - y_pred.
-
-gradient_b = −2/n ∑i (yi −y^ i )
-
-
-2d. Opdater vægte (gradient descent step)
-
-```{python}
-w1 = w1 - learning_rate * gradient_w1
-w2 = w2 - learning_rate * gradient_w2
-b = b - learning_rate * gradient_b
-
-```
-
-Parametrene flyttes modsat gradienten: w←w−α∇L 
-
-Hvis gradienten er positiv for en parameter, trækkes der fra parameteren (reducerer parameterværdi).
-
-2e. Tjek konvergens
-
-```{python}
-gradient_magnitude = sqrt(gradient_w1² + gradient_w2² + gradient_b²)
-if gradient_magnitude < tolerance:
-    print(f"Konvergeret efter {iteration} iterationer")
-    break
-
-```
-
-Beregner Euclidisk norm (størrelse) af gradientvektoren.
-
-Hvis denne er under tolerance, antages tabet at være fladt nok — stop.
-
-2f. (Optional) Log progress
-```{python}
-if iteration % 100 == 0:
-    loss = mean(errors²)
-    print(f"Iteration {iteration}: Loss = {loss}")
-
-```
-
-Periodisk udskrift af tab (her MSE) for at følge træningsforløbet.
-
-
-3. Returner trænede vægte
-
-```{python}
-return w1, w2, b
-
-```
-
-Efter konvergens eller max-iterationer returneres de fundne parametre.
-
-Teknisk noter og antagelser
-Tabfunktion: implicit bruges MSE: L=n1 ∑(yi −y^ i )2
-Batch-type: dette er batch gradient descent — hele datasættet bruges hver iteration. Ikke stokastisk (SGD) og ikke mini-batch.
-Tegnsætning i fejl: koden bruger error = y - y_pred. Derfor står der et ekstra negativt tegn i gradientberegningen (dera -2/n)
-Kompleksitet: per iteration O(n) (her n = n_samples). Total tid O(n⋅iterations).
-Numerisk stabilitet: uden feature-skalering kan gradienterne være meget store eller små → læringsrate skal tilpasses. Anbefaling: normaliser features (z-score eller min-max).
-Valg af learning_rate: for stor → divergens; for lille → langsom konvergens.
-
------>
-
-## Billedegenkendelse 
-
-<!----
-
-Hvorfor Er Billedgenkendelse Svært?
-Forestil dig at skulle programmere en computer til at genkende billeder af katte. Med traditionel programmering ville du forsøge at skrive regler:
-
-```{python}
-def is_cat(image):
-    if has_pointy_ears(image) and has_whiskers(image) and has_fur(image):
+#| echo: true
+#| eval: false
+def er_det_en_kat(image):
+    if har_spidse_orer(image) and har_knurhår(image) and har_pels(image):
         return True
     return False
+
+print(er_det_en_kat("billede_hund.png"))
 ```
-
-Men hvordan implementerer du has_pointy_ears()? Du ville skulle specificere:
-
-Nøjagtig form og vinkel på ører
-Tekstur af pels
-Placering af features i forhold til hinanden
-Variation i farver, belysning, vinkler, delvis okklusion...
-
-Dette bliver hurtigt umuligt. Der er millioner af variationer - katte i forskellige positioner, med forskelligt lys, delvist skjulte, som killinger eller voksne, forskellige racer. At håndkode alle disse regler er praktisk umuligt.
-Machine learning løser dette ved at lære reglerne fra data i stedet for at få dem håndkodet.
-
-
-1. Data-Drevet Læring
-Vi specificerer ikke regler. Vi viser eksempler. Modellen finder selv mønstre:
-
-Hvilke pixel-kombinationer indikerer "kat"?
-Hvilke høj-niveau features betyder "Ferrari"?
-Hvordan kombineres features til beslutninger?
-
-2. Hierarkisk Feature-Læring
-Modellen bygger automatisk en repræsentation fra simpelt til komplekst:
-Pixels → Kanter → Former → Dele → Objekter → Scener
-Dette er umuligt at håndkode.
-
-3. Optimering af Objektiv Funktion
-Alt reduceres til: "Minimer den gennemsnitlige fejl på træningsdata"
-min Σ Loss(f(x_i; θ), y_i)
-Hvor f er netværket, θ er alle vægte, x_i er billeder, y_i er labels.
-
-
-4. Generalisering til Usete Data
-Magien er at modellen lærer generelle mønstre, ikke bare memorerer træningsdata.
-En model trænet på 60,000 håndskrevne cifre kan genkende din håndskrift - som den aldrig har set før.
-
-
-
-Før ML (traditionel computer vision):
-
-Hånddesignede features (SIFT, HOG, SURF)
-Ingeniører bruger år på feature engineering
-Brittle systems der fejler ved variation
-
-Med Deep Learning:
-
-Automatisk feature læring
-End-to-end optimering
-Robust til variation i data
-Overgår mennesker på mange opgaver
-
-Machine learning til billedgenkendelse er ikke magi. Det er:
-
-Systematisk transformation af pixels gennem lag af matriceoperationer
-Hierarkisk abstraktion fra simple til komplekse features
-Gradient-baseret optimering af millioner af parametre
-Statistisk pattern-matching på mega-skala
-
-Men samlet set skaber dette systemer der kan "se" på måder der var utænkelige for 20 år siden. Fra at genkende cifre til at diagnosticere kræft, identificere fuglearter, køre biler autonomt, og generere fotorealistiske billeder - alt sammen ved at lære fra data i stedet for at følge hårdkodede regler.
-
-
-
-
-
----->
 
 ## Datarepræsentation
 
-<!----
+**Opgaven**: Lær forskellen mellem disse mønstre af tal!
 
-Et digitalt billede er en matrix af pixels. Lad os tage et helt simpelt 28×28 gråtonebillede (som MNIST håndskrevne cifre):
+<br> 
 
-
-
-Forestil dig du er en computer der aldrig har set en kat. Alt du ser er tal:
+```
 Billede af en kat (forenklet 8×8 gråtone):
 [  10,  15,  20,  25,  25,  20,  15,  10]  ← Mørk baggrund
 [  15,  80, 120, 140, 140, 120,  80,  15]  ← Øverste kant af hoved
@@ -1080,1328 +413,66 @@ Billede af en hund (samme størrelse):
 [  20, 160, 170, 180, 180, 170, 160,  20]
 [  15,  80, 140, 160, 160, 140,  80,  15]
 [  10,  15,  20,  25,  25,  20,  15,  10]
-
-Opgaven: Lær forskellen mellem disse mønstre af tal!
-
-Forward Pass - Iteration 1
-Input: Kattebillede (8×8)
-
-Backward Pass - Lær fra Fejlen
-Sand label: Kat → [1, 0]
-Forudsigelse: [0.38, 0.62]
-Fejl: [0.38 - 1.0, 0.62 - 0.0] = [-0.62, 0.62]
-
-```{python}
-# Gradient af loss (cross-entropy + softmax):
-∂L/∂output = predicted - true
-           = [0.38 - 1.0, 0.62 - 0.0]
-           = [-0.62, 0.62]
-
-Dette fortæller: 
-"Kat-neuronen skulle have været HØJERE (-0.62 fejl)"
-"Hund-neuronen skulle have været LAVERE (+0.62 fejl)"
-
-# Fejl-signal sendes tilbage til convolutional lag:
-# "Hvilke features var vigtige for den forkerte beslutning?"
-
-# Hidden neuron 0 bidrog stærkt til Hund-score
-# Den var aktiveret af features fra midten af billedet
-# Disse features skal justeres!
 ```
 
-Nyt eksempel, samme process ... 
+--- 
 
-Efter 10 Træningseksempler
-Modellen har set:
+::: {style="font-size: 0.7em;"}
 
-5 katte-billeder (forskellige vinkler, positioner)
-5 hunde-billeder
+1. **Gradvis Abstraktion**: Pixels → Kanter → Former → Dele → Objekter
+2. **Automatisk Feature Discovery**: Vi specificerede ikke "find runde former". Netværket opdagede selv at runde former er vigtige
+3. **Distribueret Repræsentation**: Ingen enkelt neuron "er" kat-detektor. 
+4. **Datadrevet Læring**
+    * Kvalitet af træningsdata **er vigtigere end** model arkitektur
+    * Diverse eksempler giver en robust model
+    * Biased data giver en biased model
+5. **Iterativ Forbedring**
+    * Hver træningsiteration: Lille forbedring
+    * 1000+ iterationer: Ekspert-niveau performance
+    * Men aldrig perfekt ...
 
-Efter 100 Træningseksempler
-Forskellige filtre har specialiseret sig:
-Filter 1 - "Rund Form Detektor":
-Filter 2 - "Kant Detektor":
-Filter 3 - "Øje Detektor":
-Filter 4 - "Tekstur Detektor":
+::: 
 
-Efter 1000 Træningseksempler: Ekspert-Niveau
+Det er ikke magi. Det er **systematisk, iterativ pattern-matching** gennem gradient descent på et **massivt parameterspace**. Men resultatet, en model der "forstår" hvad en kat er, emerger *fra* denne "simple" proces, hvilket er det vilde ved machine learning.
 
+## En simplificering af processen
 
+Et billede af en kat i gråtoner (0-255): Hver celle er én pixel's lysstyrke
 
-Forståelse af Læreprocessen: Hvad Skete Der?
-Fase 1: Primære Features (Iteration 0-50)
-Filtrene lærer basale mønstre:
-- Lyse vs mørke områder
-- Horisontale/vertikale kanter
-- Simple teksturer
+<br> 
 
-Som et barn der lærer "det lyse ting" vs "det mørke ting"
-
-
-Fase 2: Sammensatte Features (Iteration 50-200)
-Filtre begynder at specialisere:
-- Filter kombination detekterer "rund + lys + kant" = ansigt
-- Dense layer lærer hvilke filter-kombinationer betyder noget
-
-Som et barn der lærer "rund + pels + ansigt-dele = kat"
-
-Fase 3: Kontekst og Disambiguation (Iteration 200+)
-Netværket lærer subtle forskelle:
-- Proportioner: Katte har forholdsvis større øjne
-- Tekstur: Kattepels vs hundepels (forskellige frekvenser)
-- Form: Katte har mere kompakte ansigter
-
-Som et barn der lærer at skelne mellem ligner-kat og er-kat
-
-
-
-Transfer Learning: Genbrugbar Viden
-Efter træning på katte vs hunde kan vi genbruge de lærte features:
-# Frys de første lag (basale features)
-Layer 1-2: FROZEN (kanter, teksturer er universelle!)
-
-# Tilføj nye output neuroner for ny opgave
-Layer 4: NEW - [Kat, Hund, Kanin, Hamster]
-
-# Fintune kun sidste lag
-# Kun 100-200 eksempler nødvendige i stedet for 1000+!
-
-Fordi: Kaniner har også pels-tekstur, kanter, former
-Det er kun de høj-niveau kombinationer der skal læres
-
-
-
-
-1. Gradvis Abstraktion
-Pixels → Kanter → Former → Dele → Objekter
-2. Automatisk Feature Discovery
-Vi specificerede ikke "find runde former"
-Netværket opdagede selv at runde former er vigtige
-3. Distribueret Repræsentation
-Ingen enkelt neuron "er" kat-detektor
-Det er mønsteret af aktivations på tværs af neuroner
-4. Datadrevet Læring
-Kvalitet af træningsdata > Model arkitektur
-Diverse eksempler → Robust model
-Biased data → Biased model
-5. Iterativ Forbedring
-Hver træningsiteration: Lille forbedring
-1000+ iterationer: Expert-niveau performance
-Men aldrig perfekt - statistisk pattern matching
-
-Det er ikke magi. Det er systematisk, iterativ pattern-matching gennem gradient descent på en massiv parameterspace. Men resultatet - en model der "forstår" hvad en kat er - emerger fra denne simple proces, hvilket er det virkelig smukke ved machine learning.RetryJ
-
------>
-
-## Neurale Netværk 
-
-<!----
-
-Et særligt kraftfuldt område inden for machine learning er neurale netværk, der er løst inspireret af hjernens struktur. Disse består af lag af kunstige neuroner der er forbundet med hinanden. Simple neurale netværk har få lag, mens deep learning refererer til netværk med mange lag (deraf "deep").
-
-Hvert lag i netværket lærer at genkende forskellige niveauer af abstraktion. I et billedgenkendelses-netværk kan de første lag lære at genkende simple kanter og teksturer, mellemste lag kan kombinere disse til former og mønstre, mens de dybe lag kan genkende komplette objekter som ansigter eller biler. Denne hierarkiske læringsstruktur gør deep learning særligt effektiv til komplekse opgaver.
-
-
-
-
-
-
-
-Forward Pass: Data flyder fremad gennem netværket - fra input til output
-Backward Pass: Gradienter flyder baglængs gennem netværket - fra output til input
-Forward Pass (Prediction):
-Input → Layer 1 → Layer 2 → ... → Output → Loss
-  x       h₁        h₂              ŷ        L
-Forward pass er færdig. Nu skal vi lære fra denne fejl!
-
-
-Backward Pass (Learning):
-∂L/∂x ← ∂L/∂W₁ ← ∂L/∂W₂ ← ... ← ∂L/∂ŷ ← L
-
-Fejlen fra output skal fordeles tilbage til hidden neurons.
-
-Backward Pass: The Magic of Backpropagation
-Nu kommer den del der gør at netværket kan lære. Vi skal beregne gradienten af loss'en med hensyn til HVER ENESTE vægt:
-∂L/∂w₁₁, ∂L/∂w₂₁, ∂L/∂w₁₂, ∂L/∂w₂₂, ∂L/∂w₃, ∂L/∂w₄, ∂L/∂b₁, ∂L/∂b₂
-
-Vægtene er nu opdateret! Hvis vi kører forward pass igen med de nye vægte, vil fejlen være mindre.
-
-FORWARD PASS (værdier flyder fremad):
-
-x₁=0.05 ──0.15──┐
-                ├─Σ─→ σ → h₁=0.5933 ──0.40──┐
-x₂=0.10 ──0.20──┘ +0.35                     ├─Σ─→ σ → ŷ=0.7514
-                                            │  +0.60
-x₁=0.05 ──0.25──┐                           │
-                ├─Σ─→ σ → h₂=0.5969 ──0.45──┘
-x₂=0.10 ──0.30──┘ +0.35
-
-                                        Loss = 0.0110
-
-
-BACKWARD PASS (gradienter flyder baglænds):
-
-∂L/∂x₁←─0.0027──┐
-                ├←Σ← -0.0111 ←─0.0165──┐
-∂L/∂x₂←─0.0027──┘                      ├←Σ← -0.0278 ← ∂L/∂ŷ=-0.1486
-                                       │
-∂L/∂x₁←─0.0030──┐                      │
-                ├←Σ← -0.0125 ←─0.0166──┘
-∂L/∂x₂←─0.0030──┘
-
-Hver vægt får sin gradient: ∂L/∂w
-
-dW[l]: Hvor meget hver vægt bidrog til fejlen
-db[l]: Hvor meget hver bias bidrog til fejlen
-da[l-1]: Fejl-signal der sendes tilbage til forrige lag
-
-
-The Beautiful Dance
-Forward og backward pass er en elegant dans af:
-
-Forward: Information transformation
-Data → Features → Abstract representations → Predictions
-
-Backward: Error attribution
-Loss → Output error → Hidden errors → Input gradients
-
-Update: Iterative improvement
-Juster hver vægt baseret på dens bidrag til fejl
-
-Dette simple princip - anvendt millioner af gange på millioner af parametre - skaber lærende systemer der kan genkende ansigter, forstå sprog, og spille komplekse spil.
-
-Kernen er:
-
-Forward pass er deterministisk computation
-Backward pass er automatisk differentiation via kædereglen
-Weight update er gradient descent optimization
-
-Alt sammen mekanisk, algoritmisk, og smukt matematisk - ingen magi, bare calculus og linear algebra anvendt i massiv skala.
------>
-
-## Fra Kaos til Intelligens
-
-<!-----
-
-# Simpelt eksempel:
-
-Træningseksempel 1: Kat med lys pande
-Pixel værdi: 245 (lys)
-Filter vægt: 0.04
-Output: 245 × 0.04 = 9.8
-→ Bidrog til Kat-klassifikation
-→ Gradient: "Øg denne vægt!"
-→ Ny vægt: 0.041
-
-Træningseksempel 2: Hund med mørkere pande  
-Pixel værdi: 180 (mindre lys)
-Filter vægt: 0.041
-Output: 180 × 0.041 = 7.38
-→ Bidrog til Hund-klassifikation
-→ Gradient: "Reducer denne vægt!"
-→ Ny vægt: 0.040
-
-Træningseksempel 3: Kat med lys pande
-Pixel værdi: 250
-Filter vægt: 0.040
-→ Gradient: "Øg!"
-→ Ny vægt: 0.042
-
-# Over tid: Vægten stiger når den korrelerer med "kat"
-# Resultat: Filter lærer at "lyse områder = kat"
-
-
-
-# I Dense Layer:
-
-Neuron 5 udvikling:
-Iteration 0:   Tilfældige vægte
-Iteration 100: Begynder at respondre til "rund + lys"
-Iteration 200: Specialiseret "kat-ansigt detektor"
-
-Neuron 8 udvikling:
-Iteration 0:   Tilfældige vægte
-Iteration 100: Begynder at respondre til "aflang + kant"
-Iteration 200: Specialiseret "hunde-kropsdetektor"
-
-# Hvorfor skete dette?
-
-# Neuron 5 havde TILFÆLDIGVIS startværdier der gav
-# lidt højere output for katte tidligt.
-# → Fik mere Kat-relateret gradient feedback
-# → Styrkede denne specialisering
-# → Blev "kat-ekspert"
-
-# Neuron 8 havde startværdier der tilfældigvis
-# matchede hunde lidt bedre
-# → Specialiserede sig i hunde
-
-# Dette er "SPONTAN SYMMETRIBRYDNING"
-# Fra symmetri (alle neuroner ens) → asymmetri (specialisering)
-
-
-Hvorfor Sker Det? Den Matematiske Essens
-1. Gradient Descent Finder Korrelationer
-# Simpel matematik:
-
-Loss = (prediction - true_label)²
-
-For at minimere loss:
-- Vægte der korrelerer med korrekt label → øges
-- Vægte der anti-korrelerer → reduceres
-- Vægte der er ukorrelerede → forbliver små
-
-# Eksempel:
-Vægt W ser ofte pixel=240 når label=kat
-→ Gradient skubber W højere
-→ W specialiseres til "detektor for lyse områder på katte"
-
-2. Ikke-Linearitet Skaber Kompleksitet
-# Uden activation functions:
-y = W₃(W₂(W₁x))
-  = (W₃W₂W₁)x
-  = W_combined × x
-→ Kun lineære transformationer mulige!
-
-# Med activation functions (ReLU):
-y = ReLU(W₃(ReLU(W₂(ReLU(W₁x)))))
-→ Kan lære VILKÅRLIGT komplekse funktioner!
-
-# ReLU tilføjer "knæk" i funktionen:
-f(x) = max(0, x)
-
-Dette gør at netværket kan lære:
-- IF blob AND edge AND texture THEN cat
-- Logiske kombinationer
-- Hierarkiske strukturer
-
-
-
-HVAD VI PROGRAMMERER:
-═══════════════════════
-- Netværks-arkitektur (antal lag, neuroner)
-- Activation functions (ReLU, sigmoid)
-- Loss function (cross-entropy)
-- Optimizer (gradient descent)
-- Træningsdata (billeder + labels)
-
-                    ↓
-            [10,000 iterationer]
-                    ↓
-
-HVAD DER EMERGERER:
-═══════════════════
-✗ "Roundness detector" ← VI specificerede IKKE dette
-✗ "Fur texture detector" ← VI specificerede IKKE dette
-✗ "Whisker detector" ← VI specificerede IKKE dette
-✗ Hierarkisk struktur ← VI specificerede IKKE dette
-✗ Specialiserede neuroner ← VI specificerede IKKE dette
-
-ALT emergerede fra:
-- Tilfældig initialisering
-- Systematisk gradient descent
-- Statistiske mønstre i data
-
-
-Konklusion: Fra Kaos til Orden
-Start (Iteration 0):
-[Tilfældige tal] → [Tilfældig output] → Loss: 0.69
-Ingen struktur. Ingen mening. Ren entropil
-Midte (Iteration 500):
-[Delvist strukturerede tal] → [Bedre output] → Loss: 0.32
-Mønstre begynder at forme sig. Vage specialiseringer.
-Slut (Iteration 5000):
-[Højt strukturerede tal] → [Præcis output] → Loss: 0.05
-Klar hierarki. Tydelige roller. Emergent intelligens!
-Nøglen:
-Ikke én vægt "besluttede" at blive roundness-detektor. Ikke én neuron "valgte" at specialisere sig i ansigter.
-Det EMERGEREDE gradvist gennem:
-
-Millioner af små justeringer
-Hver styret af gradient af fejl
-Akkumuleret over tusindvis af eksempler
-Konvergerende mod strukturer der minimerer loss
-
-Det er ikke magi. Det er emergens fra simple regler gentaget i massiv skala.
-Ligesom:
-
-Fugleflokkes mønstre emerger fra simple regler pr. fugl
-Bevidstheden emerger fra simple neuroner i hjernen
-Liv emerger fra simple kemiske reaktioner
-
-Machine learning er emergent kompleksitet fra matematisk simplicitet.
-Og det er derfor det er så smukt - og så skræmmende kraftfuldt.
-
-------->
-
-## Arkitektur
-
-<!----
-
-"FRIVILLIG SEKTION"
-
-Du er arkitekten der designer bygningen (netværket).
-Gradient descent er byggearbejderne der udfylder detaljerne (vægtene).
-Men du bestemmer grundstrukturen!
-
-```{python}
-import tensorflow as tf
-from tensorflow import keras
-
-# Build model
-model = keras.Sequential([
-    keras.layers.Conv2D(32, 3, activation='relu', 
-                       input_shape=(224, 224, 3)),
-    keras.layers.MaxPooling2D(2),
-    keras.layers.Conv2D(64, 3, activation='relu'),
-    keras.layers.MaxPooling2D(2),
-    keras.layers.Conv2D(128, 3, activation='relu'),
-    keras.layers.Flatten(),
-    keras.layers.Dense(256, activation='relu'),
-    keras.layers.Dense(2, activation='softmax')
-])
-
-# Load image
-image = load_cat_image()  # Shape: (224, 224, 3)
-image_batch = np.expand_dims(image, axis=0)  # Shape: (1, 224, 224, 3)
-
-# Create model that outputs intermediate layers
-layer_outputs = [layer.output for layer in model.layers[:6]]
-activation_model = keras.Model(inputs=model.input, 
-                               outputs=layer_outputs)
-
-# Get feature maps
-activations = activation_model.predict(image_batch)
-
-# Inspect
-print("Layer 1 (Conv2D) output shape:", activations[0].shape)
-# (1, 222, 222, 32) ← batch_size, height, width, channels
-
-print("Layer 2 (MaxPool) output shape:", activations[1].shape)
-# (1, 111, 111, 32)
-
-print("Layer 3 (Conv2D) output shape:", activations[2].shape)
-# (1, 109, 109, 64)
-
-# Access specific neuron
-neuron_value = activations[0][0, 50, 75, 15]
-print(f"Neuron at position (50,75) in feature map 15: {neuron_value}")
-# 145.73
-
-# Visualize feature map
-import matplotlib.pyplot as plt
-
-# Feature map 15 fra layer 1
-feature_map_15 = activations[0][0, :, :, 15]
-plt.imshow(feature_map_15, cmap='viridis')
-plt.title('Feature Map 15 from Layer 1')
-plt.colorbar()
-plt.show()
 ```
-
-
-DENSE LAYER:
-100 neuroner
-100 inputs per neuron
-= 100 × 100 = 10,000 vægte ✗ Mange!
-
-CONV LAYER:
-32 filtre
-3×3×1 per filter
-= 32 × 9 = 288 vægte ✓ Få!
-
-Men producerer 26×26×32 = 21,632 output værdier!
-
-Dette er EFFEKTIVITETEN i CNN:
-Få vægte, meget output, deling på tværs af positioner
-
-
-ET CONVOLUTIONAL LAYER har:
-═══════════════════════════
-
-FILTRE (også kaldet kernels):
-- Antal: Du vælger (f.eks. 32, 64, 128)
-- Hver filter = ét sæt vægte
-- Hver filter scanner hele input
-- Hver filter producerer ÉN feature map
-
-NEURONER (output positioner):
-- Antal: Beregnes automatisk
-- = (output_height × output_width × antal_filtre)
-- Hver position i hver feature map = én "neuron"
-
-EKSEMPEL:
-Conv2D(filters=32, kernel_size=3)
-på 28×28 input
-
-→ 32 filtre
-→ Output: 26×26×32
-→ 26 × 26 × 32 = 21,632 "neuroner"
-→ Men kun 32 × 9 = 288 vægte!
-  (vægtene deles på tværs af positioner)
-
-Hvis du brugte Dense layer direkte på billede:
-# 8×8 pixels billede = 64 pixels
-image = [10, 20, 30, 40, ..., 250, 245, 240]  # 64 værdier
-
-# Én neuron i dense layer:
-neuron_weights = [w₁, w₂, w₃, w₄, ..., w₆₃, w₆₄]  # 64 vægte
-
-# Beregning:
-output = pixel₁×w₁ + pixel₂×w₂ + ... + pixel₆₄×w₆₄ + bias
-
-# JA - hver pixel får sin egen vægt!
-
-Visualisering: Dense Neuron Ser HELE Billedet
-BILLEDE (8×8):                    NEURON:
-┌─────────────────┐              ┌──────────────────┐
-│ 10  20  30  40  │ ─×w₁,w₂...─→ │                  │
-│ 50  60  70  80  │ ─×w₉,w₁₀..→  │   SUM ALLE       │
-│ 90 100 110 120  │ ─×w₁₇...──→  │   ↓              │
-│130 140 150 160  │ ─×w₂₅...──→  │   + bias         │
-│170 180 190 200  │ ─×w₃₃...──→  │   ↓              │
-│210 220 230 240  │ ─×w₄₁...──→  │   ReLU           │
-│245 250 255 250  │ ─×w₄₉...──→  │   ↓              │
-│240 235 230 225  │ ─×w₅₇...──→  │   output         │
-└─────────────────┘              └──────────────────┘
-
-Hver pixel har sin egen forbindelse og vægt!
-
-Problem: Dette Lærer IKKE Former Godt
-# Hvis neuronen skal lære "rund form":
-
-# Pixel 1 (top-venstre hjørne): w₁ = 0.01
-# Pixel 2: w₂ = 0.02
-# ...
-# Pixel 28 (centrum af rund form): w₂₈ = 0.95  ← Høj!
-# ...
-
-# PROBLEM:
-# Hvis katten flytter sig 2 pixels til højre,
-# så er centrum nu ved pixel 30, ikke 28
-# Men vægten er stadig høj ved pixel 28!
-# → Neuronen fejler!
-
-# Dense neurons lærer POSITIONS-SPECIFIKKE mønstre
-# Ikke generelle former
-
-
-Convolutional Layer
-# FILTER (3×3) = 9 vægte (ikke 64!)
-filter = [[w₁, w₂, w₃],
-          [w₄, w₅, w₆],
-          [w₇, w₈, w₉]]
-
-# Dette filter anvendes på LOKALE OMRÅDER:
-
-# Position (0,0) - top-venstre 3×3:
-patch_1 = [[10, 20, 30],
-           [50, 60, 70],
-           [90, 100, 110]]
-
-output₁ = 10×w₁ + 20×w₂ + 30×w₃ +
-          50×w₄ + 60×w₅ + 70×w₆ +
-          90×w₇ + 100×w₈ + 110×w₉
-
-# Position (0,1) - skift én pixel til højre:
-patch_2 = [[20, 30, 40],
-           [60, 70, 80],
-           [100, 110, 120]]
-
-output₂ = 20×w₁ + 30×w₂ + 40×w₃ + ...
-
-# SAMME 9 vægte, forskellige pixels!
-
-BILLEDE (8×8):                    FILTER (3×3):
-┌──────────────────┐              ┌─────────┐
-│[10  20  30] 40.. │              │ w₁ w₂ w₃│
-│[50  60  70] 80.. │  ←───────×───│ w₄ w₅ w₆│
-│[90 100 110]120.. │              │ w₇ w₈ w₉│
-│130 140 150 160.. │              └─────────┘
-│170 180 190 200.. │                   │
-│210 220 230 240.. │                   │
-│245 250 255 250.. │                   │
-│240 235 230 225.. │                   ▼
-└──────────────────┘              Output₁ = 85.5
-
-Så flytter filteret:
-┌──────────────────┐
-│ 10 [20  30  40]  │
-│ 50 [60  70  80]  │  ←───────×───[Samme filter]
-│ 90[100 110 120]  │
-│130 140 150 160.. │              Output₂ = 95.5
-  ...
-
-Kun 9 vægte, men mange output-værdier!
-
-
-Forskellen: Position-Specifik vs Position-Invariant
-# Dense neuron vægte efter træning:
-weights = [
-    0.01,  # pixel 0 (hjørne)
-    0.02,  # pixel 1
-    0.03,  # pixel 2
-    ...
-    0.95,  # pixel 28 (centrum) ← MEGET HØJI
-    ...
-    0.02,  # pixel 63 (hjørne)
-]
-
-# Dette betyder:
-# "Hvis pixel 28 er lys, er det en kat"
-
-# Problem:
-# Hvis katten flytter sig, fejler neuronen!
-
-Conv Filter: Lærer "Lys Center Med Mørkere Kanter"
-# Conv filter vægte efter træning:
-filter = [[0.12,  0.34,  0.12],
-          [0.38,  0.71,  0.38],
-          [0.12,  0.34,  0.12]]
-
-# Dette betyder:
-# "Hvis centrum er lyst og kanter moderate,
-#  aktiver højt - UANSET HVOR i billedet"
-
-# Dette mønster matcher runde former OVERALT!
-
-
-
-
-
-Hvordan Læres "En Form"?
-
-Trin 1: Simpel Feature (Kant)
-FØR TRÆNING - Tilfældigt filter:
-════════════════════════════════
-Filter = [[0.02, -0.01,  0.03],
-          [0.01,  0.04, -0.02],
-          [-0.01,  0.02,  0.01]]
-
-På kant i billede:
-[[50, 50, 250],      × Filter → Output: 8.5
- [50, 50, 250],
- [50, 50, 250]]
-
-Ikke særlig høj output - filteret "ser" ikke kanten
-
-
-EFTER 500 TRÆNINGSITERATIONER:
-═══════════════════════════════
-Filter = [[-0.42,  0.03,  0.45],  ← Læg mærke til mønster!
-          [-0.51,  0.05,  0.54],  ← Negative venstre,
-          [-0.42,  0.03,  0.45]]  ← Positive højre
-
-På kant i billede:
-[[50, 50, 250],      × Filter → Output: 189!
- [50, 50, 250],
- [50, 50, 250]]
-
-= 50×(-0.42) + 50×0.03 + 250×0.45 +
-  50×(-0.51) + 50×0.05 + 250×0.54 +
-  50×(-0.42) + 50×0.03 + 250×0.45
-= -21 + 1.5 + 112.5 + -25.5 + 2.5 + 135 + -21 + 1.5 + 112.5
-= 189!
-
-FILTERET HAR LÆRT AT GENKENDE KANTER!
-
-Trin 2: Kombineret Feature (Rund Form)
-EFTER TRÆNING - Dense neuron kombinerer:
-══════════════════════════════════════
-
-# Layer 1 outputs (fra forskellige filtre):
-kant_top = 120     (Filter_1 fandt kant øverst)
-kant_right = 115   (Filter_2 fandt kant til højre)
-kant_bottom = 118  (Filter_3 fandt kant nederst)
-kant_left = 112    (Filter_4 fandt kant til venstre)
-center_bright = 165 (Filter_5 fandt lyst centrum)
-
-# Dense neuron vægte (lært):
-weights = [0.41, 0.42, 0.41, 0.42, 0.52]
-          ↑     ↑     ↑     ↑     ↑
-       Alle  Alle  Alle  Alle  Centrum
-       kanter næsten ens  højest!
-
-# Output:
-roundness = 120×0.41 + 115×0.42 + 118×0.41 + 112×0.42 + 165×0.52
-          = 49.2 + 48.3 + 48.4 + 47.0 + 85.8
-          = 278.7
-
-# Hvis vægtene var ens for alle fire kanter:
-# → Neuronen aktiverer når kanter er symmetriske
-# + lyst centrum
-# = RUND FORM!
-
-DENNE DENSE NEURON HAR LÆRT "RUNDHED"!
-
-
-
-Trin 3: Semantisk Koncept (Kat)
-EFTER TRÆNING - Output neuron kombinerer:
-═══════════════════════════════════════
-
-# Dense layer outputs:
-roundness_neuron = 278     (fra ovenstående)
-whisker_neuron = 195       (lærer snurhår-features)
-ear_neuron = 142           (lærer øre-features)
-fur_neuron = 168           (lærer pels-features)
-dog_body_neuron = 45       (aktiverer på hunde)
-
-# Kat-output neuron vægte (lært):
-weights = [0.91,  0.88,  0.76,  0.65,  -0.82]
-           ↑      ↑      ↑      ↑       ↑
-         Rund  Snurhår Ører   Pels   Anti-hund!
-
-# Output:
-cat_score = 278×0.91 + 195×0.88 + 142×0.76 + 168×0.65 + 45×(-0.82)
-          = 252.98 + 171.6 + 107.92 + 109.2 - 36.9
-          = 604.8
-
-# Softmax → P(Kat) = 0.97
-
-DENNE OUTPUT NEURON HAR LÆRT "KAT"!
-
-
-
-
-Et Filter = En Lille Matrix af Vægte
-# Et 3×3 filter er bare 9 tal:
-filter = [[0.5, 0.8, 0.5],
-          [0.8, 1.0, 0.8],
-          [0.5, 0.8, 0.5]]
-
-# Det er ALT det er!
-# 9 vægte arrangeret i et grid
-
-
-FILTER = 3×3 GRID AF VÆGTE:
-
-    Col 0   Col 1   Col 2
-  ┌───────┬───────┬───────┐
-  │  0.5  │  0.8  │  0.5  │  Row 0
-  ├───────┼───────┼───────┤
-  │  0.8  │  1.0  │  0.8  │  Row 1
-  ├───────┼───────┼───────┤
-  │  0.5  │  0.8  │  0.5  │  Row 2
-  └───────┴───────┴───────┘
-
-Dette er et "template" eller "pattern matcher"
-
-
-Hvordan "Flytter" Filteret Sig? (Convolution Operation)
-Step-by-Step: Scanning Billedet
-
-BILLEDE (8×8):
-┌────────────────────────────────┐
-│ 10  20  30  40  50  60  70  80 │
-│ 15  25  35  45  55  65  75  85 │
-│ 20  30  40  50  60  70  80  90 │
-│ 25  35  45  55  65  75  85  95 │
-│ 30  40  50  60  70  80  90 100 │
-│ 35  45  55  65  75  85  95 105 │
-│ 40  50  60  70  80  90 100 110 │
-│ 45  55  65  75  85  95 105 115 │
-└────────────────────────────────┘
-
-FILTER (3×3):
-┌─────────┐
-│ 1  0 -1 │
-│ 1  0 -1 │
-│ 1  0 -1 │
-└─────────┘
-
-
-Position 1: Top-Venstre (0,0)
-STEP 1: Placer filter over top-venstre hjørne
-════════════════════════════════════════════
-
-┌────────────────────────────────┐
-│[10  20  30] 40  50  60  70  80│  ← Filter dækker disse 9 pixels
-│[15  25  35] 45  55  65  75  85│
-│[20  30  40] 50  60  70  80  90│
-│ 25  35  45  55  65  75  85  95│
-...
-
-FILTER:              INPUT PATCH:
-┌─────────┐         ┌─────────┐
-│ 1  0 -1 │    ×    │10 20 30│
-│ 1  0 -1 │         │15 25 35│
-│ 1  0 -1 │         │20 30 40│
-└─────────┘         └─────────┘
-
-BEREGNING (element-wise multiply og sum):
-output[0,0] = (10×1) + (20×0) + (30×-1) +
-              (15×1) + (25×0) + (35×-1) +
-              (20×1) + (30×0) + (40×-1)
-            
-            = 10 + 0 - 30 +
-              15 + 0 - 35 +
-              20 + 0 - 40
-            
-            = -60
-
-OUTPUT FEATURE MAP:
-┌─────────────┐
-│ -60  ?  ? ..│
-│  ?   ?  ? ..│
-│  ?   ?  ? ..│
-└─────────────┘
-
-
-Position 2: Skift Én Pixel Til Højre (0,1)
-
-STEP 2: "Glid" filteret én pixel til højre
-═══════════════════════════════════════════
-
-┌────────────────────────────────┐
-│ 10 [20  30  40] 50  60  70  80│  ← Nu dækker vi disse 9 pixels
-│ 15 [25  35  45] 55  65  75  85│
-│ 20 [30  40  50] 60  70  80  90│
-│ 25  35  45  55  65  75  85  95│
-...
-
-FILTER:              INPUT PATCH:
-┌─────────┐         ┌─────────┐
-│ 1  0 -1 │    ×    │20 30 40│
-│ 1  0 -1 │         │25 35 45│
-│ 1  0 -1 │         │30 40 50│
-└─────────┘         └─────────┘
-
-BEREGNING:
-output[0,1] = (20×1) + (30×0) + (40×-1) +
-              (25×1) + (35×0) + (45×-1) +
-              (30×1) + (40×0) + (50×-1)
-            
-            = 20 + 0 - 40 +
-              25 + 0 - 45 +
-              30 + 0 - 50
-            
-            = -60
-
-OUTPUT FEATURE MAP:
-┌─────────────┐
-│-60 -60  ? ..│
-│ ?   ?   ? ..│
-│ ?   ?   ? ..│
-└─────────────┘
-
-Position 3: Næste Position (0,2)
-STEP 3: Fortsæt til højre
-═════════════════════════
-
-┌────────────────────────────────┐
-│ 10  20 [30  40  50] 60  70  80│
-│ 15  25 [35  45  55] 65  75  85│
-│ 20  30 [40  50  60] 70  80  90│
-...
-
-output[0,2] = beregn på samme måde...
-            = -60
-
-
-
-INPUT: 224×224×3 RGB billede
-    ↓
-
-LAYER 1: Conv2D(32 filters, 3×3)
-════════════════════════════════
-- 32 different 3×3×3 filters
-- Each scans entire image
-- Output: 222×222×32
-  (32 feature maps, each 222×222)
-
-    ↓
-
-LAYER 2: MaxPooling(2×2)
-════════════════════════
-- No filters/weights
-- Just takes max of 2×2 regions
-- Output: 111×111×32
-  (reduced size, same depth)
-
-    ↓
-
-LAYER 3: Conv2D(64 filters, 3×3)
-════════════════════════════════
-- 64 different 3×3×32 filters
-  (must be 32 deep to match input!)
-- Each filter: 3×3×32 = 288 weights
-- Output: 109×109×64
-
-    ↓
-
-LAYER 4: MaxPooling(2×2)
-════════════════════════
-- Output: 54×54×64
-
-    ↓
-
-LAYER 5: Conv2D(128 filters, 3×3)
-═════════════════════════════════
-- 128 different 3×3×64 filters
-- Each filter: 3×3×64 = 576 weights
-- Output: 52×52×128
-
-    ↓
-
-Continue...
-
-
-
-START → FILTER SCANNING → OUTPUT
-
-Frame 1:
-INPUT (8×8)        FILTER (3×3)      OUTPUT (6×6)
-┌────────┐         ┌───┐             ┌────────┐
-│[▓▓▓]   │    ×    │w w│    →        │[✓]     │
-│[▓▓▓]   │         │w w│             │        │
-│[▓▓▓]   │         └───┘             │        │
-│        │                           │        │
-└────────┘                           └────────┘
-
-Frame 2:
-┌────────┐                           ┌────────┐
-│ [▓▓▓]  │    ×    [Same filter] →  │ ✓[✓]   │
-│ [▓▓▓]  │                           │        │
-│ [▓▓▓]  │                           │        │
-│        │                           │        │
-└────────┘                           └────────┘
-
-Frame 3:
-┌────────┐                           ┌────────┐
-│  [▓▓▓] │    ×    [Same filter] →  │ ✓ ✓[✓] │
-│  [▓▓▓] │                           │        │
-│  [▓▓▓] │                           │        │
-│        │                           │        │
-└────────┘                           └────────┘
-
-...continue til hele billedet er scannet...
-
-Final:
-┌────────┐                           ┌────────┐
-│        │                           │✓✓✓✓✓✓  │
-│        │    Alle positioner →     │✓✓✓✓✓✓  │
-│        │    beregnet              │✓✓✓✓✓✓  │
-│        │                           │✓✓✓✓✓✓  │
-└────────┘                           └────────┘
-                                     Feature Map!
-
-
-
-Tænk på det som: ****************************************************
-Ét filter = Én type detektor (f.eks. "lodret kant-finder")
-Scanning = Lede efter dette mønster OVERALT i billedet
-Feature map = Kort over "hvor fandt jeg dette mønster"
-Mange filtre = Lede efter mange forskellige mønstre samtidigt!
-
-
-✓ Et LAYER har mange FILTRE (f.eks. 32)
-✓ Hvert FILTER producerer én FEATURE MAP
-✓ Hver FEATURE MAP indeholder mange "neuroner" (output positioner)
-✓ Eksempel: 32 filtre → 32 feature maps × 26×26 = 21,632 "neuroner"
-
-✓ Output = 3D tensor (højde × bredde × dybde)
-✓ Dybde = antal filtre
-✓ Hver "slice" i dybden = én feature map
-✓ Hver værdi = hvor stærkt filteret responderede der
-✓ Høj værdi = stærk match til filterets mønster
-
-Feature maps eksisterer MELLEM lag
-De er outputtet fra ét lag
-Og inputtet til næste lag
-
-┌────────┐  Feature    ┌────────┐  Feature    ┌────────┐
-│ Layer  │   Maps      │ Layer  │   Maps      │ Layer  │
-│   1    │─────────→   │   2    │─────────→   │   3    │
-│ (Conv) │  32×222×222 │ (Pool) │  32×111×111 │ (Conv) │
-└────────┘             └────────┘             └────────┘
-
-Feature maps er "aktivationer" - output fra lag
-
-
-
-
-En neuron er en beregningsenhed der:
-
-┌────────────────── NEURON ─────────────────┐
-│                                           │
-│  INPUTS:                                  │
-│  x₁ = 10 ──×w₁=0.5──┐                     │
-│                     │                     │
-│  x₂ = 20 ──×w₂=0.8──┼── SUM ──┐           │
-│                     │         │           │
-│  x₃ = 15 ──×w₃=0.3──┘         │           │
-│                               │           │
-│  VÆGTE: [0.5, 0.8, 0.3]       │           │
-│                               ↓           │
-│                             27.5          │
-│                               │           │
-│  BIAS: +2.0 ────────────────→ │           │
-│                               │           │
-│                               ↓           │
-│                        ACTIVATION         │
-│                         (ReLU)            │
-│                               │           │
-│                               ↓           │
-│  OUTPUT: 27.5 ─────────────────────────→  │
-│                                           │
-└───────────────────────────────────────────┘
-
-NEURONEN = Hele boksen (beregningsenheden)
-VÆGTENE = De tre tal [0.5, 0.8, 0.3]
-BIAS = Ét tal [2.0]
-
-Neuron_i = {
-    Inputs: [x₁, x₂, ..., xₙ]
-    Weights: [w₁, w₂, ..., wₙ]  ← Disse er separate ting!
-    Bias: b
-    Activation: σ
-    
-    Computation:
-    output = σ(Σ(xᵢ × wᵢ) + b)
-}
-
-NEURON = En "tom beholder" for beregning
-
-Før træning:
-┌─────────────────────┐
-│   NEURON 5          │
-│                     │
-│ Kan potentielt      │
-│ lære hvad som       │
-│ helst               │
-│                     │
-└─────────────────────┘
-
-Efter træning:
-┌─────────────────────┐
-│   NEURON 5          │
-│                     │
-│ Har lært at være    │
-│ "kat-ansigt         │
-│ detektor"           │
-│                     │
-└─────────────────────┘
-
-Samme beholder (neuron)
-Forskelligt indhold (defineret af vægte)
-
-
-
-Der er ingen "auto-pilot". Du skal aktivt designe arkitekturen baseret på dit problem.
-
-Forskellige Lag-Typer Har Forskellig Matematik
-# BILLEDGENKENDELSE (Standard pattern):
-═══════════════════════════════════════
-model = Sequential([
-    # Convolutional layers - ALTID først til billeder
-    Conv2D(32, kernel_size=3),
-    ReLU(),
-    MaxPooling2D(2),
-    
-    Conv2D(64, kernel_size=3),
-    ReLU(),
-    MaxPooling2D(2),
-    
-    Conv2D(128, kernel_size=3),
-    ReLU(),
-    
-    # Dense layers - til beslutning
-    Flatten(),
-    Dense(128),
-    ReLU(),
-    Dropout(0.5),
-    
-    Dense(10),  # Output: 10 klasser
-    Softmax()
-])
-
-# Hvorfor denne struktur?
-# Conv layers → Spatial features (kanter, teksturer, former)
-# Dense layers → Kombinerer features til klassifikation
-
-1. Hvilken Layer-Type?
-# DU beslutter baseret på data-type:
-
-IF data = billeder:
-    → Brug Convolutional layers
-    
-IF data = sekvenser (tekst, lyd, tidsserie):
-    → Brug LSTM/GRU eller Transformer layers
-    
-IF data = tabeller (features uden orden):
-    → Brug Dense layers
-    
-IF data = grafer (sociale netværk):
-    → Brug Graph Neural Network layers
-    
-IF data = 3D (medicinske scans):
-    → Brug 3D Convolutional layers
-
-
-2. Hvor Mange Lag?
-# DU beslutter dybden:
-
-# SHALLOW (1-3 lag):
-model = [
-    Dense(128),
-    Dense(64),
-    Dense(10)
-]
-# Brug til: Simple problemer, små datasæt
-
-# MEDIUM (5-10 lag):
-model = [
-    Conv2D(32, 3),
-    Conv2D(64, 3),
-    Conv2D(128, 3),
-    Dense(256),
-    Dense(128),
-    Dense(10)
-]
-# Brug til: Standard problemer (MNIST, CIFAR)
-
-# DEEP (50-200 lag):
-model = ResNet50()  # 50 lag!
-# Brug til: Komplekse problemer (ImageNet)
-
-
-3. Hvor Mange Neuroner Per Lag?
-# DU beslutter størrelsen:
-
-# LILLE:
-Conv2D(16, 3)    # 16 filtre
-Dense(32)        # 32 neuroner
-
-# MEDIUM:
-Conv2D(64, 3)    # 64 filtre
-Dense(128)       # 128 neuroner
-
-# STOR:
-Conv2D(512, 3)   # 512 filtre
-Dense(1024)      # 1024 neuroner
-
-# Trade-off:
-# Flere neuroner = Mere kapacitet, men langsommere og overfitting-risiko
-# Færre neuroner = Hurtigere, men måske ikke nok kapacitet
-
-
-4. Hvilken Activation Function?
-# DU vælger aktivering per lag:
-
-# Hidden layers - Standard i 2025:
-ReLU()           # Most common
-GELU()           # Modern, bruges i Transformers
-Swish()          # Nogle gange bedre end ReLU
-LeakyReLU()      # Undgår "dying ReLU"
-
-# Output layer - Afhænger af opgave:
-Softmax()        # Multi-class klassifikation
-Sigmoid()        # Binary klassifikation
-Linear()         # Regression (ingen activation)
-Tanh()           # Output mellem -1 og 1
-
-
-Konkret Eksempel: Kat vs Hund Detektor
-Du Designer Arkitekturen Selv
-
-# DIN BESLUTNING #1: Problem-type
-# → Billedklassifikation → Brug CNN
-
-# DIN BESLUTNING #2: Input størrelse
-input_shape = (224, 224, 3)  # RGB billede
-
-# DIN BESLUTNING #3: Første conv layer
-# Skal fange basale features
-Conv2D(filters=32,           # 32 forskellige feature detectors
-       kernel_size=3,        # 3×3 vinduer
-       activation='relu')    # ReLU activation
-
-# DIN BESLUTNING #4: Pooling
-# Reducer størrelse, bevar vigtige features
-MaxPooling2D(pool_size=2)    # 2×2 pooling
-
-# DIN BESLUTNING #5: Anden conv layer
-# Skal kombinere basale features
-Conv2D(filters=64,           # Mere komplekse features
-       kernel_size=3,
-       activation='relu')
-
-MaxPooling2D(pool_size=2)
-
-# DIN BESLUTNING #6: Tredje conv layer
-# Høj-niveau features
-Conv2D(filters=128,
-       kernel_size=3,
-       activation='relu')
-
-# DIN BESLUTNING #7: Dense layers
-Flatten()                    # Fra 2D til 1D
-Dense(128, activation='relu')  # Kombiner features
-
-# DIN BESLUTNING #8: Regularization
-Dropout(0.5)                 # Preventer overfitting
-
-# DIN BESLUTNING #9: Output
-Dense(2, activation='softmax')  # 2 klasser: Kat, Hund
-
-
-Hvor Kommer "Standarderne" Fra?
-Akademisk Forskning → Best Practices
-Der Er Ingen "Perfekt Standard"
-
-
-# Iteration 1: Start simpelt
-model_v1 = [
-    Conv2D(32, 3),
-    MaxPooling2D(),
-    Dense(64),
-    Dense(2)
-]
-# Test → Accuracy: 75%
-
-# Iteration 2: Gør det dybere
-model_v2 = [
-    Conv2D(32, 3),
-    Conv2D(64, 3),  # ← Tilføjet
-    MaxPooling2D(),
-    Dense(128),     # ← Større
-    Dense(2)
-]
-# Test → Accuracy: 82%
-
-# Iteration 3: Tilføj regularization
-model_v3 = [
-    Conv2D(32, 3),
-    Conv2D(64, 3),
-    MaxPooling2D(),
-    Dropout(0.3),    # ← Tilføjet
-    Dense(128),
-    Dropout(0.5),    # ← Tilføjet
-    Dense(2)
-]
-# Test → Accuracy: 87%
-
-# Du prøver forskellige designs og vælger bedste!
-
-
-
-
-
-antal vægte = antal inputs til neuronen.
-
-# Efter convolution og pooling:
-# Billede reduceret til 7×7×64 = 3,136 værdier
-
-# Dense layer neuron:
-neuron = Dense(1)
-
-# Denne ENE neuron har:
-# → 3,136 vægte (én for hver input!)
-# → 1 bias
-# → Total: 3,137 parametre
-
-weights = [w₁, w₂, w₃, ..., w₃₁₃₆]  # 3,136 tal!
-
-# Beregning:
-output = ReLU(Σ(input_i × weight_i) + bias)
-       = ReLU(input₁×w₁ + input₂×w₂ + ... + input₃₁₃₆×w₃₁₃₆ + bias)
-
-
-SIMPELT EKSEMPEL (pædagogisk):
-══════════════════════════════════
-
-Input Layer (3)        Dense Layer (1)
-[x₁] ─── w₁ ───┐
-               ├─→ Neuron: 3 vægte
-[x₂] ─── w₂ ───┤
-               │
-[x₃] ─── w₃ ───┘
-
-3 inputs → 3 vægte
-
-
-REALISTISK EKSEMPEL (kat-detektor):
-═══════════════════════════════════
-
-Input Layer (3,136)        Dense Layer (1)
-[x₁] ─── w₁ ───┐
-[x₂] ─── w₂ ───┤
-[x₃] ─── w₃ ───┤
-[x₄] ─── w₄ ───┤
-  ...          ├─→ Neuron: 3,136 vægte!
-  ...          │
-[x₃₁₃₄]─ w₃₁₃₄─┤
-[x₃₁₃₅]─ w₃₁₃₅─┤
-[x₃₁₃₆]─ w₃₁₃₆─┘
-
-3,136 inputs → 3,136 vægte
-
-
-
-
-
-# Du designer:
-architecture = design_network(
-    problem_type="image_classification",
-    layer_types=[Conv, Conv, Dense, Dense],  ← Dine valg
-    layer_sizes=[32, 64, 128, 2],            ← Dine valg
-    activations=[ReLU, ReLU, ReLU, Softmax]  ← Dine valg
-)
-
-# Resulterende vægte:
-# Bestemmes af arkitekturen
-# Ofte millioner af vægte
-# Men princippet er det samme som med 3 vægte!
-
-# Træning optimerer ALLE disse vægte
-# For at løse dit problem
-
-
-
-
-
------>
-
-
-## Et eksempel mere 
-
-<!-----
-
-Her er et ekstremt simpelt billede af en kat i gråtoner (0-255):
-Hver celle er én pixel's lysstyrke
-
-Rund form: 90
-Pels: 85
-Snurhår: 95
-
-
   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
 │ 10│ 10│ 15│ 20│ 25│ 30│ 30│ 30│ 30│ 30│ 30│ 25│ 20│ 15│ 10│ 10│ 0  ← Mørk baggrund
 │ 10│ 15│ 40│ 80│120│140│150│150│150│150│140│120│ 80│ 40│ 15│ 10│ 1
 │ 15│ 50│120│180│220│240│250│250│250│250│240│220│180│120│ 50│ 15│ 2  ← Toppen af hoved
-│ 25│100│200│230│245│250│250│250│250│250│250│245│230│200│100│ 25│ 3  ← Pande (lys)
-│ 30│140│220│240│ 60│150│200│220│220│200│150│ 60│240│220│140│ 30│ 4  ← ØJNE (mørke pletter)
+│ 25│100│200│230│245│250│250│250│250│250│250│245│230│200│100│ 25│ 3  ← Pande 
+│ 30│140│220│240│ 60│150│200│220│220│200│150│ 60│240│220│140│ 30│ 4  ← Øjne 
 │ 30│150│230│245│ 50│140│200│220│220│200│140│ 50│245│230│150│ 30│ 5  
 │ 30│145│225│240│180│200│220│230│230│220│200│180│240│225│145│ 30│ 6  ← Mellem øjne og næse
-│ 28│135│215│230│200│210│ 80│180│180│ 80│210│200│230│215│135│ 28│ 7  ← NÆSE (mørk i midten)
+│ 28│135│215│230│200│210│ 80│180│180│ 80│210│200│230│215│135│ 28│ 7  ← Næse 
 │ 25│120│200│220│210│180│190│200│200│190│180│210│220│200│120│ 25│ 8  ← Under næse
 │ 22│100│180│200│200│190│200│210│210│200│190│200│200│180│100│ 22│ 9  
-│ 20│ 80│150│180│190│200│210│ 30│ 30│210│200│190│180│150│ 80│ 20│ 10 ← MUND (mørk i midten)
+│ 20│ 80│150│180│190│200│210│ 30│ 30│210│200│190│180│150│ 80│ 20│ 10 ← Mund 
 │ 15│ 60│120│150│170│180│190│150│150│190│180│170│150│120│ 60│ 15│ 11
 │ 12│ 40│ 90│120│140│160│170│170│170│170│160│140│120│ 90│ 40│ 12│ 12 ← Underkant
 │ 10│ 25│ 60│ 90│110│130│140│145│145│140│130│110│ 90│ 60│ 25│ 10│ 13
 │ 10│ 15│ 35│ 60│ 80│100│110│115│115│110│100│ 80│ 60│ 35│ 15│ 10│ 14
 │ 10│ 10│ 20│ 35│ 50│ 65│ 75│ 80│ 80│ 75│ 65│ 50│ 35│ 20│ 10│ 10│ 15
 └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
 
+---
 
-Rund Form: 90
-Find lyse pixels og mål deres form:
-# Trin 1: Find alle pixels over en threshold (f.eks. 150)
-# Dette isolerer kattens hoved fra baggrund
+> Find lyse pixels og mål deres form:
 
+::: {style="font-size: 0.7em;"}
+
+* Find alle pixels over en threshold (f.eks. 150)
+* Dette isolerer kattens hoved fra baggrund
+
+```
 Lyse pixels (>150):
   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
@@ -2418,370 +489,102 @@ Lyse pixels (>150):
 │   │   │   │ X │ X │ X │ X │   │   │ X │ X │ X │ X │   │   │   │
 │   │   │   │   │   │   │ X │ X │ X │ X │   │   │   │   │   │   │
 └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
+:::
 
-# Trin 2: Find centrum af disse pixels
-center_x = gennemsnit af alle X-koordinater ≈ 7.5
-center_y = gennemsnit af alle Y-koordinater ≈ 5.0
+---
 
-# Trin 3: Beregn afstand fra centrum til hver pixel
-# Jo mere ensartet afstanden er, jo mere cirkulær
+> Find tekstur-variation
 
-Afstande fra centrum til kant:
-Nord:     5.0 pixels
-Syd:      6.0 pixels  
-Øst:      6.5 pixels
-Vest:     6.5 pixels
-Nord-Øst: 6.2 pixels
-Nord-Vest: 6.2 pixels
-...
+::: {style="font-size: 0.7em;"}
 
-# Trin 4: Beregn variation i afstande
-mean_distance = 6.0
-std_deviation = 0.7  (lav = meget cirkulær)
+* Se på 3×3 regioner og mål variation
 
-# Trin 5: Konverter til 0-100 score
-roundness = 100 - (std_deviation × 15)
-          = 100 - (0.7 × 15)
-          = 100 - 10.5
-          = 89.5
-          ≈ 90 ✓
+<br>
 
-Rund Form: 90/100
+```
+  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+│ 10│ 10│ 15│ 20│ 25│ 30│ 30│ 30│ 30│ 30│ 30│ 25│ 20│ 15│ 10│ 10│ 0  ← Mørk baggrund
+│ 10│ 15│ 40│ 80│120│140│150│150│150│150│140│120│ 80│ 40│ 15│ 10│ 1
+│ 15│ 50│120│180│220│240│250│250│250│250│240│220│180│120│ 50│ 15│ 2  ← Toppen af hoved
+│ 25│100│200│230│245│250│250│250│250│250│250│245│230│200│100│ 25│ 3  ← Pande 
+│ 30│140│220│240│ 60│150│200│220│220│200│150│ 60│240│220│140│ 30│ 4  ← Øjne 
+│ 30│150│230│245│ 50│140│200│220│220│200│140│ 50│245│230│150│ 30│ 5  
+│ 30│145│225│240│180│200│220│230│230│220│200│180│240│225│145│ 30│ 6  ← Mellem øjne og næse
+│ 28│135│215│230│200│210│ 80│180│180│ 80│210│200│230│215│135│ 28│ 7  ← Næse 
+│ 25│120│200│220│210│180│190│200│200│190│180│210│220│200│120│ 25│ 8  ← Under næse
+│ 22│100│180│200│200│190│200│210│210│200│190│200│200│180│100│ 22│ 9  
+│ 20│ 80│150│180│190│200│210│ 30│ 30│210│200│190│180│150│ 80│ 20│ 10 ← Mund 
+│ 15│ 60│120│150│170│180│190│150│150│190│180│170│150│120│ 60│ 15│ 11
+│ 12│ 40│ 90│120│140│160│170│170│170│170│160│140│120│ 90│ 40│ 12│ 12 ← Underkant
+│ 10│ 25│ 60│ 90│110│130│140│145│145│140│130│110│ 90│ 60│ 25│ 10│ 13
+│ 10│ 15│ 35│ 60│ 80│100│110│115│115│110│100│ 80│ 60│ 35│ 15│ 10│ 14
+│ 10│ 10│ 20│ 35│ 50│ 65│ 75│ 80│ 80│ 75│ 65│ 50│ 35│ 20│ 10│ 10│ 15
+└───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
 
-100 = Perfekt cirkel
-90  = Meget rund (vores kat)
-70  = Moderat rund (måske en hund)
-50  = Aflang (en pølsehund)
-30  = Meget aflang (en slange)
-10  = Næsten ingen rundhed (en pind)
+:::
 
+---
 
-Pels: 85
-Pels måles ved tekstur-variation:
+> Find lange lige linjer
 
-# Trin 1: Se på 3×3 regioner og mål variation
+::: {style="font-size: 0.7em;"}
 
-Tag denne region fra billedet:
-[220, 240, 250]
-[230, 245, 250]
-[225, 240, 245]
+* Find kanten af ansigtet (høj gradient)
+* Meget skarpe overgange indikerer kanter (fx knurhår på en kat) 
 
-# Beregn lokal variation
-max_value = 250
-min_value = 220
-range = 30
+<br>
 
-# Trin 2: Gør dette for mange regioner
-Område ved pande:   range = 30  (moderat variation)
-Område ved kind:    range = 35  (lidt mere variation)
-Område ved øje:     range = 200 (høj variation - men det er feature, ikke pels)
+```
+  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+│ 10│ 10│ 15│ 20│ 25│ 30│ 30│ 30│ 30│ 30│ 30│ 25│ 20│ 15│ 10│ 10│ 0  ← Mørk baggrund
+│ 10│ 15│ 40│ 80│120│140│150│150│150│150│140│120│ 80│ 40│ 15│ 10│ 1
+│ 15│ 50│120│180│220│240│250│250│250│250│240│220│180│120│ 50│ 15│ 2  ← Toppen af hoved
+│ 25│100│200│230│245│250│250│250│250│250│250│245│230│200│100│ 25│ 3  ← Pande 
+│ 30│140│220│240│ 60│150│200│220│220│200│150│ 60│240│220│140│ 30│ 4  ← Øjne 
+│ 30│150│230│245│ 50│140│200│220│220│200│140│ 50│245│230│150│ 30│ 5  
+│ 30│145│225│240│180│200│220│230│230│220│200│180│240│225│145│ 30│ 6  ← Mellem øjne og næse
+│ 28│135│215│230│200│210│ 80│180│180│ 80│210│200│230│215│135│ 28│ 7  ← Næse 
+│ 25│120│200│220│210│180│190│200│200│190│180│210│220│200│120│ 25│ 8  ← Under næse
+│ 22│100│180│200│200│190│200│210│210│200│190│200│200│180│100│ 22│ 9  
+│ 20│ 80│150│180│190│200│210│ 30│ 30│210│200│190│180│150│ 80│ 20│ 10 ← Mund 
+│ 15│ 60│120│150│170│180│190│150│150│190│180│170│150│120│ 60│ 15│ 11
+│ 12│ 40│ 90│120│140│160│170│170│170│170│160│140│120│ 90│ 40│ 12│ 12 ← Underkant
+│ 10│ 25│ 60│ 90│110│130│140│145│145│140│130│110│ 90│ 60│ 25│ 10│ 13
+│ 10│ 15│ 35│ 60│ 80│100│110│115│115│110│100│ 80│ 60│ 35│ 15│ 10│ 14
+│ 10│ 10│ 20│ 35│ 50│ 65│ 75│ 80│ 80│ 75│ 65│ 50│ 35│ 20│ 10│ 10│ 15
+└───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
 
-# Trin 3: Gennemsnit (ekskluder features som øjne)
-Gennemsnitlig pels-variation = 32
+:::
 
-# Trin 4: Konverter til pels-score
-# Moderat variation = pels (hverken glat eller kaotisk)
-optimal_range = 30-40
-vores_range = 32
+## Broen mellem rå data og abstrakt forståelse
 
-pels_score = 100 - abs(32 - 35) × 5
-           = 100 - 15
-           = 85 ✓
+Netværket lærer *selv* at beregne disse features. 
 
-Pels: 85/100
+* Neural network **starter med pixels** og **lærer filtre**:
+* Neural network'et beregner:
+    * Tusindvis af mellemliggende features
+    * Hvoraf nogle kan fortolkes som "rundhed", "pels", etc.
+    * Men **netværket har aldrig fået at vide hvad disse er.**
+    * Det **opdagede selv at disse features er nyttige for at løse opgaven.**
+    * Det er derfor det hedder "feature *learning*" i stedet for "feature *engineering*" 
 
-100 = Meget tydelig pels-tekstur (langhåret kat)
-85  = God pels-tekstur (vores normalhårede kat)
-60  = Nogen tekstur (kort pels)
-30  = Glat overflade (måske læder, plast)
-10  = Næsten ingen tekstur (metal, glas)
+## Øvelse
 
+Lav et pitch til en AI-løsning, der er relevant for jeres system. 
 
+1. Løsningen skal skal være "realistisk". 
+2. Den skal løse én opgave i jeres system; ikke erstattet det. 
+3. Præsenter jeres pitch som om I ville sælge løsningen til mig som jeres leder eller kunde. 
+    * 5 min. per gruppe. 
 
-Snurhår: 95
-Snurhår detekteres ved lange, tynde linjer ud fra ansigtet:
 
-# Trin 1: Find kanten af ansigtet (høj gradient)
 
-Se på række 7 (ved næsen):
-[28│135│215│230│200│210│ 80│180│180│ 80│210│200│230│215│135│28]
-                             ↑                ↑
-                          Næse              Næse
 
-# Fra næse-position (col 6,9) scan udad
-Position 6 → 5 → 4 → 3 → 2 → 1
-Værdier: 80 → 210 → 200 → 230 → 215 → 135
-
-# Gradient: 80→210 = +130 (meget skarp overgang!)
-# Dette indikerer en tynd linje = snurhår
-
-# Trin 2: Tjek for lignende mønstre på flere rækker
-Række 4: Skarp overgang ved col 4-5: 60→150 (+90)
-Række 5: Skarp overgang ved col 4-5: 50→140 (+90)
-Række 8: Moderat overgang ved col 3-4: 200→210 (+10)
-
-# Trin 3: Tæl antal stærke overgange
-Skarpe overgange (>80): 6 fundet
-Moderate overgange (40-80): 3 fundet
-Svage overgange (<40): 12 fundet
-
-# Trin 4: Konverter til snurhår-score
-snurhaar_score = (antal_skarpe × 15) + (antal_moderate × 5)
-               = (6 × 15) + (3 × 5)
-               = 90 + 15
-               = 105 (cap at 100)
-               ≈ 95 ✓
-
-Snurhår: 95/100
-
-100 = Meget tydelige, lange snurhår (perfekt kat)
-95  = Klare snurhår synlige (vores kat)
-70  = Nogle tynde linjer synlige
-40  = Svage indikationer
-10  = Ingen tynde udadgående linjer (ikke kat)
-
-
-
-
-
-netværket lærer SELV at beregne disse features!
-
-Trin 1: Raw Pixels → Layer 1 (Edge Detection)
-Neural network starter med pixels og lærer filtre:
-
-[[-1,  0,  1],
- [-2,  0,  2],
- [-1,  0,  1]]
-
-Dette filter finder vertikale kanter!
-
-Pixels:              Filter:           Output:
-[220, 60, 150]      [[-1, 0, 1],
-[240, 50, 140]   ×   [-2, 0, 2],   = stærk respons!
-[230, 60, 145]       [-1, 0, 1]]
-
-= 220×(-1) + 60×0 + 150×1 +
-  240×(-2) + 50×0 + 140×2 +
-  230×(-1) + 60×0 + 145×1
-  
-= -220 + 0 + 150 +
-  -480 + 0 + 280 +
-  -230 + 0 + 145
-  
-= -355  (høj negativ værdi = kant fra lys til mørk!)
-
-
-
-
-Trin 2: Layer 1 Output → Layer 2 (Shape Detection)
-Layer 2 kombinerer kant-informationen:
-Neuron i Layer 2 der lærer "rundhed":
-
-
-# Denne neuron får input fra alle Layer 1 filtre
-# Den lærer at kigge efter "kanter i en cirkel"
-
-Input fra forskellige dele af billedet:
-kant_top:    -120  (kant ved toppen)
-kant_right:  -110  (kant til højre)
-kant_bottom: -125  (kant ved bunden)
-kant_left:   -115  (kant til venstre)
-
-# Vægte (lært gennem træning):
-W = [0.4, 0.4, 0.4, 0.4]  # Alle næsten ens = cirkel!
-
-Output = (-120×0.4) + (-110×0.4) + (-125×0.4) + (-115×0.4)
-       = -48 - 44 - 50 - 46
-       = -188
-       
-ReLU(-188) = 0... men hvis vi inverterer input først:
-Input_positive = [120, 110, 125, 115]
-Output = 120×0.4 + 110×0.4 + 125×0.4 + 115×0.4
-       = 186
-
-# Normaliseret til 0-100: ≈ 90 ✓
-
-
-
-Trin 3: Layer 2 → Layer 3 (Texture Detection)
-Pels-tekstur neuron:
-
-# Denne neuron lærer at kigge efter variation-mønstre
-
-Input (fra Layer 2's texture-filters):
-variation_region_1: 28  (moderat variation)
-variation_region_2: 32
-variation_region_3: 35
-variation_region_4: 29
-high_contrast_region: 200  (øje - ignorer dette!)
-
-# Vægte (lærer at ignorere høj kontrast):
-W = [0.6, 0.6, 0.6, 0.6, -0.1]  # Negativ for øje!
-
-Output = 28×0.6 + 32×0.6 + 35×0.6 + 29×0.6 + 200×(-0.1)
-       = 16.8 + 19.2 + 21.0 + 17.4 - 20
-       = 54.4
-
-# Med bias og activation:
-Output = ReLU(54.4 + 30) = 84.4 ≈ 85 ✓
-
-
-Visuelt: Fra Pixels til Features
-
-BILLEDE (16×16 = 256 pixels)
-    ↓
-    ↓ [Convolutional Layer 1 - 8 filtre]
-    ↓ Hver filter scanner hele billedet
-    ↓
-FEATURE MAPS (14×14×8 = 1,568 værdier)
-┌─────────────┐
-│ Filter 1:   │ → Detekterer horisontale kanter
-│  [høje      │
-│   værdier   │
-│   ved       │
-│   toppen]   │
-├─────────────┤
-│ Filter 2:   │ → Detekterer vertikale kanter
-│  [høje      │
-│   værdier   │
-│   ved       │
-│   siderne]  │
-├─────────────┤
-│ Filter 3:   │ → Detekterer tekstur
-│  [moderate  │
-│   værdier   │
-│   over hele │
-│   ansigtet] │
-└─────────────┘
-    ↓
-    ↓ [Pooling - reducér størrelse]
-    ↓
-REDUCED MAPS (7×7×8 = 392 værdier)
-    ↓
-    ↓ [Convolutional Layer 2 - 16 filtre]
-    ↓ Kombinerer simple features til komplekse
-    ↓
-HIGHER FEATURES (5×5×16 = 400 værdier)
-┌─────────────┐
-│ Filter 9:   │ → Kombinerer kanter til "rundhed"
-│  [aktiverer │    Output: høj værdi ≈ 90
-│   ved runde │
-│   former]   │
-├─────────────┤
-│ Filter 11:  │ → Kombinerer variation til "tekstur"
-│  [aktiverer │    Output: moderat værdi ≈ 85
-│   ved pels- │
-│   mønstre]  │
-├─────────────┤
-│ Filter 15:  │ → Finder tynde linjer fra ansigt
-│  [aktiverer │    Output: høj værdi ≈ 95
-│   ved       │
-│   snurhår]  │
-└─────────────┘
-    ↓
-    ↓ [Flatten og Dense Layer]
-    ↓
-ABSTRACT FEATURES (tre neuroner blandt mange)
-    [Roundness Neuron: 90]
-    [Fur Neuron: 85]
-    [Whiskers Neuron: 95]
-    ↓
-    ↓ [Output Layer]
-    ↓
-PREDICTION
-    [Cat: 0.97]
-    [Dog: 0.03]
-
-
-
-
-
-
-
-Sammenligning: Kat vs Hund Billede
-Kat (vores eksempel):
-Rund Form: 90    ← Runde ansigtstræk
-Pels: 85         ← Moderat pels-tekstur
-Snurhår: 95      ← Tydelige snurhår
-
-Features i pixels:
-- Symmetrisk distribution af lyse værdier
-- Jævn variation i tekstur-regioner
-- Skarpe lokale kontraster ved ansigt-kant
-Hund (lignende størrelse):
-Rund Form: 65    ← Mere aflang snude
-Pels: 88         ← Måske mere tekstur
-Snurhår: 30      ← Ingen tydelige snurhår
-
-Features i pixels:
-[220, 210, 205, 200, 190, 180, 170...]  ← Gradvis fald (aflang)
-Ingen skarpe overgange ved munden
-Mere jævn overgang mellem features
-
-
-
-
-Nøglepointen: Fra Konkret til Abstrakt
-
-NIVEAU 0: Rå Data
-[10, 15, 220, 240, 60, 150...]
-"Bare en masse tal mellem 0-255"
-
-NIVEAU 1: Lokale Features (Layer 1)
-kant_top = -120
-kant_right = -115
-textur_region = 32
-"Simple mønstre i små regioner"
-
-NIVEAU 2: Sammensatte Features (Layer 2)
-symmetry_horizontal = 0.85
-symmetry_vertical = 0.87
-texture_variation = 32
-edge_sharpness = 180
-"Mønstre af mønstre"
-
-NIVEAU 3: Semantiske Features (Layer 3)
-roundness = 90
-fur_quality = 85
-whisker_presence = 95
-"Meningsfulde koncepter"
-
-NIVEAU 4: Beslutning (Output)
-is_cat = 0.97
-is_dog = 0.03
-"Endelig klassifikation"
-
-
-
-
-De tal du så (90, 85, 95) er IKKE i billedet.
-De er emergente egenskaber der opstår når neural network'et processerer pixels gennem lag af transformationer.
-Billedet indeholder kun:
-→ 256 tal mellem 0-255 (pixels)
-
-Neural network'et beregner:
-→ Tusindvis af mellemliggende features
-→ Hvoraf nogle kan fortolkes som "rundhed", "pels", etc.
-→ Men netværket har aldrig fået at vide hvad disse er!
-→ Det opdagede selv at disse features er nyttige
-
-Det er derfor det hedder "feature learning"
-I stedet for "feature engineering" (hvor VI definerer features)
-Tallene 90, 85, 95 er derfor:
-
-Ikke direkte målbare i billedet
-Men emergerer naturligt fra netværkets læring
-Svarer til hvad vi mennesker ville kalde "rund", "pelset", "med snurhår"
-Men beregnet gennem ren matematik på pixels
-
-Det er den smukke bro mellem rå data og abstrakt forståelse!
-
-
-
-
-
-
-------->
 
 
 
