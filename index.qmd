@@ -5,7 +5,7 @@ author: "Jeppe Fjeldgaard Qvist"
 date: today
 format: 
   revealjs:
-    #include-after-body: "resources/timer.html"
+    include-after-body: "resources/timer.html"
     navigation-mode: linear
     slide-number: c
     show-slide-number: print
@@ -41,44 +41,124 @@ format:
 
 ## Dagens program 
 
-TILFØJ KAPITEL 12 fra grundbog
 
-## Maskinlæring 
+## Maskinlæring (ML)
 
-<!---
+Et ord vi ikke kan komme udenom i dag ... men hvad dækker det egentlig over? 
 
-Machine learning (maskinlæring) er et felt inden for kunstig intelligens, hvor computere lærer at løse opgaver og træffe beslutninger baseret på data, uden at være eksplicit programmeret til hver enkelt situation. I stedet for at følge faste, hårdkodede regler, lærer systemet mønstre og sammenhænge fra eksempler.
+<span class="timer" data-time="180"></span>
 
-Den fundamentale idé bag machine learning er at skabe algoritmer der kan forbedre sig selv gennem erfaring. Forestil dig forskellen mellem at lære et barn at genkende en kat ved at give det en liste af specifikke regler (har fire ben, spidse ører, pels osv.) versus at vise barnet hundredvis af billeder af katte. Machine learning fungerer som den anden tilgang: systemet lærer ved at blive eksponeret for mange eksempler.
+---
 
-Processen består typisk af tre hovedelementer:
+> Computere lærer at løse opgaver og træffe beslutninger baseret på data, uden at være eksplicit programmeret til hver enkelt situation.
 
-1. Data udgør grundlaget - det kan være billeder, tekst, tal, lydfiler eller enhver anden form for information. Jo mere relevant og varieret data systemet får adgang til, desto bedre kan det lære.
+::: {.incremental}
 
-2. Algoritmen er den matematiske metode der bruges til at finde mønstre i dataene. Den justerer gradvist sine interne parametre for at blive bedre til opgaven.
+* I stedet for at følge faste, hårdkodede regler, lærer systemet mønstre og sammenhænge fra eksempler.
+* Den fundamentale idé bag machine learning er at skabe algoritmer der kan forbedre sig selv gennem erfaring.
+* Forestil dig forskellen mellem at lære et barn at genkende en kat ved at give det en liste af specifikke regler (har fire ben, spidse ører, pels osv.) versus at vise barnet hundredvis af billeder af katte. Machine learning fungerer ud fra en mere realistisk tilgang om hvordan mennesker lærer: systemet lærer ved at blive eksponeret for mange eksempler.
 
-3. Modellen er det endelige resultat - et system der har lært at udføre en specifik opgave, såsom at klassificere billeder, forudsige priser eller oversætte sprog.
+:::
 
------>
+## De tre hovedelementer i ML 
+
+::: {.incremental}
+
+1. **Data udgør grundlaget**. Data kan være billeder, tekst, tal, lydfiler eller enhver anden form for (digital) information. Jo mere relevant og varieret data systemet får adgang til, desto bedre kan det lære.
+2. **Algoritmen er den matematiske metode der bruges til at finde mønstre i dataene**. Den justerer gradvist sine interne parametre for at blive bedre til opgaven.
+3. **Modellen er det endelige resultat**. Modellen er et system der har lært at udføre en specifik opgave, såsom at klassificere billeder, forudsige priser eller oversætte sprog.
+
+:::
 
 ## Det er allerede en del af vores hverdag 
 
-<!----
-Machine learning er blevet allestedsnærværende i moderne teknologi. Når Netflix anbefaler serier du måske kan lide, bruger det collaborative filtering til at finde mønstre i hvad lignende brugere har set. Når din smartphone kan låse op med ansigtsgenkendelse, benytter den computer vision baseret på deep learning. Sprogmodeller som dem der driver moderne oversættelses- og chatbot-systemer er trænet på enorme mængder tekst for at lære sproglige mønstre og sammenhænge.
+Machine learning er (blevet) allestedsnærværende i moderne teknologi. 
 
-Inden for sundhedssektoren bruges machine learning til at diagnosticere sygdomme fra medicinske scanninger, ofte med præcision der matcher eller overgår speciallæger. I finanssektoren hjælper det med at opdage svindel, vurdere kreditrisiko og forudsige markedsbevægelser. Selvkørende biler er måske det mest ambitiøse eksempel, hvor multiple machine learning systemer arbejder sammen for at forstå omgivelserne og træffe kørebeslutninger i realtid.
+::: {.incremental}
 
------>
+* Når Netflix anbefaler serier du måske kan lide, bruger det **collaborative filtering** til at finde mønstre i hvad lignende brugere har set. 
+* Når din smartphone kan låse op med ansigtsgenkendelse, benytter den computer vision baseret på **deep learning**. 
+* Sprogmodeller som dem der driver moderne oversættelses- og chatbot-systemer er **trænet på enorme mængder tekst for at lære sproglige mønstre og sammenhænge**.
+* Og meget mere ... 
+
+::: 
+
+<span class="timer" data-time="180"></span>
+
+# ML *vs.* AI? AI *og* ML? AI *eller* ML?
+
+---
+
+> Hvordan har I brug (generativ) AI på dette kurset og studiet indtil nu? Hvilke erfaringer har I gjort jer? 
+
+<span class="timer" data-time="180"></span>
+
+---
+
+> Er AI noget, der bekymrer jer? 
+
+## En meget kort historie om AI og ML 
+
+::: {style="font-size: 0.6em;"}
+::: {.incremental}
+
+1. De første computere fra 1945 gjorde teoretisk AI praktisk muligt, selvom computerne var primitive efter moderne standarder.
+2. Den optimistiske periode i 50'erne og 60'erne: 
+    * Artificial Intelligence som felt "fødes" ved Dartmouth Konferencen i 1956; ambitionen var at skabe tænkende maskiner. 
+    *  Begrebet Machine Learning introduceres af A. Samuel i 1959 ved introduktionen af sit checkers-program [dam-spil]. 
+    * I 1958 præsenteres Perceptronen, der er det første neurale netværk, der kunne klassificere simple mønstre. 
+    * Den første chat-bot, ELIZA introduceres i 1966.
+3. Den første "AI-vinter" 70'erne og 80'erne:
+    * Artiklen "Perceptrons" fra 1969 udfordrer meget af grundlaget for deep learning. 
+    * PROLOG programmeringssproget bliver introduceret.
+    * Selvom ekspertsystemer bliver udviklet er de dyre og ikke fleksible.  
+4. Maskinlærings gennembrudende i 90'erne:
+    * Nye matematiske/statistiske gennembrud; Support Vector Machines (klassifikation), Convolutional Neural Networks (Håndskriftgenkendelse). 
+    * **IBM's Deep Blue besejrede verdensmesteren Garry Kasparov i skak i 1997.** 
+5. Big Data og moderne maskinlæring i 00'erne. 
+    * Random Forests og XGBoost. 
+    * Deep Learning og neurale netværk får en renæssance. 
+    * ImageNet datasættet (2009) med millioner af mærkede billeder blev katalysator for computer vision fremskridt.
+    * AlexNet fra 2012 står som et centralt gennembrud i billedgenkendelse.
+    * IBM's Watson vinder Jeopardy og Siri kommer på markedet i 2011 
+6. Deep Learning's dominerer feltet i 10'erne:
+    * Word embeddings bliver praktisk implementeret. 
+    * Transformers og Attention-mekanismen muliggør chat-bots som vi kender dem i dag. 
+    * AlphaGo besejrede i 2016 Go-verdensmesteren Lee Sedol gennem kombination af deep learning, Monte Carlo tree search og reinforcement learning. Go var indtil da betragtet som umuligt for maskiner.
+    * AlphaZero fra 2017 lærte skak, shogi og Go fra scratch gennem self-play, uden menneskelig viden.
+7. Large Language Models har domineret 20'erne 
+    * Transfer learning kan implementeres i praksis (Pre-træn på massive datasæt, finjuster til specifikke opgaver.)
+    * GPT (2018), GPT-2 (2019) og GPT-3 (2020) fra OpenAI demonstrerede skalerings-love: større modeller på mere data gav kvalitativt bedre evner.
+    * GPT-3 med 175 milliarder parametre illustrerede "few-shot learning", der er evnen til at udføre opgaver fra få eksempler uden specifik træning.
+    * ChatGPT nåede i 2022 100 millioner brugere hurtigere end nogen anden teknologi.
+    * Diffusion models som DALL-E, Midjourney og Stable Diffusion revolutionerede billedgenerering.
+    * GitHub Copilot fra 2021 og efterfølgende systemer som GPT-4 transformerede programmering ved at generere funktionel kode fra naturlig sprogbeskrivelser.
+
+:::
+:::
+
+## De vigtiske udviklinger
+
+* **Computerkraft**: Fra mainframes til GPU'er til specialiseret AI-hardware (TPUs, NPUs)
+* **Data**: Fra håndlavede datasæt til internet-skala data crawls
+* **Algoritmer**: Fra simple perceptroner til Transformers og diffusion models
+* **Økonomisk investering**: Fra akademisk forskning til multi-milliard dollar industri
+
+---
+
+> Hvad håber I AI vil løse i jeres (privat eller arbejds-)liv? 
+
+<span class="timer" data-time="180"></span>
+
+
 
 ## Typer af ML 
 
-<!-----
-
-Machine learning kan opdeles i flere hovedkategorier baseret på hvordan systemet lærer:
-
-* Supervised learning (overvåget læring) er den mest almindelige tilgang. Her trænes modellen på data hvor det korrekte svar allerede er kendt. Hvis du for eksempel vil lære en model at genkende spam-emails, giver du den tusindvis af emails der allerede er mærket som enten "spam" eller "ikke spam". Modellen lærer derefter at genkende de karakteristika der adskiller spam fra legitime emails. Denne tilgang bruges til både klassifikation (kategorisering) og regression (forudsigelse af numeriske værdier).
+**Supervised learning** er den mest almindelige tilgang. Her trænes modellen på data hvor det korrekte svar allerede er kendt. Hvis du for eksempel vil lære en model at genkende spam-emails, giver du den tusindvis af emails der allerede er mærket som enten "spam" eller "ikke spam". Modellen lærer derefter at genkende de karakteristika der adskiller spam fra legitime emails. Denne tilgang bruges til både klassifikation (kategorisering) og regression (forudsigelse af numeriske værdier).
 
 > Forestil dig, at du skal lære et barn at genkende forskellige dyrearter. Den mest oplagte måde ville være at vise barnet billeder af dyr, hvor du hver gang siger: "Det her er en hund", "Det her er en kat", osv. Efter at have set mange eksempler kan barnet begynde at genkende nye dyr, det ikke har set før.
+
+---
 
 ::: {style="font-size: 0.8em;"}
 :::{.incremental}
@@ -89,12 +169,13 @@ Machine learning kan opdeles i flere hovedkategorier baseret på hvordan systeme
 :::
 :::
 
+---
 
-* Unsupervised learning (uovervåget læring) handler om at finde skjulte strukturer i data uden forudgavede svar. Algoritmen opdager selv mønstre, grupperinger eller sammenhænge. Dette bruges blandt andet til at segmentere kunder i forskellige grupper baseret på deres adfærd, eller til at reducere kompleksiteten i datasæt med mange dimensioner.
+**Unsupervised learning** handler om at finde skjulte strukturer i data *uden* forudgavede svar. Algoritmen opdager selv mønstre, grupperinger eller sammenhænge. Dette bruges blandt andet til at segmentere kunder i forskellige grupper baseret på deres adfærd, eller til at reducere kompleksiteten i datasæt med mange dimensioner.
 
-* Reinforcement learning (forstærkningslæring) er inspireret af hvordan dyr og mennesker lærer gennem belønning og straf. En agent (det lærende system) interagerer med et miljø og modtager feedback i form af belønninger for gode handlinger og straffe for dårlige. Over tid lærer agenten hvilke strategier der maksimerer den samlede belønning. Denne tilgang har haft stor succes inden for spil, robotstyring og autonome systemer.
+---
 
------>
+**Reinforcement learning** er inspireret af hvordan dyr og mennesker lærer gennem belønning og straf. En agent (det lærende system) interagerer med et miljø og modtager feedback i form af belønninger for gode handlinger og straffe for dårlige. Over tid lærer agenten hvilke strategier der maksimerer den samlede belønning. Denne tilgang har haft stor succes inden for spil, robotstyring og autonome systemer.
 
 ## Hvordan "lærer" man noget? 
 
