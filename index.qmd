@@ -1,11 +1,11 @@
 ---
-title: "TITEL"
+title: "Machine Learning og Artificial Intelligence"
 subtitle: ""
 author: "Jeppe Fjeldgaard Qvist"
 date: today
 format: 
   revealjs:
-    #include-after-body: "resources/timer.html"
+    include-after-body: "resources/timer.html"
     navigation-mode: linear
     slide-number: c
     show-slide-number: print
@@ -38,4 +38,566 @@ format:
           }
           </style>
 ---
+
+## Maskinlæring (ML)
+
+Et ord vi ikke kan komme udenom i dag ... men hvad dækker det egentlig over? 
+
+<span class="timer" data-time="180"></span>
+
+---
+
+> Computere lærer at løse opgaver og træffe beslutninger baseret på data, uden at være eksplicit programmeret til hver enkelt situation.
+
+::: {.incremental}
+
+* I stedet for at følge faste, hårdkodede regler, lærer systemet mønstre og sammenhænge fra eksempler.
+* Den fundamentale idé bag machine learning er at skabe algoritmer der kan forbedre sig selv gennem erfaring.
+* Forestil dig forskellen mellem at lære et barn at genkende en kat ved at give det en liste af specifikke regler (har fire ben, spidse ører, pels osv.) versus at vise barnet hundredvis af billeder af katte. Machine learning fungerer ud fra en mere realistisk tilgang om hvordan mennesker lærer: **systemet lærer ved at blive eksponeret for mange eksempler.**
+
+:::
+
+## De tre hovedelementer i ML 
+
+::: {.incremental}
+
+1. **Data udgør grundlaget**. Data kan være billeder, tekst, tal, lydfiler eller enhver anden form for (digital) information. Jo mere relevant og varieret data systemet får adgang til, desto bedre kan det lære.
+2. **Algoritmen er den matematiske metode der bruges til at finde mønstre i dataene**. Den justerer gradvist sine interne parametre for at blive bedre til opgaven.
+3. **Modellen er det endelige resultat**. Modellen er et system der har lært at udføre en specifik opgave, såsom at klassificere billeder, forudsige priser eller oversætte sprog.
+
+:::
+
+## Det er allerede en del af vores hverdag 
+
+Machine learning er (blevet) allestedsnærværende i moderne teknologi. 
+
+::: {.incremental}
+
+* Når Netflix anbefaler serier du måske kan lide, bruger det **collaborative filtering** til at finde mønstre i hvad lignende brugere har set. 
+* Når din smartphone kan låse op med ansigtsgenkendelse, benytter den computer vision baseret på **deep learning**. 
+* Sprogmodeller som dem der driver moderne oversættelses- og chatbot-systemer er **trænet på enorme mængder tekst for at lære sproglige mønstre og sammenhænge**.
+* Og meget mere ... 
+
+::: 
+
+<span class="timer" data-time="180"></span>
+
+# ML *vs.* AI? AI *og* ML? AI *eller* ML?
+
+---
+
+> Hvordan har I anvendt (generativ) AI på dette kurset og studiet indtil nu? Hvilke erfaringer har I gjort jer; er der noget I vil gøre mere/mindre? 
+
+<span class="timer" data-time="300"></span>
+
+---
+
+> Er AI noget, der bekymrer jer? 
+
+## En meget kort historie om AI og ML 
+
+::: {style="font-size: 0.6em;"}
+::: {.incremental}
+
+1. De første computere fra 1945 gjorde teoretisk AI praktisk muligt, selvom computerne var primitive efter moderne standarder.
+2. Den optimistiske periode i 50'erne og 60'erne: 
+    * **Artificial Intelligence** som felt "fødes" ved Dartmouth Konferencen i 1956; ambitionen var at skabe tænkende maskiner. 
+    *  Begrebet **Machine Learning** introduceres i 1959 ved introduktionen af et checkers-program [dam-spil]. 
+    * I 1958 præsenteres Perceptronen, der er det første **neurale netværk**, der kunne klassificere simple mønstre. 
+    * Den første chat-bot, **ELIZA** introduceres i 1966.
+3. Den første **AI-vinter** 70'erne og 80'erne:
+    * Artiklen "Perceptrons" fra 1969 udfordrer meget af grundlaget for deep learning. 
+    * PROLOG **programmeringssproget** bliver introduceret.
+    * Selvom **ekspertsystemer** bliver udviklet er de dyre og ikke fleksible.  
+4. Maskinlærings gennembrudende i 90'erne:
+    * Nye **matematiske/statistiske gennembrud**; Support Vector Machines (klassifikation), Convolutional Neural Networks (Håndskriftgenkendelse). 
+    * ***IBM's Deep Blue besejrede verdensmesteren Garry Kasparov i skak i 1997.***
+
+:::
+:::
+
+---
+ 
+::: {style="font-size: 0.6em;"}
+::: {.incremental}
+
+5. Big Data og moderne maskinlæring i 00'erne. 
+    * Random Forests og XGBoost. 
+    * **Deep Learning** og **neurale netværk** får en renæssance. 
+    * ImageNet **data**sættet (2009) med millioner af mærkede billeder blev katalysator for computer vision fremskridt.
+    * **AlexNet** fra 2012 står som et centralt gennembrud i billedgenkendelse.
+    * IBM's Watson vinder Jeopardy og Siri kommer på markedet i 2011 
+6. Deep Learning's dominerer feltet i 10'erne:
+    * **Word embeddings** bliver praktisk implementeret. 
+    * Transformers og Attention-mekanismen muliggør **chat-bots** som vi kender dem i dag. 
+    * AlphaGo besejrede i 2016 Go-verdensmesteren Lee Sedol gennem **kombination** af deep learning, Monte Carlo tree search og reinforcement learning. Go var indtil da betragtet som umuligt for maskiner.
+    * AlphaZero fra 2017 lærte skak, shogi og Go fra scratch gennem self-play, **uden menneskelig viden** om disse spil.
+7. Large Language Models har domineret 20'erne 
+    * **Transfer learning** kan implementeres i praksis (Pre-træn på massive datasæt, finjuster til specifikke opgaver.)
+    * GPT (2018), GPT-2 (2019) og GPT-3 (2020) fra OpenAI demonstrerede **skalerings-love**: større modeller på mere data gav kvalitativt bedre evner.
+    * **GPT-3** med 175 milliarder parametre illustrerede "few-shot learning", der er evnen til at udføre opgaver fra få eksempler uden specifik træning.
+    * **ChatGPT** nåede i 2022 100 millioner brugere hurtigere end nogen anden teknologi.
+    * Diffusion-models som DALL-E, Midjourney og Stable Diffusion revolutionerede **billedgenerering**.
+    * GitHub Copilot fra 2021 og efterfølgende systemer som GPT-4 transformerede programmering ved at **generere funktionel kode fra naturlig sprogbeskrivelser**.
+
+:::
+:::
+
+## De vigtiske udviklinger
+
+* **Computerkraft**: Fra mainframes til GPU'er til specialiseret AI-hardware (TPUs, NPUs)
+* **Data**: Fra håndlavede datasæt til internet-skala data crawls
+* **Algoritmer**: Fra simple perceptroner til Transformers og diffusion models
+* **Økonomisk investering**: Fra akademisk forskning til multi-milliard dollar industri
+
+---
+
+> Hvad håber I AI vil løse i jeres (privat eller arbejds-)liv? 
+
+<span class="timer" data-time="180"></span>
+
+
+
+## Typer af ML 
+
+**Supervised learning** er den mest almindelige tilgang. Her trænes modellen på data hvor det korrekte svar allerede er kendt. Hvis du for eksempel vil lære en model at genkende spam-emails, giver du den tusindvis af emails der allerede er mærket som enten "spam" eller "ikke spam". Modellen lærer derefter at genkende de karakteristika der adskiller spam fra legitime emails. Denne tilgang bruges til både klassifikation (kategorisering) og regression (forudsigelse af numeriske værdier).
+
+> Forestil dig, at du skal lære et barn at genkende forskellige dyrearter. Den mest oplagte måde ville være at vise barnet billeder af dyr, hvor du hver gang siger: "Det her er en hund", "Det her er en kat", osv. Efter at have set mange eksempler kan barnet begynde at genkende nye dyr, det ikke har set før.
+
+---
+
+**Unsupervised learning** handler om at finde skjulte strukturer i data *uden* forudgavede svar. 
+
+Algoritmen opdager selv mønstre, grupperinger eller sammenhænge. Dette bruges blandt andet til at segmentere kunder i forskellige grupper baseret på deres adfærd, eller til at reducere kompleksiteten i datasæt med mange dimensioner.
+
+---
+
+**Reinforcement learning** er inspireret af hvordan dyr og mennesker lærer gennem belønning og straf. En agent (det lærende system) interagerer med et miljø og modtager feedback i form af belønninger for gode handlinger og straffe for dårlige. 
+
+Over tid lærer agenten hvilke strategier der maksimerer den samlede belønning. Denne tilgang har haft stor succes inden for spil, robotstyring og autonome systemer.
+
+## Natural Language Processing (NLP)
+
+*Computervidenskabelig disciplin, der beskæftiger sig med, hvordan en computer kan forstå og producere menneskeligt sprog.*
+
+::: {style="font-size: 0.8em;"}
+* Behandling og bearbejdning af **“naturligt sprog”** ved hjælp af computerteknologi
+* Teknikker der involverer statistiske metoder til at forstå tekst; *med eller uden lingvistiske indsigter*
+* Krydsfelt mellem **datalogi og lingvistik**
+* Involverer i stigende grad brug af **maskinlæringsteknologi**
+    * Eksempler fra hverdagen: *ChatGPT, Tale-til-tekst applikationer, tekstforslag i beskeder, autokorrektur, oversættelsestjenester (Google Translate)*
+:::
+
+<span class="timer" data-time="180"></span>
+
+## Naive Bayes klassifikation: *læring gennem sandsynlighedsteori*
+
+> Forestil jer, at I står med en filmanmeldelse og vil afgøre, om den er positiv eller negativ. Naive Bayes spørger: "Givet de ord, jeg ser i denne anmeldelse, hvad er sandsynligheden for, at den tilhører hver kategori?"
+
+Dette tager afsæt i **Bayes' Theorem**/-sætning:
+
+$$
+P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
+$$
+
+Sætningen fortæller os, hvordan vi kan vende en betinget sandsynlighed om. Hvis vi kalder vores kategorier for $C$ ("positiv" eller "negativ") og vores dokument for $D$ (repræsenteret ved de ord, det indeholder), så siger Bayes' sætning:
+
+---
+
+$$
+P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
+$$
+
+::: {style="font-size: 0.8em;"}
+1. $P(C \mid D)$ er den **posterior sandsynlighed**: sandsynligheden for, at dokumentet tilhører kategori $C$, givet at vi har observeret ordene i $D$. Det er altså hvad vi vil finde ud af. 
+2. $P(D \mid C)$ er vores **likelihood**: sandsynligheden for at se netop denne kombination af ord, hvis vi ved, at dokumentet tilhører kategori $C$. 
+3. $P(C)$ er **prior sandsynligheden**: vores forhåndsforventning om, hvor sandsynlig kategorien er, før vi har set dokumentet. $P(D)$ er en normaliseringskonstant, der sikrer, at sandsynlighederne summerer til én.
+:::
+
+---
+
+$$
+P(C \mid D) = \frac{P(D \mid C) \times P(C)}{P(D)}
+$$
+
+Den naive antagelse er at vi går ud fra uafhængighed mellem ord. I virkeligheden er ord i en tekst åbenlyst ikke uafhængige af hinanden.
+
+## Naive Bayes i praksis
+
+Forstil jer at vi har trænet en model på tusindvis af filmanmeldelser, og vi ser denne korte anmeldelse: `"Fantastisk film. Elsker!"`.
+
+::: {style="font-size: 0.8em;"}
+::: {.incremental}
+1. Vi har to kategorier: `positiv` ($P$) og `negativ` ($N$).
+2. Fra vores træningsdata har vi lært følgende sandsynligheder. 
+    * Prior sandsynlighederne er $P(P) = 0.6$ og $P(N) = 0.4$: fordi $60$ procent af vores træningsanmeldelser var positive. 
+    * Hvor ofte hvert ord optræder i hver kategori: 
+      * $P(\text{fantastisk}|P) = 0.08$ (optrådte i 8 procent af positive anmeldelser) og $P(\text{fantastisk}|N) = 0.01$ (kun 1 procent negative anmeldelser). 
+      * $P(\text{film}|P) = 0.15$ og $P(\text{film}|N) = 0.12$
+      * $P(\text{elsker}|P) = 0.09$ og $P(\text{elsker}|N) = 0.02$
+:::
+:::
+
+---
+
+::: {style="font-size: 0.8em;"}
+::: {.incremental}
+3. Nu kan vi beregne den unormaliserede posterior sandsynlighed for positiv kategori:
+    * $P(P \mid D) \propto P(P) \times P(\text{fantastisk} \mid P) \times P(\text{film} \mid P) \times P(\text{elsker} \mid P)$
+    * $P(P \mid D) \propto 0.6 \times 0.08 \times 0.15 \times 0.09 = 0.0006480$
+4. Tilsvarende for negativ kategori:
+    * $P(N \mid D) \propto P(N) \times P(\text{fantastisk} \mid N) \times P(\text{film} \mid N) \times P(\text{elsker} \mid N)$
+    * $P(N \mid D) \propto 0.4 \times 0.01 \times 0.12 \times 0.02 = 0.0000096$
+5. Selv uden at normalisere kan vi se, at den positive sandsynlighed er omkring $67$ gange højere end den negative. Efter **normalisering** ville $P(P|D)$ være cirka $0.985$, så modellen er meget sikker på, at dette er en positiv anmeldelse.
+:::
+:::
+
+# Live eksempel
+
+## Hvilken problemer opstår i læring? 
+
+Machine learning er ikke en universalløsning.
+
+::: {style="font-size: 0.8em;"}
+
+* Systemerne er **kun så gode som den data de trænes på**. Hvis træningsdataene er biased eller ufuldstændige, vil modellen lære og reproducere disse fejl.
+    * En ansigtsgenkendelses-algoritme trænet primært på billeder af en bestemt demografi kan fejle når den møder andre ansigtstyper.
+* Mange machine learning modeller, især deep learning netværk, fungerer som **"black boxes"**. 
+    * Det kan være svært, hvis ikke umuligt, at forstå præcist hvorfor de træffer en bestemt beslutning. Dette giver nogle fundamentale udfordringer inden for områder hvor transparens og forklarlighed er kritiske, såsom medicinske diagnoser eller juridiske afgørelser.
+* Desuden kræver mange moderne machine learning systemer **enorme mængder data og beregningskraft for at træne**, hvilket kan være dyrt og miljømæssigt belastende. 
+
+:::
+
+## ML algoritmer 
+
+#### Superviseret ML: 
+
+::: {style="font-size: 0.4em;"}
+
+* **Lineær Regression**: Lineær regression bruges til at forudsige numeriske værdier som huspriser, temperaturer eller salgstal. Algoritmen finder den bedste rette linje gennem datapunkterne, hvilket gør den hurtig, simpel at fortolke og nem at implementere. Den fungerer godt når sammenhængen mellem input og output kan tegnes som en ret linje. Ulempen er at den kun kan modellere lineære forhold, og den er følsom over for outliers - det vil sige ekstreme værdier der ligger langt fra resten af dataene. Et eksempel er at forudsige huspris baseret på størrelse, hvor sammenhængen er: jo større hus, jo højere pris, hvilket danner en ret linje.
+
+* **Logistisk Regression**: Logistisk regression bruges til klassifikation, altså at placere ting i kategorier som spam/ikke-spam, syg/rask eller godkendt/afvist. Algoritmen beregner sandsynligheden for at noget tilhører en bestemt kategori. Fordelen er at den er hurtig, giver sandsynligheder i stedet for bare ja/nej, og er let at fortolke. Den kan dog have udfordringer ved klassifikation af flere kategorier samtidig. Et eksempel: hvis du spørger om en email er spam, kan algoritmen svare "85% sandsynlighed for spam".
+
+* **Decision Trees**: Decision trees bruges til både klassifikation og regression. Algoritmen træffer beslutninger gennem en serie af ja/nej-spørgsmål organiseret i en træstruktur. De er intuitive og lette at visualisere, og de håndterer både numeriske tal og kategoriske data som tekst med minimal forberedelse. Ulemperne er tendens til overfitting, hvor modellen lærer træningsdata for godt og klarer sig dårligt på nye data. De er også ustabile, så små ændringer i data kan give meget forskellige træer, og de er dårlige til at gætte værdier uden for træningsdataens område. Et eksempel på en beslutningstræ-proces: "Er det solrigt? Ja → Er det over 20°? Ja → Er det weekend? Ja → Tag til stranden".
+
+* **Random forests**: Random forests bruges til samme opgaver som decision trees, men er mere pålidelige. De anvender ensemble learning, hvor mange træer kombineres for at få et bedre samlet resultat - ligesom at spørge flere eksperter i stedet for kun én. Dette gør dem robuste over for overfitting, og de håndterer manglende data godt samt kan vise hvilke features (egenskaber) der er vigtigst. Ulemperne er at de er mindre tolkbare end enkelte træer fordi det er svært at se præcis hvorfor de traf en beslutning, og de giver langsommere forudsigelser og kræver mere hukommelse. Man kan tænke på det som at spørge 100 eksperter og tage gennemsnittet af deres svar i stedet for at stole på én enkelt ekspert.
+
+* **Gradient boosting**: Gradient boosting bruges til samme opgaver som random forests, ofte med endnu bedre præcision. I modsætning til random forests, der bygger alle træer uafhængigt, bygger gradient boosting træer sekventielt - et ad gangen - hvor hvert nyt træ fokuserer på at rette op på de fejl de tidligere træer lavede. Dette gør den ofte til den mest præcise algoritme i praksis, og den er fleksibel og håndterer komplekse forhold. Ulemperne er at den er mere tilbøjelig til overfitting end random forests, kræver omhyggelig tuning af hyperparametre (indstillinger der styrer hvordan algoritmen lærer), og har langsommere træning.
+
+* **Support Vector Machines**: Support Vector Machines bruges til klassifikation. Forestil dig en linje der adskiller to grupper som æbler og pærer - SVM finder den bedste linje med mest mulig afstand til begge grupper. Algoritmen er effektiv selv når der er mange features, hukommelseseffektiv, og kraftfuld med den rigtige kernel, som er et matematisk trick der hjælper med at adskille komplekse mønstre. Den er dog langsom på store datasæt, følsom over for feature scaling (hvilket betyder at alle features skal være på samme skala), og svær at fortolke. Et eksempel er at adskille sunde og syge patienter baseret på blodprøver ved at finde den klareste grænse mellem grupperne.
+
+* **K-Nearest Neighbors** (KNN): K-Nearest Neighbors bruges til klassifikation og regression. Algoritmen fungerer efter princippet "stem med dine naboer" - den ser på de K nærmeste datapunkter og lader dem stemme om kategorien. Den har ingen træningsfase og lærer derfor ikke på forhånd, den er simpel at forstå, og den fungerer godt med uregelmæssige beslutningsgrænser. Ulemperne er at den er langsom ved forudsigelse på store datasæt fordi den skal sammenligne med alle datapunkter, den er følsom over for irrelevante features og feature scaling, og den kræver meget hukommelse. Et eksempel: hvis dine 5 nærmeste naboer er 4 katte og 1 hund, klassificeres du som kat fordi flertallet vinder.
+
+* **Naive Bayes**: Naive Bayes bruges til klassifikation, især tekstklassifikation og spam-filtrering. Algoritmen bruger sandsynlighedsregning gennem Bayes' sætning til at gætte kategorier. Den er ekstremt hurtig, effektiv selv med lidt data, og fungerer godt med højdimensionelle data der har mange features. Navnet "naive" kommer af at den antager at alle features er uafhængige af hinanden, hvilket sjældent er sandt i virkeligheden. Den kan også være dårlig til at estimere sandsynligheder hvis træningsdata er utilstrækkelig. Et eksempel er en spam-filter der ser på ord i en email og beregner: "90% af emails med ordene 'gratis', 'vind' og 'klik her' er spam".
+
+:::
+
+---
+
+
+#### Usuperviseret ML: 
+
+::: {style="font-size: 0.5em;"}
+
+* **K-means**: K-means bruges til at gruppere data i kategorier når vi ikke ved kategorierne på forhånd. Algoritmen finder K centre-punkter og placerer hvert datapunkt ved det nærmeste center, hvilket danner klynger. Den er simpel, hurtig og skalerer godt til store datasæt. Ulemperne er at man skal vælge antallet af klynger (K) på forhånd, den er følsom over for hvor man starter (initialisering), den antager at klynger er runde med lignende størrelse, og den er følsom over for outliers. Et eksempel er at gruppere kunder i segmenter baseret på købeadfærd uden at vide kategorierne på forhånd - algoritmen kan finde fx "budget-shoppere", "luksus-kunder" og "impuls-købere".
+
+* **Principal Component Analysis** (PCA): PCA bruges ikke til forudsigelser, men til at simplificere komplicerede data. Algoritmen transformerer data så de vigtigste mønstre, kaldet principal components, fanger mest variation i dataene. Den reducerer støj, gør andre algoritmer hurtigere, og muliggør visualisering af komplekse data. Ulemperne er at principal components er svære at fortolke (hvad betyder "komponent 1" egentlig?), den er kun en lineær metode og finder derfor kun lineære sammenhænge, og den er følsom over for feature scaling. Et eksempel er at reducere 100 målinger om en person som højde, vægt, alder og indkomst til 3 hovedkomponenter der fanger det vigtigste, hvilket gør det lettere at visualisere og arbejde med dataene.
+
+* **Neurale Netværk**: Neurale netværk bruges til komplekse opgaver som billedgenkendelse, sprogforståelse og tale-genkendelse. De er inspireret af hvordan hjernen virker og består af lag af neuroner, som er simple beregningsenheder. Hver neuron modtager input, anvender vægte der repræsenterer styrken af forbindelser, summerer dem, tilføjer bias og sender resultatet gennem en aktiveringsfunktion. Netværket lærer ved at bruge backpropagation, hvor det arbejder baglæns fra fejl og justerer vægte så det forbedres over tid. De kan lære ekstremt komplekse mønstre og giver state-of-the-art resultater på mange opgaver. Ulemperne er at de kræver meget data og computerkapacitet, de er svære at fortolke og fungerer som en "black box", og de har lang træningstid. Et eksempel er at genkende ansigter på billeder ved at lære mønstre fra millioner af eksempler.
+
+:::
+
+---
+
+I praksis kombineres algoritmerne ofte i **ensembles** med omhyggelig **hyperparameter-tuning**. Valget afhænger af problem, datamængde, krav til fortolkelighed og computational ressourcer. Der er ingen "bedste" algoritme. Det vil altid handle om at vælge det rigtige "værktøj" til jobbet.
+
+## Algorimer? 
+
+::: {style="font-size: 0.8em;"}
+
+Den **klassiske algoritme-definition**: En præcis, endelig sekvens af veldefinerede instruktioner der:
+
+1. Tager et input
+2. Udfører en beregning gennem diskrete skridt
+3. Producerer et output
+4. Terminerer (stopper) efter et endeligt antal skridt
+5. Er reproducerbar - samme input giver samme output
+
+Det der gør **machine learning modeller** til *algoritmer* er at de fundamentalt er specificerede, reproducerbare, mekaniske procedurer for at **transformere input til output gennem en sekvens af veldefinerede operationer**.
+
+På et meta-niveau forbliver alt algoritmisk: **sekvenser af præcise instruktioner, eksekverbare af en maskine, analysable matematisk, reproducerbare i praksis.** 
+
+Machine learning er ikke "magi". Det er ekstremt sofistikeret anvendelse af algoritmisk tænkning til at automatisere opdagelsen af mønstre i data.
+
+:::
+
+---
+
+### To Algoritmer i Én
+
+::: {style="font-size: 0.8em;"}
+
+Når vi taler om en "machine learning algoritme", refererer vi faktisk til **to forskellige algoritmiske processer**, der består af at **transformere den matematiske idealspecifikation** til en mekanisk, step-by-step **procedure der kan eksekveres af en computer**:
+
+1. ***Lærealgoritmen*** (training algorithm): den proces der justerer modellens parametre baseret på data. Det er denne, der er kernen i hvad vi mener med "algoritmen". For eksempel:
+
+    * I **gradient descent** er algoritmen: beregn gradienten af tabsfunktionen, tag et skridt i modsat retning, gentag indtil konvergens
+    * I **decision trees** er algoritmen: find det bedste split, opdel data rekursivt, stop ved givet kriterium
+    * I **k-means** er algoritmen: tildel punkter til nærmeste centroid, genberegn centroids, gentag indtil stabilitet
+
+2. ***Inferens-algoritmen*** (prediction algorithm): den trænede model, der udfører også en algoritmisk proces når den laver forudsigelser:
+
+    * **Lineær regression**: multiplicer inputs med vægte og læg sammen
+    * **Neural netværk**: feed-forward propagation gennem lag
+    * **K-NN**: find K nærmeste naboer og udfør sammenligningsproces
+
+:::
+
+--- 
+### Det epistemologisk interessante ved ML algoritmer 
+
+Traditionelle algoritmer implementerer løsninger vi allerede kender. De løser et problem vi kan specificere fuldstændigt. ML-algoritmer **finder løsninger til problemer vi ikke kan specificere eksplicit**. 
+
+> Vi kan ikke skrive ned præcise regler for at genkende en kat, men vi kan skrive en algoritme der lærer disse regler fra data.
+
+* Algoritmen er altså en metode til automatisk at *generere en anden algoritme* (**modellen**).
+* Dette er *meta-algoritmisk*: en algoritme der producerer algoritmer. **Læreprocessen er algoritmisk specificeret, men den resulterende model er ikke forhåndsspecificeret af programmøren**.
+
+## Hvad ML *ikke* er
+
+* Tilfældig trial-and-error uden struktur
+* Mystisk *"emergent intelligence"* uden mekanisk basis
+* Uforklarlige "black boxes" på algoritmisk niveau (selvom beslutningslogikken kan være uklar)
+* Menneskelig-lignende forståelse eller intuition
+
+## Billedegenkendelse: *hvorfor er det så svært?* 
+
+Forestil jer at skulle programmere en computer til at genkende billeder af katte. 
+
+Med traditionel programmering ville vi forsøge at skrive regler:
+
+```{python}
+#| echo: true
+#| eval: false
+def er_det_en_kat(image):
+    if har_spidse_orer(image) and har_knurhår(image) and har_pels(image):
+        return True
+    return False
+
+print(er_det_en_kat("billede_hund.png"))
+```
+
+## Datarepræsentation
+
+**Opgaven**: Lær forskellen mellem disse mønstre af tal!
+
+<br> 
+
+```
+Billede af en kat (forenklet 8×8 gråtone):
+[  10,  15,  20,  25,  25,  20,  15,  10]  ← Mørk baggrund
+[  15,  80, 120, 140, 140, 120,  80,  15]  ← Øverste kant af hoved
+[  20, 180, 250, 255, 255, 250, 180,  20]  ← Kattens pande
+[  25, 200,  90, 220, 220,  90, 200,  25]  ← Øjne (mørke pletter)
+[  25, 180, 180, 200, 200, 180, 180,  25]  ← Snude
+[  20, 160, 240, 190, 190, 240, 160,  20]  ← Mund/næse område
+[  15,  90, 150, 160, 160, 150,  90,  15]  ← Underkant af ansigt
+[  10,  15,  20,  25,  25,  20,  15,  10]  ← Mørk baggrund
+
+Billede af en hund (samme størrelse):
+[  10,  15,  20,  20,  20,  20,  15,  10]
+[  15,  70, 100, 110, 110, 100,  70,  15]
+[  20, 150, 200, 210, 210, 200, 150,  20]  ← Mere aflang form
+[  25, 170, 180, 200, 200, 180, 170,  25]  ← Anderledes øjen-placering
+[  25, 165, 175, 185, 185, 175, 165,  25]  ← Længere snude
+[  20, 160, 170, 180, 180, 170, 160,  20]
+[  15,  80, 140, 160, 160, 140,  80,  15]
+[  10,  15,  20,  25,  25,  20,  15,  10]
+```
+
+--- 
+
+::: {style="font-size: 0.7em;"}
+
+1. **Gradvis Abstraktion**: Pixels → Kanter → Former → Dele → Objekter
+2. **Automatisk Feature Discovery**: Vi specificerede ikke "find runde former". Netværket opdagede selv at runde former er vigtige
+3. **Distribueret Repræsentation**: Ingen enkelt neuron "er" kat-detektor. 
+4. **Datadrevet Læring**
+    * Kvalitet af træningsdata **er vigtigere end** model arkitektur
+    * Diverse eksempler giver en robust model
+    * Biased data giver en biased model
+5. **Iterativ Forbedring**
+    * Hver træningsiteration: Lille forbedring
+    * 1000+ iterationer: Ekspert-niveau performance
+    * Men aldrig perfekt ...
+
+::: 
+
+Det er ikke magi. Det er **systematisk, iterativ pattern-matching** gennem gradient descent på et **massivt parameterspace**. Men resultatet, en model der "forstår" hvad en kat er, emerger *fra* denne "simple" proces, hvilket er det vilde ved machine learning.
+
+## En simplificering af processen
+
+Et billede af en kat i gråtoner (0-255): Hver celle er én pixel's lysstyrke
+
+<br> 
+
+```
+  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+│ 10│ 10│ 15│ 20│ 25│ 30│ 30│ 30│ 30│ 30│ 30│ 25│ 20│ 15│ 10│ 10│ 0  ← Mørk baggrund
+│ 10│ 15│ 40│ 80│120│140│150│150│150│150│140│120│ 80│ 40│ 15│ 10│ 1
+│ 15│ 50│120│180│220│240│250│250│250│250│240│220│180│120│ 50│ 15│ 2  ← Toppen af hoved
+│ 25│100│200│230│245│250│250│250│250│250│250│245│230│200│100│ 25│ 3  ← Pande 
+│ 30│140│220│240│ 60│150│200│220│220│200│150│ 60│240│220│140│ 30│ 4  ← Øjne 
+│ 30│150│230│245│ 50│140│200│220│220│200│140│ 50│245│230│150│ 30│ 5  
+│ 30│145│225│240│180│200│220│230│230│220│200│180│240│225│145│ 30│ 6  ← Mellem øjne og næse
+│ 28│135│215│230│200│210│ 80│180│180│ 80│210│200│230│215│135│ 28│ 7  ← Næse 
+│ 25│120│200│220│210│180│190│200│200│190│180│210│220│200│120│ 25│ 8  ← Under næse
+│ 22│100│180│200│200│190│200│210│210│200│190│200│200│180│100│ 22│ 9  
+│ 20│ 80│150│180│190│200│210│ 30│ 30│210│200│190│180│150│ 80│ 20│ 10 ← Mund 
+│ 15│ 60│120│150│170│180│190│150│150│190│180│170│150│120│ 60│ 15│ 11
+│ 12│ 40│ 90│120│140│160│170│170│170│170│160│140│120│ 90│ 40│ 12│ 12 ← Underkant
+│ 10│ 25│ 60│ 90│110│130│140│145│145│140│130│110│ 90│ 60│ 25│ 10│ 13
+│ 10│ 15│ 35│ 60│ 80│100│110│115│115│110│100│ 80│ 60│ 35│ 15│ 10│ 14
+│ 10│ 10│ 20│ 35│ 50│ 65│ 75│ 80│ 80│ 75│ 65│ 50│ 35│ 20│ 10│ 10│ 15
+└───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
+
+---
+
+> Find lyse pixels og mål deres form:
+
+::: {style="font-size: 0.7em;"}
+
+* Find alle pixels over en threshold (f.eks. 150)
+* Dette isolerer kattens hoved fra baggrund
+
+```
+Lyse pixels (>150):
+  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │
+│   │   │   │   │   │   │ X │ X │ X │ X │   │   │   │   │   │   │
+│   │   │   │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │   │   │   │
+│   │   │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │   │   │
+│   │   │ X │ X │   │ X │ X │ X │ X │ X │ X │   │ X │ X │   │   │
+│   │ X │ X │ X │   │   │ X │ X │ X │ X │   │   │ X │ X │ X │   │
+│   │   │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │   │   │
+│   │   │ X │ X │ X │ X │   │ X │ X │   │ X │ X │ X │ X │   │   │
+│   │   │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │   │   │
+│   │   │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │ X │   │   │
+│   │   │   │ X │ X │ X │ X │   │   │ X │ X │ X │ X │   │   │   │
+│   │   │   │   │   │   │ X │ X │ X │ X │   │   │   │   │   │   │
+└───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
+:::
+
+---
+
+> Find tekstur-variation
+
+::: {style="font-size: 0.7em;"}
+
+* Se på 3×3 regioner og mål variation
+
+<br>
+
+```
+  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+│ 10│ 10│ 15│ 20│ 25│ 30│ 30│ 30│ 30│ 30│ 30│ 25│ 20│ 15│ 10│ 10│ 0  ← Mørk baggrund
+│ 10│ 15│ 40│ 80│120│140│150│150│150│150│140│120│ 80│ 40│ 15│ 10│ 1
+│ 15│ 50│120│180│220│240│250│250│250│250│240│220│180│120│ 50│ 15│ 2  ← Toppen af hoved
+│ 25│100│200│230│245│250│250│250│250│250│250│245│230│200│100│ 25│ 3  ← Pande 
+│ 30│140│220│240│ 60│150│200│220│220│200│150│ 60│240│220│140│ 30│ 4  ← Øjne 
+│ 30│150│230│245│ 50│140│200│220│220│200│140│ 50│245│230│150│ 30│ 5  
+│ 30│145│225│240│180│200│220│230│230│220│200│180│240│225│145│ 30│ 6  ← Mellem øjne og næse
+│ 28│135│215│230│200│210│ 80│180│180│ 80│210│200│230│215│135│ 28│ 7  ← Næse 
+│ 25│120│200│220│210│180│190│200│200│190│180│210│220│200│120│ 25│ 8  ← Under næse
+│ 22│100│180│200│200│190│200│210│210│200│190│200│200│180│100│ 22│ 9  
+│ 20│ 80│150│180│190│200│210│ 30│ 30│210│200│190│180│150│ 80│ 20│ 10 ← Mund 
+│ 15│ 60│120│150│170│180│190│150│150│190│180│170│150│120│ 60│ 15│ 11
+│ 12│ 40│ 90│120│140│160│170│170│170│170│160│140│120│ 90│ 40│ 12│ 12 ← Underkant
+│ 10│ 25│ 60│ 90│110│130│140│145│145│140│130│110│ 90│ 60│ 25│ 10│ 13
+│ 10│ 15│ 35│ 60│ 80│100│110│115│115│110│100│ 80│ 60│ 35│ 15│ 10│ 14
+│ 10│ 10│ 20│ 35│ 50│ 65│ 75│ 80│ 80│ 75│ 65│ 50│ 35│ 20│ 10│ 10│ 15
+└───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
+
+:::
+
+---
+
+> Find lange lige linjer
+
+::: {style="font-size: 0.7em;"}
+
+* Find kanten af ansigtet (høj gradient)
+* Meget skarpe overgange indikerer kanter (fx knurhår på en kat) 
+
+<br>
+
+```
+  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+│ 10│ 10│ 15│ 20│ 25│ 30│ 30│ 30│ 30│ 30│ 30│ 25│ 20│ 15│ 10│ 10│ 0  ← Mørk baggrund
+│ 10│ 15│ 40│ 80│120│140│150│150│150│150│140│120│ 80│ 40│ 15│ 10│ 1
+│ 15│ 50│120│180│220│240│250│250│250│250│240│220│180│120│ 50│ 15│ 2  ← Toppen af hoved
+│ 25│100│200│230│245│250│250│250│250│250│250│245│230│200│100│ 25│ 3  ← Pande 
+│ 30│140│220│240│ 60│150│200│220│220│200│150│ 60│240│220│140│ 30│ 4  ← Øjne 
+│ 30│150│230│245│ 50│140│200│220│220│200│140│ 50│245│230│150│ 30│ 5  
+│ 30│145│225│240│180│200│220│230│230│220│200│180│240│225│145│ 30│ 6  ← Mellem øjne og næse
+│ 28│135│215│230│200│210│ 80│180│180│ 80│210│200│230│215│135│ 28│ 7  ← Næse 
+│ 25│120│200│220│210│180│190│200│200│190│180│210│220│200│120│ 25│ 8  ← Under næse
+│ 22│100│180│200│200│190│200│210│210│200│190│200│200│180│100│ 22│ 9  
+│ 20│ 80│150│180│190│200│210│ 30│ 30│210│200│190│180│150│ 80│ 20│ 10 ← Mund 
+│ 15│ 60│120│150│170│180│190│150│150│190│180│170│150│120│ 60│ 15│ 11
+│ 12│ 40│ 90│120│140│160│170│170│170│170│160│140│120│ 90│ 40│ 12│ 12 ← Underkant
+│ 10│ 25│ 60│ 90│110│130│140│145│145│140│130│110│ 90│ 60│ 25│ 10│ 13
+│ 10│ 15│ 35│ 60│ 80│100│110│115│115│110│100│ 80│ 60│ 35│ 15│ 10│ 14
+│ 10│ 10│ 20│ 35│ 50│ 65│ 75│ 80│ 80│ 75│ 65│ 50│ 35│ 20│ 10│ 10│ 15
+└───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
+
+:::
+
+## Broen mellem rå data og abstrakt forståelse
+
+Netværket lærer *selv* at beregne disse features. 
+
+* Neural network **starter med pixels** og **lærer filtre**:
+* Neural network'et beregner:
+    * Tusindvis af mellemliggende features
+    * Hvoraf nogle kan fortolkes som "rundhed", "pels", etc.
+    * Men **netværket har aldrig fået at vide hvad disse er.**
+    * Det **opdagede selv at disse features er nyttige for at løse opgaven.**
+    * Det er derfor det hedder "feature *learning*" i stedet for "feature *engineering*" 
+
+## Øvelse
+
+***Lav et pitch til en AI-løsning, der er relevant for jeres system.***
+
+1. Løsningen skal skal være "realistisk". 
+2. Den skal løse én opgave i jeres system; ikke erstattet det. 
+3. Præsenter jeres pitch som om I ville sælge løsningen til mig som jeres leder eller kunde. 
+    * 5 min. per gruppe. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
